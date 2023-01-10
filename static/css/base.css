@@ -20,6 +20,16 @@ body {
     width: 1.5rem;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
 /*---------------------------------------- styling Main logo --*/
 .logo-font {
     text-transform: uppercase;
