@@ -39,27 +39,93 @@ body {
     width: fit-content;
 }
 
-/*---------------------------------------- Styling on buttons --*/
+/*---------------------------------------- Styling on buttons inspiration taken from @sparehcodes --*/
 .shop-now-button {
     background: black;
     color: white;
     min-width: 260px;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+.btn{
+    padding: 16px 48px;
+    cursor: pointer;
+    position: relative;
+    transition:all 0.3;
+
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+.btn::before,.btn::after{
+    --offset:2px;
+    content:"";
+    position:absolute;
+    width:0; height:0;
+    transition:all 0.3;
+    opacity:0;
 }
+
+.btn::before{
+    border-top:2px solid #ff7a00;
+    border-left: 2px solid #ff7a00;
+    top:var(--offset); left:var(--offset);
+}
+
+.btn::after{
+    border-bottom:2px solid #ff7a00;
+    border-right: 2px solid #ff7a00;
+    bottom:var(--offset); right:var(--offset);
+}
+
+.btn:hover{
+    background-color: #ff7a00; color: #fff;
+    transition-delay: 0.3s;
+}
+
+.btn:hover::before,.btn:hover::after{
+width:calc(100% - 6px);height:calc(100% - 6px);
+opacity:1;
+}
+
+/*---------------------------------------- image display inspiration takein from geeksforgeeks.org --*/
+.myProducts-gallery img{
+    height: 100%;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .5;
+}
+   
+.myProducts-gallery img:hover {
+    opacity: 1;
+}
+   
+.myProducts-gallery {
+    float: left;
+}
+   
+.myProducts {
+    top: 25%;
+    left: 25%;
+    transform: translate(-25% , -25%);
+    position: absolute;
+}
+   
+.image-container img {
+    height: 200px;
+    transition: transform 1s;
+}
+   
+.image-container img:hover{
+    transform: scale(1.5);
+    cursor: zoom-in;
+}
+   
+.image-container {
+    float: right;
+    padding: 10px;
+}
+
+
 
 .text-black {
     color: #000 !important;

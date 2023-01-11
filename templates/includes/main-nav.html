@@ -14,24 +14,24 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Vegan Leather
+                Ladies
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Vegan Leather</a>
-                <a href="" class="dropdown-item">purses</a>
-                <a href="" class="dropdown-item">Mens Bags</a>
-                <a href="" class="dropdown-item">All Bags</a>
+                <a href="{% url 'products' %}?category=hand_bags" class="dropdown-item">Handbags</a>
+                <a href="{% url 'products' %}?category=purse" class="dropdown-item">Purses</a>
+                <a href="{% url 'products' %}?category=travel_bags" class="dropdown-item">Travel Bags</a>
+                <a href="{% url 'products' %}?category=womens_accessories" class="dropdown-item">Accessories</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-white mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sustainable Leather
+                Mens
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Gents Wallets</a>
-                <a href="" class="dropdown-item">Womens Shoes</a>
-                <a href="" class="dropdown-item">All Homeware</a>
+                <a href="{% url 'products' %}?category=gents_wallets" class="dropdown-item">Gents Wallets</a>
+                <a href="{% url 'products' %}?category=Leather_bags_&_briefcases" class="dropdown-item">Leather bags & briefcases</a>
+                <a href="{% url 'products' %}?category=mens_accessories" class="dropdown-item">Accessories</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=gift_ideas" class="dropdown-item">Gift Ideas</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,gift_ideas,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
