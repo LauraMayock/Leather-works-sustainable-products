@@ -111,5 +111,58 @@
                 </div>
             </div>
         </div>
+        <div>
+            <!-- Back to top button -->
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+          </div>
     </div>
+{% endblock %}
+
+<!---Javascript used when user is sorting products -->
+{% block postloadjs %}
+    {{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        let selector = $(this);
+        let currentUrl = new URL(window.location);
+
+        let selectedVal = selector.val();
+        if(selectedVal != "reset") {
+            let sort = selectedVal.split("_")[0];
+            let direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+            
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort")
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+
+    })
+
+
+// Learned from  W3school
+let mybutton = document.getElementById("myBtn");
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {
+    scrollFunction();
+   };
+  
+   function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+  }
+</script>
 {% endblock %}
