@@ -26,8 +26,15 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: white;
+    background: black;
     z-index: -1;
+}
+
+/*---------------------------------------- styling and hover effect on category badges --*/
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
 
 /*---------------------------------------- styling Main logo --*/
