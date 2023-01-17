@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/pexels-mart-production-8801100.jpg') no-repeat center center fixed;
+    background: url('/media/pexels-mart-production-8801100\ \(1\).jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -26,7 +26,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: black;
+    background: rgb(54, 52, 52);
     z-index: -1;
 }
 
@@ -50,7 +50,7 @@ a.category-badge > span.badge:hover {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    padding: 5px;
 }
 
 .btn{
@@ -91,6 +91,35 @@ a.category-badge > span.badge:hover {
 width:calc(100% - 6px);height:calc(100% - 6px);
 opacity:1;
 }
+
+/*---------------------------------------- Back to top button */
+
+#myBtn {
+    position: fixed; 
+    bottom: 60px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: white; 
+    color: black; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px; 
+    font-weight: 600;
+  }
+  
+
+.thin {
+    font-weight: 300;
+}
+
+.light-bg {
+    background-color: black;
+}
+
+
 
 /*---------------------------------------- image display inspiration takein from geeksforgeeks.org --*/
 .myProducts-gallery img{
