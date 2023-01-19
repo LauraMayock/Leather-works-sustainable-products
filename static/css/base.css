@@ -88,6 +88,7 @@ width:calc(100% - 6px);height:calc(100% - 6px);
 opacity:1;
 }
 
+
 /*---------------------------------------- Back to top button */
 
 #myBtn {
@@ -143,8 +144,14 @@ opacity:1;
 }
    
 .image-container img {
-    height: 200px;
-    transition: transform 1s;
+    border: 5px solid white;
+    padding: 10px;
+    display: grid;
+    grid-gap:1rem;
+    grid-template-areas:
+    "img4 img4 img4"
+    "img4 img4 img4"
+    "img1 img 2 img3";
 }
    
 .image-container img:hover{
@@ -165,6 +172,89 @@ opacity:1;
 
 .border-black {
     border: 1px solid black !important;
+}
+
+/* ------------------------------- Footer (Code inspired by @csscoding_ instagram page */
+
+.c-footer{
+    max-width: 1170px;
+    margin:auto;
+}
+
+.r-footer{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
+
+.footer-ul {
+    list-style:none;
+}
+.footer {
+    background: black;
+    padding: 70ox o;
+}
+
+.footer- col{
+    width:25%;
+    padding: 0 15px;
+}
+
+.footer-col h4{
+    font-size:18px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+
+}
+
+.footer-col h4::before{
+    content: '';
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    background: orange;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child)
+{
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: orange;
+    background: fff;
 }
 
 /* -------------------------------- Media Queries */
@@ -200,4 +290,22 @@ opacity:1;
     body {
         height: calc(100vh - 116px);
     }
+}
+
+/* footer */
+@media (max-width: 767px) {
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* footer */
+@media (max-width: 564px) {
+    .footer-col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
 }

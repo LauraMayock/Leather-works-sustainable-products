@@ -10,18 +10,85 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-white">
-                    Sustainable leather products
-                </h1>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'products' %}" class="btn btn-lg bg-dark text-white rounded-0 text-uppercase py-3">Shop Now</a>
-                    </h4>
-                </div>
+<div class="container h-100">
+  <div class="row h-100">
+      <div class="col-7 col-md-6 my-auto">
+          <h1 class="display-4 logo-font text-white">
+              The new collections are here
+          </h1>
+          <div class="my-5">
+              <h4>
+                  <a href="{% url 'products' %}" class="btn btn-lg text-white rounded-0 text-uppercase py-3">Shop Now</a>
+              </h4>
+          </div>
+      </div>
+  </div>
+</div>
+
+<section>
+  <div class="col-sm-6 col-lg-5 mb-3">
+            
+    <a href="{#}" aria-label="Takes you to the e-liquid products">
+
+        <div id="vape-juice" class="home-card card shadow rounded-0 border-red">
+            
+            <div class="overlay d-flex align-items-center justify-content-center">
+            
+                <h2 class="text-light text-center">E-liquids</h2>
+            
             </div>
+
         </div>
-    </div>
+
+    </a>
+
+</div>
+
+<div class="col-lg-1"></div>
+
+</div>
+
+<div class="row mx-auto mb-4">
+
+<div class="col-lg-1"></div>
+
+<div class="col-sm-6 col-lg-5 mb-3">
+
+    <a href="{% url 'products' %}?category=tanks_and_coils" aria-label="Takes you to the tanks and coils products">
+        
+        <div id="tanks-and-coils" class="home-card card shadow rounded-0 border-red">
+
+            <div class="overlay d-flex align-items-center justify-content-center ">
+
+                <h2 class="text-light text-center">Tanks and Coils</h2>
+
+            </div>
+
+        </div>
+
+    </a>
+
+</div>
+
+<div class="col-sm-6 col-lg-5 mb-3">
+
+    <a href="{% url 'products' %}?category=batteries_and_accessories" aria-label="Takes you to the Batteries and Accessories products">
+        
+        <div id="bats-and-accessories" class="home-card card shadow rounded-0 border-red">
+            
+            <div class="overlay d-flex align-items-center justify-content-center ">
+
+                <h2 class="text-light text-center">Batteries and Accessories</h2>
+
+            </div>
+
+        </div>
+    </a>
+
+</div>
+
+<div class="col-lg-1"></div>
+
+</div>
+</section>
 {% endblock %}
