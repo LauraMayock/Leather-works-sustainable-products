@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/pexels-mart-production-8801100\ \(1\).jpg') no-repeat center center fixed;
+    background: url('/media/pexels-mart-production-8801100\ \(2\).jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -26,7 +26,7 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: rgb(54, 52, 52);
+    background-color: white;
     z-index: -1;
 }
 
@@ -47,11 +47,7 @@ a.category-badge > span.badge:hover {
 }
 
 /*---------------------------------------- Styling on buttons inspiration taken from @sparehcodes --*/
-.shop-now-button {
-    background: black;
-    color: white;
-    padding: 5px;
-}
+
 
 .btn{
     padding: 16px 48px;
