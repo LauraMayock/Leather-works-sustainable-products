@@ -2,14 +2,65 @@ html {
     height: 100%;
 }
 
-body {
+
+/*-----------------------------------------------------hero image */
+.index-hero-image {
     background: url('/media/pexels-mart-production-8801100\ \(2\).jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-   
 }
 
+
+/*---------------------------------HOMEPAGE STYLES */
+section {
+    margin-bottom: 5rem;
+}
+
+.carousel-caption {
+    background-color: #e1efe682;
+}
+
+.carousel-anchor {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.carousel-anchor > h5 {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: black;
+}
+
+/*----------------------------------------------Info cards*/
+#Sustainability {
+    background: url('https://res.cloudinary.com/dyhess8yw/image/upload/v1674158836/Project5/pexels-tzdhanjit-7953286_kiaxi1.jpg') center;
+}
+
+#blog {
+    background: url('https://res.cloudinary.com/dyhess8yw/image/upload/v1674158836/Project5/pexels-tzdhanjit-7953286_kiaxi1.jpg') center;
+}
+
+#tanner {
+    background: url('https://res.cloudinary.com/dyhess8yw/image/upload/v1674158815/Project5/pexels-euwan-marbaniang-12210275_whiv2l.jpg') center;
+}
+
+.home-card {
+    background-size: 100% auto;
+    height: 300px;
+    position: relative;
+    width: 100%;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 
 /*--------------------------------------------------- from Bulma to style font awesome icons */
 .icon {
@@ -37,15 +88,44 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-/*---------------------------------------- styling Main logo --*/
+/*---------------------------------------- styling Main logo (gold effect gotten from https://codingartistweb.com/ --*/
 .logo-font {
-    text-transform: uppercase;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 10%;
+   left: 30%;
+   font-family: 'Times New Roman',serif;
+   font-weight: bold;
+   background-image: linear-gradient(
+	to right,
+	#814e01 0,
+    #cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#814e01 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
 }
+
 
 .main-logo-link {
     width: fit-content;
+  
 }
 
+/*------------------------------------Change color of navbar */
+#topnav {
+    background-color: black;
+}
+
+/*--------------------------------------background for buttons */
+.back {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
 /*---------------------------------------- Styling on buttons inspiration taken from @sparehcodes --*/
 
 
