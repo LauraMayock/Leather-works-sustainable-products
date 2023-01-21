@@ -18,29 +18,25 @@
                     <div class="row row-cols-1">
                     {% if product.thumbnail %}
                         <div>
-                            <a href="{% url 'product_detail' product.id %}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.thumbnail.url }}" alt="{{ product.name }}" alt="click here" 
-                            onclick="myImageFunction(this)">
+                            <a href="{{ product.thunbnail.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.thumbnail.url }}" alt="{{ product.name }}">
                             </a>
                         </div>
                     </div>
                     <div class="row row-cols-3">
                         <div>
-                            <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}" alt="click here" 
-                                onclick="myImageFunction(this)">
+                            <a href="{{ product.image_url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
                             </a>
                         </div>
                         <div>
-                            <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                <img class="card-img-top img-fluid" src="{{ product.image_url_2 }}" alt="{{ product.name }}" alt="click here" 
-                                onclick="myImageFunction(this)">
+                            <a href="{{ product.image_url_2 }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image_url_2 }}" alt="{{ product.name }}">
                             </a>
                         </div>
                         <div>
-                            <a href="{% url 'product_detail' product.id %}" target="_blank">
-                                <img class="card-img-top img-fluid" src="{{ product.image_url_3 }}" alt="{{ product.name }}" alt="click here" 
-                                onclick="myImageFunction(this)">
+                            <a href="{{ product.image_url_3 }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image_url_3 }}" alt="{{ product.name }}">
                             </a>
                         </div>
                     </div>
