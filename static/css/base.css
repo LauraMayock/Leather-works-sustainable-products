@@ -1,6 +1,5 @@
 html {
     height: 100%;
-    background-color: #000;
 }
   
 
@@ -14,8 +13,9 @@ html {
 
 
 /*---------------------------------HOMEPAGE STYLES */
+
 section {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
 }
 
 .carousel-caption {
@@ -36,6 +36,12 @@ section {
 
 /*----------------------------------------------Info cards*/
 
+.hr1 {
+    border: 0;
+    height: 3px;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  }
 
 .home-card {
     background-size: 100% auto;
@@ -112,6 +118,8 @@ a.category-badge > span.badge:hover {
     background-color: black;
 }
 
+
+
 /*--------------------------------------background for buttons */
 .back {
     background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
@@ -136,11 +144,7 @@ a.category-badge > span.badge:hover {
     overflow: hidden;
     position: relative;
 }    
-    @media (max-width: 576px) {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-    }
+    
     
 
   
@@ -151,12 +155,7 @@ a.category-badge > span.badge:hover {
     margin-left: 50%;
     transform: translateX(-50%);
 }   
-    @media (max-width: 1140px) {
-    margin: 0;
-    transform: none;
-    width: 100%;
-    height: auto;
-    }
+    
     
 
 
@@ -382,8 +381,14 @@ a.category-badge > span.badge:hover {
         color: white;
     }
 
- 
+    .card-img {
+        margin: 0;
+        transform: none;
+        width: 100%;
+        height: auto;
+        }
 }
+
 
 /* footer */
 @media (max-width: 767px) {
@@ -401,12 +406,12 @@ a.category-badge > span.badge:hover {
         margin-bottom: 30px;
     }
 
-    .vgr-cards {
-        display:block;
-    }
-
     .card-body {
         padding: 0;
     }
 
+    .card-img-body {
+        display: none;
+        }
+    
 }
