@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
-{% block title %}{% trans '404 Error' %}{% endblock %}
+{% block title %}{% trans '500 Error' %}{% endblock %}
 {% block content %}
-<!-- Details of 404 error and button to navigate to home -->
+<!-- Details of 500 error and button to navigate to home -->
 <div class="container">
     <div id='topnav' class="row pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-md-left">
@@ -15,10 +15,13 @@
               class="d-block w-100 img-responsive" style="width:auto;">
             <div class="card-img-overlay">
             <h1 class="display-4 error-page-header">
-                404 Page Error
+                500 Page Error
             </h1>
-            <p class="lead-error-p">Sorry! We cannot find or display the page you are requesting.</p>
-            <hr class="my-4">
+            <p class="lead-error-p">Oops! Something has gone wrong with our website.</p>
+            <hr class="hr1">
+            <p class="lead-error-p">his isn't a problem with your browser, your computer, or your internet connection. We have been alerted
+                to this issue and do out best to fix it as soon as possible.</p></p>
+            <hr class="hr1">
             <p>Please use the button below to return to our store.</p>
             <p class="lead">
                 <a class="btn home-btn standard-btn" href="{% url 'home' %}" role="button">Home</a>
