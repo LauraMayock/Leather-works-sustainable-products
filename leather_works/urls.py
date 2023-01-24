@@ -25,6 +25,3 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('bag/', include('bag.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# handling the 404 error
-handler404 = 'bag.views.error_404_view'

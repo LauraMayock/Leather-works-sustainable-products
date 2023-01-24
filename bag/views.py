@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 
+
 # Create your views here.
 
 
@@ -81,10 +82,3 @@ def remove_item(request, item_id):
 
     except Exception as e:
         return HttpResponse(status=500)
-
-
-def error_404_view(request, exception):
-   
-    # we add the path to the the 404.html file
-    # here. The name of our HTML file is 404.html
-    return render(request, 'templates.errors.404.html')
