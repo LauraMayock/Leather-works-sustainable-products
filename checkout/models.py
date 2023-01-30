@@ -28,28 +28,28 @@ class Order(models.Model):
         Generate a random, unique order number using UUID
         """
         return uuid.uuid4().hex.upper()
-    
+
     def update_total(self):
         """
-        Update grand total each time an item is added,
-        delivery cost to be added where applicable
+        Update grand total each time a line item is added,
+        accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total_sum']
-        if self.order_total < settings.FREE_DELIVERY:
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
 
-    def save(self, *args, **hwargs):
+    def save(self, *args, **kwargs):
         """
-        Override the origional save method to set the order
-        number if it hasnt been set
+        Override the original save method to set the order number
+        if it hasn't been set already.
         """
         if not self.order_number:
-            self.order_number = self.__generate_order_number()
-        super().save(*args, **kwards)
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.order_number
@@ -58,17 +58,17 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
-    product_color = models.CharField(max_length=2, null=True, blank=True) # Tan Rust, black
+    product_color = models.CharField(max_length=2, null=True, blank=True) # Tan rust black
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
 
-    def save(self, *args, **hwargs):
+    def save(self, *args, **kwargs):
         """
-        Override the origional save method to set the lineitem
-        total and update the order total
+        Override the original save method to set the lineitem total
+        and update the order total.
         """
         self.lineitem_total = self.product.price * self.quantity
-        super().save(*args, **kwards)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
