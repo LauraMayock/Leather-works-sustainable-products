@@ -2,9 +2,8 @@
 
 [Live Website]()
 
-[GitHub Repo]()
+Leather works is a small company making and selling leather products from sustainably sourced leather. With consumers being more mindful than ever, we aim to provide high-quality, environmentally friendly, and ethically sourced products that will last a lifetime. 
 
-Leather works is a small company making and selling leather products from sustainably sourced leather. With consumers being more mindful than ever before our aim is to provode a high quality product that is both environmentally friendly, ethically sourced and will last a lifetime. 
 
 **How does our product source ethical and enviromentally friendly leather?**
 
@@ -12,39 +11,21 @@ Leather works is a small company making and selling leather products from sustai
 ## **Table of Contents**
 
 * [**Planning Phase**](#planning-phase)
-  * [**Strategy**](#strategy)
+  * [**User Experience**](#user-experience)
     * [***Site Aims***](#site-aims)
     * [***Opportunities***](#opportunities)
     * [***Scope***](#scope)
-    * [***Structure***](#structure)
+    * [**Agile Methodology:**](#agile-methodology)
       * [**User Stories:**](#user-stories)
         * [**EPIC 1 - Set up and Deployment:**](#epic-1---set-up-and-deployment)
         * [**EPIC 2 - Viewing and Navigation:**](#epic-2---viewing-and-navigation)
         * [**EPIC 3 - Registration and User Accounts:**](#epic-3---registration-and-user-accounts)
         * [**EPIC 4 - Sorting and Searching:**](#epic-4---sorting-and-searching)
-        * [**EPIC 5 - Purchasing and Checkout:**](#epic-5---purchasing-and-checkout)
-        * [**EPIC 6 - Admin and Store Management:**](#epic-6---admin-and-store-management)
-        * [**EPIC 7 - Product Reviews:**](#epic-7---product-reviews)
-        * [**EPIC 8 - Marketing:**](#epic-8---marketing)
-      * [User Stories dropped as part of the AGILE process](#user-stories-dropped-as-part-of-the-agile-process)
-        * [**Form Epic 3 - Registration and User Accounts:**](#form-epic-3---registration-and-user-accounts)
-        * [**Form Epic 6 - Admin and Store Management:**](#form-epic-6---admin-and-store-management)
-    * [**Skeleton**](#skeleton)
-      * [**Wireframes:**](#wireframes)
-        * [***Home Page:***](#home-page)
-        * [***Products Page:***](#products-page)
-        * [***Product Details Page:***](#product-details-page)
-        * [***Shopping Cart Page:***](#shopping-cart-page)
-        * [***Checkout Page:***](#checkout-page)
-        * [***User Profile Page:***](#user-profile-page)
-        * [***Order Confirmation Page:***](#order-confirmation-page)
+    * [**Wireframes:**](#wireframes)
+      * [***Home Page:***](#home-page)
+      * [***Products Page:***](#products-page)
+      * [***Product Details Page:***](#product-details-page)
       * [**Database Schema:**](#database-schema)
-        * [***All Products Table***](#all-products-table)
-        * [***Product Reviews Table***](#product-reviews-table)
-        * [***Contact us Table***](#contact-us-table)
-        * [***Order Tables***](#order-tables)
-        * [***Profile Table***](#profile-table)
-        * [***Full ERD from PgAdmin***](#full-erd-from-pgadmin)
     * [**SEO considerations**](#seo-considerations)
       * [***Keywords***](#keywords)
       * [***Page Titles***](#page-titles)
@@ -126,11 +107,94 @@ Leather works is a small company making and selling leather products from sustai
 
 # **Planning Phase**
 
-## **Strategy**
+## **User Experience (UX)**
 
 ### ***Site Aims***
+Our new website aims to expand our market base and provide easily accessible information on what our company stands for and the lengths our company goes to offer a sustainable product that can be enjoyed for a lifetime. 
+
+We hope to:
+
+* Expand our product base to a larger market, expanding nationally and worldwide. With the ability to buy online and have it shipped.
+
+* Provide information and grow trust in our company and how we aim for sustainability within the vast number of people already conscious about sustainability.
+
+* Provide information and grow support from people who are not explicitly looking for a sustainable leather product but would like to support an Irish, family-run business.
+
+### ***Scope***
+
+To clearly understand the business owner's requests and requirements for this project. I have used the MoSCoW method to divide the above opportunities into the below categories aiding me to prioritize and ensure that I can achieve my goal of a fully functioning MVP by the deadline. In following the Agile methodology progress will be reviewd on a regular basis : -
+
+* To create a minimum functional E-commerce site, The below **must** be prioritiesed :
+
+  * Full CRUD Functionality.
+  * User login/register.
+  * Checkout system.
+  * Account profile.
+  * Mailing list.
+  * Product Filters/searching.
+  * Stripe payments.
+  * SEO language throughout.
+  * Guest checkout completion.
+  * User Role permissions.
+  * Order History.
+  * Social Media page.
+  * Password Recovery.
+  * Email confirmation of order.
+  * User feedback for actions taken.
+  * Saved customer details on checkout.
+
+* To enhance user experience and increase site functionality, the below **should** be addressed:
+
+  * Product reviews. 
+  * Contact form.
+  * Admin can add/remove products via the front end.
+  * Delivery information.
+  * FAQ
+  * Terms and conditions.
+
+* To increase the sites popularity and customer base, it would be  **nice to have** the below opportunities addressed : -
+
+  * Blog.
+  * Video demo of products.
+  * Ability to edit order until status set to processing.
+  * Stock management system.
+  * Order Status.
+
+### ***Agile Methodology***
+
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board, which can be seen here - (Leather Works)[]
+
+Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
+
+Backlog
+Current Iteration
+In Progress
+Done
+
+(Image of Kanban)[]
+
+Github issues were used to create User Stories and any other Fixes or Updates for the project. This is where the project user was assigned; labels were added to show at a glance importance of tasks and help prioritize jobs. User story was added to the appropriate Iteration and the project. Each User Story, Fix or Update had a clear title, acceptance criteria and smaller tasks (if applicable).
+
+Milestones were used to create Iterations. There were 3 Iterations, each dated appropriately. User Stories were completed based on the current Iteration that was in progress.
+
+#### **User Stories:**
+
+##### ** - 1st Iteration:**
+
+* As a **Developer** I can...
+  * ...**Create a Git hub repository** so that I can **Store my project files online.**
+  * ...**Create a Heroku app** so that I can **link to the a virtually hosted the deployed site.**
+
+##### ** 2ed Iteration:**
+
+* As a **Shopper** I want to be able to...
+  * ...**Clearly identity the sites purpose upon visiting** so that I can **determine if the site is what I am looking for.**
 
 
+##### **3ed Interation:**
+
+* As a **Site User** I want to be able to...
+  * ...**Register for an account** so that I can **save my personal details, view my order history online.**
 
 ### ***Opportunities***
 
@@ -138,7 +202,6 @@ In the course of providing a fully functioning E-commerce platform, the followin
 
 Opportunity | Importance | Viability/Feasibility
 ---|---|---
-Age verification on first visit | 5 | 3
 Mailing list | 5 | 5
 Account profile | 5 | 5
 Product Filters/searching | 5 | 5
@@ -148,133 +211,29 @@ User feedback for actions taken | 5 | 5
 Check out system | 5 | 5
 Guest checkout completion | 5 | 5
 User login/register | 5 | 5 |
-Vape Blog | 1 | 5
+Blog | 1 | 5
 Video demo of products | 1 | 5
 Delivery information | 3 | 5
-User Role permissions | 5 | 5
 Product reviews | 5 | 3
 Full CRUD functionality | 5 | 5
 Order History | 5 | 5
+Information on sustainable leather | 1| 5
 Stock management system | 5 | 3 |
 Contact form | 3 | 5
 Social Media pages | 5 | 5
 Special offers | 5 | 5
 Password Recovery | 5 | 5
 Email confirmation of order | 5 | 5
-Related products | 1 | 1
 Saved customer details on checkout | 5 | 5
 Admin can add/remove products via the front end | 3 | 5
 Multiple currencies | 5 | 1
-Trustpilot reviews | 5 | 1
 Terms and conditions | 3 | 5
+FAQ | 3 | 5
 Generate sales reports | 5 | 1
 Order Status | 2 | 5
 Ability to edit order until status set to processing | 1 | 5
 ---------------------- | --- | ---  
-Totals | 133 | 138
-
-### ***Scope***
-
-
-### ***Structure***
-
-Using the above as a guide, I have created a flow diagram to help me visualize how the user will navigate through the core functionality of the web store. During the Agile process, minor tweaks may occur to this pre-planned user journey, but the overall structure will remain the same.
-
-![UserFlow Journey flowchart](docs/flowcharts/userjourney.jpg)
-
-#### **User Stories:**
-
-To assist the AGILE process, I have created several user stories to help me plan and implement the project. These will help me prioritize the features and functionality of the site and ensure that I am delivering an MVP by the deadline. The below user stories are divided into EPICs and will be reviewed and updated after each sprint.
-
-##### **EPIC 1 - Set up and Deployment:**
-
-
-
-* As a **Developer** I can...
-  * ...**Create a Git hub repository** so that I can **Store my project files online.**
-  * ...**Create a virtual environment on my local machine** so that I can **avoid polluting my machine on a global level.**
-  * ...**Install Django and required libraries** so that I can **work with a postgress Database and cloudbased images from my local development IDE.**
-  * ...**Set up my local coding environment** so that I can **develop on my local machine and deploy securely without revealing sensitive information.**
-  * ...**Create a Heroku app** so that I can **link to the a virtually hosted Postgres database for the deployed site.**
- 
-
-
-* As a **User**, I can **access a live url** so that I can **use the site on any device**.
-
-##### **EPIC 2 - Viewing and Navigation:**
-
-* As a **Shopper** I want to be able to...
-  * ...**Clearly identity the sites purpose upon visiting** so that I can **determine if the site is what I am looking for.**
-  * ...**View a list of products** so that I can **select some to purchase.**
-  * ...**View individual product details** so that I can **identify the price, description, detailed reviews, and product image enabling me to compare how the product differs from other items.**
-  * ...**View the total of my purchases at any time** so that I can **see and review how much I am spending at any time whilst building an order.**
-  * ...**Leave a review** so that I can **share my opinion of a product and leave a star rating.**
-  * ...**View reviews of a product** so that I can **see what other people think of a product.**
-  * ...**Identify any promotions that are available** so that I can **take advantage of them and obtain the best value for money possible.**
-  * ...**See clearly when something goes wrong on the site** so that I can **correct any errors and continue with my purchase.**
-  * ... **See a pleasantly styled and easy to navigate site** so that I can **enjoy the experience of using the site.**
-  * ...**Easily contact the store owner** so that I can **ask questions about the products or the site.**
- 
-
-##### **EPIC 3 - Registration and User Accounts:**
-
-* As a **Site User** I want to be able to...
-  * ...**Register for an account** so that I can **save my personal details, view my order history online.**
-  * ...**Easily login or logout at any time** so that I can **access my personal account information and protect it from unauthorized viewing on shared devices.**
-  * ...**Save my personal details to my profile from the checkout page** so that I **don’t have to enter them every time I make a purchase.**
-  * ...**Amend my personal details from my profile** so that I can **update information should there be any changes.**
-  * ...**Recover my password in case I forget it** so that I can **regain access to my account in the event I lose my password.**
-  * ...**Receive an email confirmation upon registration** so that I can **confirm the registration process worked correctly.**
-
-##### **EPIC 4 - Sorting and Searching:**
-
-* As a **Shopper** I want to be able to...
-  * ...**Sort the list of available products** so that I can **view them in different orders. and find the highest/lowest rating/prices and sort alphabetically to aid in finding the most suitable products to suit my needs.**
-  * ...**Search for a product by name or content in the product description** so that I can **find a specific product I am looking for.**
-  * ...**View a list of products in a specific category** so that I can **view all products in that category.**
-  * ...**Identify what I have searched for easily and the number of results found** so that I can **easily see the availability of the item I searched for and quickly find the product I want.**
-
-##### **EPIC 5 - Purchasing and Checkout:**
-
-* As a **Shopper** I want to be able to...
-  * ...**Select a quantity of a product** so that I can **buy the required amount of the product.**
-  * ...**View items in my bag to be purchased** so that I can **identify the total cost of my purchases before checkout.**
-  * ...**Adjust the quantity of individual items in my bag** so that I can **easily make changes to my bag.**
-  * ...**Easily enter my payment information** so that I can **checkout quickly with no hassles by using information previously stored in the system.**
-  * ...**View an order confirmation after checkout** so that I can **verify that I haven’t made any mistakes.**
-  * ...**Receive an email confirmation after checking out** so that I can **keep a record of my order.**
-  * ...**View my order history** so that I can **see the orders I have made previously.**
-  * ...**Access the checkout page** so that I can **review my order whilst entering my payment/shipping details**
-  * ...**securely submit my payment details** so that I can **rest assured my financial information is safe**
-
-##### **EPIC 6 - Admin and Store Management:**
-
-* As a **Store Owner** I want to be able to...
-  * ...**Add a product** so that I can **add new products to the store.**
-  * ...**Edit/update a product** so that I can **change product details.**
-  * ...**Delete a product** so that I can **remove products that are no longer for sale.**
-  * ...**Add a promotion** so that I can **add new promotions to the store.**
-  * ...**manually manage the stock levels** so that I can **input received purchase orders and ensure that the stock levels are accurate in case of discrepancies or damages.**
-
-##### **EPIC 7 - Product Reviews:**
-
-* As a **Shopper** I want to be able to...
-  * ...**Leave a review** so that I can **share my opinion of a product and leave a rating.**
-  * ...**View reviews of a product** so that I can **see what other people think of a product.**
-  * ...**Edit my reviews of a product** so that I can **update my public opinion should it ever change**
-  * ...**delete my reviews of a product** so that I can **remove previous reviews should I see fit**.
-
-##### **EPIC 8 - Marketing:**
-
-
-
-
-##### **Form Epic 3 -**
-
-
-
-  
-### **Skeleton**
+Totals | 129 | 138
 
 #### **Wireframes:**
 
@@ -282,108 +241,134 @@ Wireframes were created using Balsamiq wireframes to visualize how the site woul
 
 ##### ***Home Page:***
 
-[Home page wireframe](docs/wireframes/landing-page.png)
+[Home page wireframe](media/Mobile%20%26%20Desktop.png)
 
 ##### ***Products Page:***
 
-[Products page wireframe](docs/wireframes/products-page.png)
+[Products page wireframe](media/Mobile%20%26%20Desktop-product%20page.png)
 
 ##### ***Product Details Page:***
 
-This page changed from the original design in the following ways:
+[Product details page wireframe](media/Mobile%20%26%20Desktop-product_detail_page.png)
 
-* Multiple images were not implemented and so no accordion was needed.
-* Buy now button was removed as it was not needed.
-
-These will now be added as part of the future features.
-
-[Product details page wireframe](docs/wireframes/product-detail-page.png)
-
-##### ***Shopping Cart Page:***
-
-[Shopping cart page wireframe](docs/wireframes/shopping-cart-page.png)
-
-##### ***Checkout Page:***
-
-[Checkout page wireframe](docs/wireframes/checkout-page.png)
-
-##### ***User Profile Page:***
-
-This page changed from the original design in the following ways:
-
-* No multiple addresses.
-* No delete account button.
-* No image/avatar upload.
-
-These will now be added as part of the future features.
-
-[User profile page wireframe](docs/wireframes/user-profile.png)
-
-##### ***Order Confirmation Page:***
-
-[Order confirmation page wireframe](docs/wireframes/order-confirmation-page.png)
 
 #### **Database Schema:**
 
 The database table scheme was created using [drawsql.app](https://drawsql.app) and can be seen below.
 
-##### ***All Products Table***
-
-This table was designed for scalability, I didn't have time to leverage the full advantages of a polymorphic data set, but I have included the fields that would be needed to do so. In the future, I would automate many more processes allowing for products with sizes to be linked together and display the product options on a single product page. This database model also allows for quicker queries as the volume of products grows, so it was designed now to save a lot of restructuring later when the business popularity grows.
-
-[All products table](docs/flowcharts/database/products.png)
-
-[View online with notes](https://drawsql.app/teams/student-444/diagrams/pp5-vapor-town/embed)
-
-##### ***Product Reviews Table***
-
-[Product reviews table](docs/flowcharts/database/product-reviews.png)
-
-[View online with notes](https://drawsql.app/teams/student-444/diagrams/reviews/embed)
-
-##### ***Contact us Table***
-
-[Contact us table](docs/flowcharts/database/contact-us.png)
-
-[View online with notes](https://drawsql.app/teams/student-444/diagrams/reviews/embed)
-
-##### ***Order Tables***
-
-[Order tables](docs/flowcharts/database/checkout.png)
-
-[View online with notes](https://drawsql.app/teams/student-444/diagrams/checkout-app/embed)
-
-##### ***Profile Table***
-
-[Profile table](docs/flowcharts/database/profiles.png)
-
-[View online with notes](https://drawsql.app/teams/student-444/diagrams/profiles/embed)
-
-##### ***Full ERD from PgAdmin***
-
-The EDR from pgAdmin, connected directly to my instance of elephantSQL, shows the complete relationship of all tables. Including those which came from libraries such as all auth.
-
-[Full ERD](docs/flowcharts/database/pgadmin-erd.png)
 
 ### **SEO considerations**
 
 #### ***Keywords***
 
-Unfortunately, the website word tracker never worked enough for me. I even subscribed and continued encountering the issue where I had no results or was told I had made too many searches. Speaking to their customer support, they advised this is a known issue and that they are working on it, but it's been a few months, and it's still not working for me. I have included a brain dump using keywords and google to return a list of long and short-tail keywords. The ones ticked were included in the site meta description.
+I performed keyword research to understand what topics and categories users search for when shopping for sustainable leather-related products online. First, I brainstormed general topics to ascertain some keywords and followed this by researching these words using google to understand potential short-tail and long-tail keywords. Using wordtracker.com, I evaluated which would be competitive, relevant, authoritative and trustworthy.
 
-![Key words Brain dump](docs/seo/keywords.JPG)
+Short-tail Keywords
+
+Sustainable leather
+leather products
+leather bags
+leather wallets
+leather belts
+sustainable products
+Irish leather
+Irish Tanner
+Irish products
+Gifts
+Irish gifts
+luxury gifts
+sustainablity
+
+Long-tail Keywords
+
+Is leather sustainable
+Irish leather products
+supporting Irish companies
+
+**Related searches provided by google**
+  * Sustainable leather foundation
+  * Sustainable leather brands
+  * Ethically sourced leather
+  * sustainable leather alternatives
+  * purluxe leather alternatives
+
+**People also asked**
+  * Why is sustainable leather so important?
+  * What is the most eco-friendly vegan leather?
+  * What is the sustainable leather foundation's transparency dashboard?
+  * What do customers want from the leather industry?
+
+I used ()[https://www.ryrob.com/keyword-tool/] to help find the best keywords to use. Unfortunately, it provided no information when I clicked Ireland or the United Kingdom as regions. There was no Europe option, so I decided to go with the United States for its large demographic.
+
+Search using "Homemade sustainable leather products."
+[](media/keyword%20search%201.png)
+[](media/keyword%20search%202.png)
+
+
+The volume column in the above images shows the estimated google monthly volume using those keywords. 
+
+The Difficulty column grades each keyphrase on how difficult it would be to rank on the first page of google.
+
+This website also could view related searches based on the keyword.
+As the list was extensive, I will highlight below the ones I thought maybe best targeted, taking into account the volume of searches per month and how difficult it would be to reach the coveted first page on google search.
+
+A lot of the tail words provided were based on destinations. The fact that the company ships worldwide will hopefull pick up these searches. But I will not be prioritising worldwide shipping as it is too commom a keyword. Instead, I will use the fact the company is Irish.
+
+**leather goods store**
+Volume 22.2k
+Difficulty medium
+
+* leather goods store near me
+* leather goods stores nearby
+* leather goods for sale
+* leather bags store near me
+* leather bags shop near me
+
+**Handmade.leather bags**
+volume 1.3k
+Difficulty medium
+
+* handmade leather bags
+* handmade leather bags near me
+* custom leather goods
+* handmade leather purses for sale
+
+**Sustainable bags**
+Volume 720
+Difficulty medium
+
+* sustainable bags brands
+* sustainable bags meaning
+
+**Ethical leather bags**
+Volume 110
+difficulty medium
+
+* ethical leather bags
+* ethical bag companies
+
+This website also had a blog title generator to help with SEO. Here are a few options that we will concentrate on for blog posts and facebook post titles.
+
+**Blog post titles**
+* 5 Reasons to Buy Handmade Leather Bags
+* The Benefits of Investing in Quality
+* How to Choose the Perfect
+* A Guide to Caring for Your
+
+* The Ethical Choice: Understanding the Benefits of Sustainable Leather Goods
+* Exploring the Pros and Cons of Sustainable Leather
+* The Eco-Friendly Fabric: How Sustainable Leather Production Can Help the Environment
+* Sustainable Leather: Reducing the Carbon Footprint of the Fashion Industry
+* What is sustainable leather?
+
+The output highlighted below helped with the naming conventions and descriptions for the products and page URLs to improve site searchability.
 
 #### ***Page Titles***
 
-Each page shows an extra title after the store name to assist help with SEO.
+
 
 #### ***Robots.txt and sitemap.xml***
 
-Sitemap and robots.txt files have been added to the site's root to help with SEO.
-
-At first, I found that lighthouse was showing a fault with my robots.txt. The issue was that it was being read as an HTML file, not a text file. I fixed this by adding a URL path in the project level URLs.py. More about the method can be read [here](https://adamj.eu/tech/2020/02/10/robots-txt/).
-
-Due to initializing the template in the path, I had to move the robots.txt into my templates folder to make it work.
 
 ### ***Content***
 
@@ -399,9 +384,7 @@ Black and white feature heavily throughout the site. However, I added color to h
 
 The final color scheme can be seen below:
   
-Online [here](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23007bff%2C%0D%0A%236c757d%2C%0D%0A%2328a745%2C%0D%0A%2317a2b8%2C%0D%0A%23ffc107%2C%0D%0A%23dc3545%2C%0D%0A%23f8f9fa%2C%0D%0A%23fff59a%2C%0D%0A%23343a40%2C%0D%0A%23ffffff%2C%0D%0A%235469d4%2C%0D%0A%23aab7c4%2C%0D%0A%23000000%2C%0D%0A%23004c9e%2C%0D%0A%23004c9e%0D%0A%23490049%0D%0A%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
 
-And via GitHub [here](docs/color/contrast-grid.JPG)
 
 #### ***Typography***
 
@@ -410,13 +393,6 @@ For this project, I have used the following fonts:
 * [DM Sans](https://fonts.google.com/specimen/DM+Sans?query=dm+s) - This font is used for the main headings and the logo. It is a clean and simple font that is easy to read and stands out well.
 * [Damion](https://fonts.google.com/specimen/Damion?query=damion) - This was for the logo. I initially wanted to make the V and the T cursive; however, I found this font perfect for all letters of the logo.
 
-## **Agile Development Process**
-
-I used [JIRA](https://dnlbowers.atlassian.net/jira/software/projects/PVS/boards/5/roadmap) to track and create issues/user stories. When submitting the project, I will provide login credentials for the above project space. However, you can find a summary of my agile process/learnings [here](AGILE.md).
-
-## **E-commerce Application Type**
-
-As already mentioned, Vapor Town is a B2C e-commerce application. Selling directly to consumers means that the site is designed to sell quickly, on impulse, and in smaller quantities. While wholesale is a possible future goal, the website was not yet intended to sell to other businesses. For this reason, a large amount of the functionality is focused on the user experience and the ability to purchase products quickly and effectively
 
 ## **Marketing Stratergy**
 
