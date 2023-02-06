@@ -1,0 +1,36 @@
+Hello {{ order.full_name }},
+
+Thank you for shopping at Leather Works.
+
+We have received your order and will be processing it for shippment ASAP.
+
+Below is the purchase information.
+
+Order details:
+
+{% for item in order.lineitems.all %}
+{{ item.product.name }}{% if item.product.has_color %} - Color {{ item.product_color|upper }}{% else %}N/A{% endif %}
+{{ item.quantity }} @ ${{ item.product.price }} each
+{% endfor %}
+
+
+Order Summary:
+
+Order Total: ${{ order.order_total }}
+Delivery: {{ order.delivery_cost }}
+Grand Total: {{ order.grand_total }}
+
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+Delivery Address: {{ order.street_address1 }}
+                  {{ order.town_or_city}}
+                  {{ order.country}}.
+
+If you need any further information please do not heisitate to contact us.
+
+Thank you for your order.
+
+Sincerely,
+All the family at Leather Works.
+

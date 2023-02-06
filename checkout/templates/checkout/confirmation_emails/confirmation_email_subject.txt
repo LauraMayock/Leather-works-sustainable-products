@@ -1,0 +1,1 @@
+Leather Works confirmation for Order number {{ order.order_number }}
