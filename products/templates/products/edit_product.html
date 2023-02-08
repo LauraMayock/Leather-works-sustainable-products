@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -15,21 +16,38 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <h2 class="logo-font mb-4">Product Management</h2>
+                <br>
                 <h5 class="text-muted">Edit a Product</h5>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right">
+                    {% for field in form %}
+                        {% if field.name != 'thumbnail' %}
+                           {{ field | as_crispy_field }}
+                        {% else %}
+                           {{ field }}
+                           {% endif %}
+                    {% endfor %}
+                    <div class ="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
                         <button class="btn btn-black rounded-0" type="submit">Update Product</button>
                     </div>
                 </form>
-            </div>            
+            </div>
         </div>
     </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}
