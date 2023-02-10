@@ -7,65 +7,24 @@
 
 {% block content %}
 <!-- Homepage carousel section -->
-<section class="homepage-carousel-section">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <picture>
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151624/Project5/pexels-bilakis-12442672_c9g4pl.jpg"media="(min-width: 992px)"
-              alt="Leather works logo">
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151624/Project5/pexels-bilakis-12442672_c9g4pl.jpg" media="(min-width: 300px)"
-              alt="Leather works logo">
-            <img src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151624/Project5/pexels-bilakis-12442672_c9g4pl.jpg" alt="Logo"
-              class="d-block w-100 img-responsive" style="width:auto;">
-          </picture>
-          <div class="carousel-caption text-black d-none d-md-block">
-            <!-- View our website button -->
-            <a class="carousel-anchor" href="{% url 'products' %}" aria-label="Navigates to view all products">
-              <h5>Visit our blog</h5>
-              <p>Find out more about how our leather is Sustainability</p>
-            </a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <picture>
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674150623/Project5/new_arrivals_leather_work_sustainable_leather.jpg" media="(min-width: 992px)"
-              alt="New products bag">
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674150623/Project5/new_arrivals_leather_work_sustainable_leather.jpg" media="(min-width: 300px)"
-            alt="New products bag">
-            <img src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674150623/Project5/new_arrivals_leather_work_sustainable_leather.jpg"
-            alt="New products bag" class="d-block w-100 img-responsive"
-              style="width:auto;">
-          </picture>
-          <div class="carousel-caption text-black d-none d-md-block">
-            <!-- Shop now button -->
-            <a class="carousel-anchor" href="{#}"
-              aria-label="Navigates to the blog">
-              <h5>Shop Now</h5>
-              <p>New arrivals</p>
-            </a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <picture>
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674315994/Project5/large_logo_1_kzcakd.png" media="(min-width: 992px)"
-              alt="New products bag">
-            <source srcset="https://res.cloudinary.com/dyhess8yw/image/upload/v1674315994/Project5/large_logo_1_kzcakd.png" media="(min-width: 300px)"
-            alt="New products bag">
-            <img src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674315994/Project5/large_logo_1_kzcakd.png"
-            alt="New products bag" class="d-block w-100 img-responsive"
-              style="width:auto;">
-          </picture>
-          <div class="carousel-caption text-black d-none d-md-block">
-            <!-- Shop now button -->
-            <a class="carousel-anchor" href="{#}"
-              aria-label="Navigates to the blog" style="margin-bottom:-50px;"></a>
-              <h5>We are Irish</h5>       
-              <p>Learn more about who we are.</p>
-            </a>
-          </div>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img class="d-block w-100" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674150623/Project5/new_arrivals_leather_work_sustainable_leather.jpg" alt="Second slide">
+        <div class="carousel-caption">
+          <h5>We are Irish</h5>
+          <a class="carousel-anchor" href="{% url 'products' %}" aria-label="Navigates to view all products">
+          <p>Find out more about our family.</p>
         </div>
       </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674315994/Project5/large_logo_1_kzcakd.png" alt="Second slide">
+          <div class="carousel-caption">
+            <h5>Sustainable Leather</h5>
+            <a class="carousel-anchor" href="{% url 'products' %}" aria-label="Navigates to view all products">
+            <p>Want to find out more about sustainable leather?</p>
+          </div>
+        </div>
       <!-- Left and right controls -->
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -94,7 +53,7 @@
     <div class="card-group vgr-cards">
       <div class="card">
         <div class="card-img-body">
-        <img class="card-img" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674323734/Project5/pexels-anna-shvets-5830634_2_akfksb.jpg" alt="Card image cap" style="height:100%; width:100%;">
+        <img class="card-img" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674323734/Project5/pexels-anna-shvets-5830634_2_akfksb.jpg" alt="Card image cap" style="height:100%; width:100%; overflow: hidden;">
         </div>
         <div class="card-body">
           <h4 class="card-title">Meet the Tanner</h4>
@@ -103,7 +62,7 @@
             Cordwainers College London then worked with designer Bill Amberg in Notting Hill, London.
             Since coming home in 2001, I've been developing new designs and styles in the business.
           </p>
-          <a href="#" class="btn btn-outline-dark">Learn More</a>
+          <a href="#" class="btn font-weight-bold back">Learn More</a>
         </div>
       </div>
       <div class="card">
@@ -114,7 +73,7 @@
             Today’s consumers are more mindful than ever before, and they expect the brands they purchase from to provide more
             they want environmentally friendly products from ethical, transparent brands.
             </p>
-            <a href="#" class="btn btn-outline-dark">Learn More</a>
+            <a href="#" class="btn font-weight-bold back">Learn More</a>
         </div>
         <div class="card-img-body">
           <img class="card-img" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151618/Project5/pexels-dominika-roseclay-5462565_ujkufv.jpg" alt="Card image cap">
