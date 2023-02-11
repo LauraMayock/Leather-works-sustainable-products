@@ -10,23 +10,20 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col text-center mt-3">
-                <h2 class="logo-font">Products</h2>
-                {% for c in current_categories %}
-                    <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                    </a>
-                {% endfor %}
-                <hr class="w-50 mb-1">
+<div class="overlay"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">Products</h2>
+            {% for c in current_categories %}
+                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                    <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                </a>
+            {% endfor %}
+            <hr class="w-50 mb-1">
             </div>
         </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2">
-                    <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                <div style="margin-left:25%">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
@@ -41,7 +38,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6 order-md-first">
+                    <div class="col-8 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
                                 <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
@@ -50,7 +47,66 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="w3-sidebar w3-bar-block" style="width:25%">
+                    <a href="{% url 'home' %}">Home</a>|</a> <b><a href="{% url 'products' %}">All Products</a></b></p>
+                    <div class="border-bottom pb-2 ml-2">
+                        <h4>Filters</h4>
+                    </div>
+                    <div class="py-2 border-bottom ml-3">
+                        <h6 class="font-weight-bold">Categories</h6>
+                        <div><span class="fa fa-minus"></span></div>
+                            <div class="form-group">
+                                <a href="{% url 'products' %}?category=Purse" class="dropdown-item">Purses</a>
+                            </div>
+                            <div class="form-group">
+                                <a href="{% url 'products' %}?category=bags" class="dropdown-item">Bags</a>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Wallets</a>
+                                </div>
+                            </div>                                
+                    </div>
+                    <div class="py-2 border-bottom ml-3">
+                        <h6 class="font-weight-bold">Accompainments</h6>
+                        <div id="orange"><span class="fa fa-minus"></span></div>
+                            <div class="form-group">
+                                <input type="checkbox" id="tea">
+                                <label for="tea">Tea Cakes</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="cookies">
+                                <label for="cookies">Cookies</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="pastries">
+                                <label for="pastries">Pastries</label>
+                            </div>                                
+                            <div class="form-group">
+                                <input type="checkbox" id="dough">
+                                <label for="dough">Cookie Dough</label>
+                            </div>                                
+                            <div class="form-group">
+                                <input type="checkbox" id="choco">
+                                <label for="choco">Chocolates</label>
+                            </div>                                
+                    </div>
+                    <div class="py-2 ml-3">
+                        <h6 class="font-weight-bold">Top Offers</h6>
+                        <div id="orange"><span class="fa fa-minus"></span></div>
+                        <form>
+                            <div class="form-group">
+                                <input type="checkbox" id="25off">
+                                <label for="25">25% off</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="5off">
+                                <label for="5off" id="off">5% off on artisan breads</label>
+                            </div>                                           
+                        </form>
+                    </div>
+                </div>
+                <div style="margin-left:27%">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
@@ -63,7 +119,7 @@
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}
-                                <div class="card-body pb-0">
+                                <div class="card pb-0">
                                     <p class="mb-0">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
@@ -94,34 +150,35 @@
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
+                            <div class="col-8 d-sm-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}                        
                         {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <div class="col-8 d-none d-sm-block d-md-block d-lg-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <div class="col-8 d-none d-lg-block d-xl-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
+                            <div class="col-8 d-none d-xl-block mb-5">
                                 <hr>
                             </div>
                         {% endif %}
                     {% endfor %}
-                </div>
-            </div>
-        </div>
-        <div>
-            <!-- Back to top button -->
-            <button onclick="topFunction()" id="myBtn" class="btn" title="Go to top">Top</button>
-          </div>
-    </div>
+                        </div>
+        
+    
+
+<!-- Back to top button -->
+<button onclick="topFunction()" id="myBtn" class="btn" title="Go to top">Top</button>
+
+
+
 {% endblock %}
 
 <!---Javascript used when user is sorting products -->

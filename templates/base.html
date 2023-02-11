@@ -36,7 +36,7 @@
 
     <title>Leather works {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header id ="topnav" class="container-fluid fixed-top">
         <div class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-md-left">
@@ -63,7 +63,7 @@
                     <li class="list-inline-item">
                         <a class="header-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <p class="my-0">Blog</p>
+                                <p class="my-0"> <a href="{% url 'blog' %}">Blog</a></p>
                             </div>
                         </a>
                     </li>

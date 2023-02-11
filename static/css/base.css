@@ -279,6 +279,29 @@ input[name='q']::placeholder {
     overflow-x: hidden;
     overflow-y: auto;
 }
+/*---------------------------------------side bar bbbootstrap.com--*/
+
+
+/*--------------------------------------- blog page--*/
+
+
+
+/*---------------------------------------pagination blog--*/
+
+.pagination {
+    margin-bottom: 100px;
+}
+
+.page-link {
+    color:  white;
+    background-color: #23BBBB;
+}
+
+.page-link{
+    background-color:  #23BBBB;
+    color:white;
+}
+
 
 /*---------------------------------------- image display inspiration takein from geeksforgeeks.org --*/
 .myProducts-gallery img{
