@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'FAQs' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog-style.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Main container for page content : FAQs -->
+<div class="container-fluid">
+    <!-- Page header -->
+    <div class="row">
+        <div class="col mt-3 mb-3">
+            <h1 class="page-title">Frequently Asked Questions</h1>
+            <hr class="mb-1">
+        </div>
+    </div>
+    <!-- Intro text -->
+    <div class="row">
+        <div class="col mt-3 mb-3">
+            <p class="card-text"> We've done our best to answer some of the most frequently asked questions.</p>
+            <p class="card-text"> If one of your questions isn't answered below or you would like some assistance don't
+                hesitate to either email us at <a class="" target="_blank" rel="noopener noreferer"
+                    aria-label="Send an email to The Leather Works"
+                    href="">@gmail.com</a> or call us on
+                <a class="mailto-anchor" href="tel:+441618727795" aria-label="Call leather work" target="_blank"
+                    rel="noopener noreferer">01618727795.</a></p>
+        </div>
+    </div>
+    <!-- FAQs Vertical Accordion credited to Monica Wheeler on CodePen -->
+    <div class="row">
+        <div class="col mt-3 mb-3">
+            <div id="faqs-section">
+                <div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <symbol viewBox="0 0 24 24" id="expand-more">
+                            <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </symbol>
+                        <symbol viewBox="0 0 24 24" id="close">
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                            <path d="M0 0h24v24H0z" fill="none" />
+                        </symbol>
+                    </svg>
+                </div>
+                <!-- Question 1 -->
+                <details open>
+                    <summary> When will I receive my order? <svg class="control-icon control-icon-expand" width="24"
+                            height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> Orders purchased from our site using standard delivery usually take 3-5 working days to deliver. 
+                        A tracking number will be provided on purchase.</p>
+                    <p class="card-text"> You can also have your order delivered the next day for an extra fee. Purchase must be placed before 12 o clock to avoid disappointment.</p>
+                    <p class="card-text"> Please bear in mind that custom or large orders may take longer. Once the order is placed someone from our team will be in contact to provide a time line.</p>
+                    <p class="card-text"> For information on typical delivery times and how to track with An Post,
+                        please see <a class="mailto-anchor"
+                            href="https://www.anpost.com/Post-Parcels/Track/Search" target="_blank"
+                            rel="noopener noreferer" aria-label="Read about An Post Tracking">here for tracking our order with An Post
+                            </a> and <a class="mailto-anchor"
+                            href="https://www.dhl.com/ie-en/home/tracking.html?locale=true" target="_blank"
+                            rel="noopener noreferer" aria-label="Read about 48 hour delivery">here for 24 hour
+                            tracked</a>.</p>
+                </details>
+                <!-- Question 2 -->
+                <details>
+                    <summary> How much does delivery cost? <svg class="control-icon control-icon-expand" width="24"
+                            height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> Delivery is <strong>free</strong> when you spend over £50.</p>
+                    <p class="card-text"> Otherwise it is 10% of your bag total.</p>
+                </details>
+                <!-- Question 3 -->
+                <details>
+                    <summary> Do I need to register to place an order? <svg class="control-icon control-icon-expand"
+                            width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> You don't need to register or sign in to order. Instead you can checkout as a
+                        'Guest'.</p>
+                    <p class="card-text"> Please bear in mind this will mean your order isn't stored on our website for
+                        future records.</p>
+                    <p class="card-text"> Creating an account allows you to do things like 'Reorder' quickly, see your
+                        previous orders and retain delivery details for a quick checkout.</p>
+                </details>
+                <!-- Question 4 -->
+                <details>
+                    <summary> I'm having issues logging into my account <svg class="control-icon control-icon-expand"
+                            width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> Potentially you have checked out as a 'Guest' in which case you will need to
+                        register for an account <a class="mailto-anchor" target="_blank" rel="noopener noreferer"
+                            aria-label="Register for Coffee Collective account"
+                            href="{% url 'account_signup' %}">here</a></p>
+                    <p class="card-text"> If this doesn't work, get in touch with us and we'll be able to help.</p>
+                </details>
+                <!-- Question 5 -->
+                <details>
+                    <summary> Can I make changes to my order? <svg class="control-icon control-icon-expand" width="24"
+                            height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> Once an order has been paid for and processed, we are unable to change it.
+                    </p>
+                    <p class="card-text"> However, if you contact us in the shop on <a class="mailto-anchor"
+                            href="tel:+441618727795" aria-label="Call Leather Works" target="_blank"
+                            rel="noopener noreferer">01618727795</a> as soon as possible then, provided your order has
+                        not been fulfilled, we'll be happy to cancel/refund you.</p>
+                </details>
+                <!-- Question 6 -->
+                <details>
+                    <summary> Is your website secure? <svg class="control-icon control-icon-expand" width="24"
+                            height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> Yes. The Leather Works is committed to protecting your privacy and
+                        promises not to share any information we collect with any third party.</p>
+                    <p class="card-text"> Our website uses https, a more secure protocol, meaning your data and most
+                        importantly your payment is encrypted and therefore better protected.</p>
+                    <p class="card-text"> Look for the padlock sign on your browser. We use Stripe Payments for our card
+                        payment handling, one of the largest and most trusted payment handling company's in the world.</p>
+                </details>
+                <!-- Question 7 -->
+                <details>
+                    <summary> How can I place a custom order? <svg
+                            class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <div class="card-text">
+                        <ul class="faq-list">
+                            <p class="card-text"> You can contact us by filling out by filling out this form and one of our Tanners will get in contact personally. 
+                                It is recommended that you come and visit our workshop to get a feel for the different types of leather and allow one of our Tanners and
+                            designers to help bring your idea to life.   </p>
+                        </ul>
+                    </div>
+                </details>
+                <!-- Question 8 -->
+                <details>
+                    <summary> How should care for my leather? <svg class="control-icon control-icon-expand" width="24"
+                            height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> 
+                    </p>
+                    <p class="card-text"> </p>
+                    <p class="card-text"> </p>
+                    <p class="card-text"> </p>
+                    <p class="card-text"></p>
+                </details>
+                <!-- Question 9 -->
+                <details>
+                    <summary> What makes your product sustainable? <svg class="control-icon control-icon-expand"
+                            width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <p class="card-text"> </p>
+                    <p class="card-text"> </p>
+                    <p class="card-text"> </p>
+                    <p class="card-text"> </p>
+                </details>
+                <!-- Question 10 -->
+                <details>
+                    <summary>  <svg class="control-icon control-icon-expand"
+                            width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+                        </svg>
+                        <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+                        </svg>
+                    </summary>
+                    <div class="card-text">
+                        <ul class="faq-list">
+                            <li class="faq-list-item">
+                                <strong></strong> 
+                            </li>
+                            <li class="faq-list-item">
+                               
+                            </li>
+                            <li class="faq-list-item">
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div> {% endblock content %}

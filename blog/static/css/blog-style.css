@@ -1,0 +1,99 @@
+/* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
+#faqs-section {
+    width: 100%;
+    display: block;
+    margin-bottom: 4rem;
+  }
+  
+  details {
+    width: 75%;
+    min-height: 2.5rem;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+    position: relative;
+    border: 0.1rem solid #ccc;
+    box-sizing: border-box;
+    transition: all 0.4s;
+  }
+  
+  details+details {
+    margin-top: 1.5rem;
+  }
+  
+  details[open] {
+    min-height: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0.35rem 0.35rem 0.35rem #ccc;
+  }
+  
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  summary:focus {
+    outline: none;
+  }
+  
+  summary:focus::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 0 0.15rem #674ea780;
+  }
+  
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .control-icon {
+    fill: #674ea7;
+    transition: 0.4s;
+    pointer-events: none;
+  }
+  
+  .control-icon-close {
+    display: none;
+  }
+  
+  details[open] .control-icon-close {
+    display: initial;
+    transition: 0.4s;
+  }
+  
+  details[open] .control-icon-expand {
+    display: none;
+  }
+  
+  /* Our Story Page */
+  .lorenzo-ferodo-img {
+    max-height: 28.125rem;
+    margin-top: 2rem;
+  }
+  
+  .coffee-shop-img {
+    max-height: 31.8rem;
+    margin-top: 2rem;
+  }
+  
+  .sign-up-h2 {
+    margin-top: 3rem !important
+  }
+  
+  
+  /* Sustainability Page */
+  .icon {
+    margin-left: 0.875rem;
+    color: #351c75;
+    font-size: 1.25rem;
+  }
+
+  

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, CreateView
 from .models import Post
 from .forms import ContactForm
 
@@ -30,3 +30,14 @@ def contact(request):
             submitted = True
     return render(request, 'contact.html',
                   {'form': form, 'submitted': submitted})
+
+
+class Faqs(CreateView):
+    """
+    Displays Frequently asked questions page.
+    """
+    template_name = 'faqs.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name, {})
+
