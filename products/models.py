@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth import get_user_model
+from django.db.models import Avg
 
 
 class Category(models.Model):
@@ -14,6 +16,7 @@ class Category(models.Model):
 
     def get_friendly_name(self):
         return self.friendly_name
+    
 
 
 class Product(models.Model):
@@ -32,3 +35,30 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    
+    def average_rating(self) -> float:
+        return Rating.objects.filter(post=self).aggregate(Avg("rating"))["rating__avg"] or 0
+
+    def __str__(self):
+        return f"{self.name}: {self.average_rating()}"
+
+    
+class Review(models.Model):
+    """
+    Models the fields for adding product reviews.
+    """
+    User = get_user_model()
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name='reviews'
+    )
+    username = models.ForeignKey(User, on_delete=models.CASCADE,
+                                 related_name='user_reviews')
+    message = models.TextField(help_text='Add your review here')
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']
+
+    def __str__(self):
+        return f'Review {self.message} by {self.username}'

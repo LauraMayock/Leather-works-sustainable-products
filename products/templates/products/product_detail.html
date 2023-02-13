@@ -125,6 +125,67 @@
                     </form>
                 </div>
             </div>
+             <!--- Container for product reviews -->
+    <div class="container-fluid mt-2 mb-4">
+        <div class="row">
+            <!--- Container for product reviews -->
+            <div class="col-md-6 card mb-4 mt-3 border-0">
+                <div class="card-body">
+                    <h3 class="card-subtitle mb-2 cust-review-h3" style="color: #351c75">Customer Reviews
+                    </h3>
+                    {% for review in reviews %}
+                    <div class="card-body mt-3 mb-3">
+                        <p class="card-text">{{ review.username }} said:
+                        </p>
+                        <p class="card-text"><i>
+                                {{ review.message | linebreaks }}</i></p>
+                        <span class="text-muted">
+                            {{ review.created_on }}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- Container for adding product reviews -->
+                <div class="card-body">
+                    <!--- Link to inform how registration is required -->
+                    {% if not user.is_authenticated %}
+                    <div class="card-body">
+                        <h3 class="card-subtitle mb-2" style="color: #351c75">Would you like to review this product?
+                        </h3>
+                        <div class="card-body mb-3">
+                            <p class="card-text register-text">Please either <a style="color:#351c75"
+                                    href="{% url 'account_login' %}"><strong>sign in</strong></a> to your account or
+                                register first.
+                            </p>
+                            <a href="{% url 'account_signup' %}" class="btn standard-btn register-btn">Register
+                            </a>
+                        </div>
+                    </div>
+                    <!--- Signed in user can leave a product review -->
+                    {% else %} {% if user.is_authenticated %}
+                    <div class="card-body">
+                        <h3 class="card-subtitle cust-review-h3" style="color: #351c75">Leave your review
+                        </h3>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Reviewing as:
+                                <span>{{ user.username }}
+                                </span>
+                            </p>
+                            <!---User feature to add product review  -->
+                            <form method="post" style="margin-top: 1.3em;">
+                                {{ review_form | crispy }} {% csrf_token %}
+                                <!---Button to submit product review -->
+                                <button type="submit" class="standard-btn">Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    {% endif %} {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
         </div>
     </div> 
 {% endblock %}
