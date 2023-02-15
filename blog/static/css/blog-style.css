@@ -1,3 +1,25 @@
+
+/*--------------------------------------------------------pagination*/
+.pagination {
+  margin-bottom: 100px;
+}
+
+.page-link {
+  color:  white;
+  background-color: #23BBBB;
+}
+
+.page-link{
+  background-color:  #23BBBB;
+  color:white;
+}
+
+
+
+
+
+
+
 /* FAQs Vertical Accordion credited to Monica Wheeler on CodePen  */
 #faqs-section {
     width: 100%;
@@ -47,7 +69,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    box-shadow: 0 0 0 0.15rem #674ea780;
+    box-shadow: 0 0 0 0.15rem black;
   }
   
   summary::-webkit-details-marker {
@@ -55,7 +77,7 @@
   }
   
   .control-icon {
-    fill: #674ea7;
+    fill: black;
     transition: 0.4s;
     pointer-events: none;
   }

@@ -1,6 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView, CreateView
+from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, CreateView, View
 from .models import Post
+from django.utils.text import slugify
 from .forms import ContactForm
 
 
@@ -13,6 +14,23 @@ class PostList(ListView):
     template_name = "blog.html"
     paginate_by = 6
 
+
+class PostDetail(View):
+    """
+    Gets full post
+    """
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Post.objects
+        post = get_object_or_404(queryset, slug=slug)
+
+        return render(
+            request,
+            "post_details.html",
+            {
+                "post": post,
+            },
+        )
+    
 
 def contact(request):
     """

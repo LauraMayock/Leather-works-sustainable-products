@@ -1,0 +1,35 @@
+{% extends 'base.html' %} 
+{% block content %}
+{% load crispy_forms_tags %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+<div class="masthead offset-md-1">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                 <h1 class="post-title">{{ post.title }}</h1>
+                 <h4>{{ post.author }}</h4>
+                 <p class="card-text ">
+                    {{ post.content | safe }}
+                </p>
+             </div>
+             <div class="d-none d-md-block col-md-5 masthead-image">
+                 <!-- The featured image URL or an alternitive if one isnt provided -->
+                 {% if "placeholder" in post.featured_image.url %}
+                <img src="https://res.cloudinary.com/dyhess8yw/image/upload/v1666291002/shutterstock_587276996-800x500_kcsyxi.jpg" width="100%">
+                {% else %}
+                <img src=" {{ post.featured_image.url }}" width="100%">
+                {% endif %}
+            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+        </div>
+        </div>
+    </div>
+
+{% endblock content %}
