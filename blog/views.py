@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, CreateView, View
 from .models import Post
 from django.utils.text import slugify
-from .forms import ContactForm
+from .forms import ContactForm, BlogPost
 
 
 class PostList(ListView):
@@ -30,7 +30,40 @@ class PostDetail(View):
                 "post": post,
             },
         )
-    
+
+def update_post(request, post_id):
+    """
+    Users can update book reviews that they have
+    created using a form
+    """
+    post = Post.objects.get(pk=post_id)
+    form = BlogPost(request.POST or None, instance=post)
+    if post.author != request.user:
+        return redirect('This is not your Post')
+    if form.is_valid():
+        form.save()
+        return redirect('blog')
+
+    return render(request,
+                  'update_post.html',
+                  {'update-post': post, 'form': form})  
+
+
+def delete_post(request, post_id):
+    """
+    Users can delete post
+    """
+    pst = Post.objects.get(pk=post_id)
+    context = {'pst': pst}
+
+    if request.method == 'POST':
+        rev.delete()
+        messages.success(request,
+                         ('You have deleted this review sucessfully.'))
+        return redirect('blog')
+
+    return render(request, 'delete.html', context)
+
 
 def contact(request):
     """

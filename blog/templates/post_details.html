@@ -15,21 +15,38 @@
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
                  <h1 class="post-title">{{ post.title }}</h1>
-                 <h4>{{ post.author }}</h4>
                  <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
              </div>
              <div class="d-none d-md-block col-md-5 masthead-image">
                  <!-- The featured image URL or an alternitive if one isnt provided -->
-                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://res.cloudinary.com/dyhess8yw/image/upload/v1666291002/shutterstock_587276996-800x500_kcsyxi.jpg" width="100%">
-                {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
-                {% endif %}
-            <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+                 <div class="image-container">
+                    {% if "placeholder" in post.featured_image.url %}
+                    <img class="card-img-top" src="{{ post.featured_image }}" style="width:100%"
+                      alt="Blog post image">
+                    {% else %}
+                    <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="" style="width:100%">
+                    {% endif %}
+                  </div>
+            <p class="post-subtitle">Author: {{ post.author }} | {{ post.created_on }}</p>
         </div>
         </div>
-    </div>
+
+    {% if user.is_authenticated %} 
+{% if user.id == x.author.id %}
+<div class="pb-4">
+<!-- Update or review button -->
+<a href="{% url 'update_post' x.id %}" class="btn mb-3 btn-signup btn active">Edit Post</a>
+<a href="{#}"class="btn mb-3 btn-outline-danger btn active">Delete Review</a>
+
+{% else %}
+<a class="btn back mb-4" href="{% url 'blog' %}">Back </a>
+</div>
+</div>
+
+{% endif %}
+{% endif %} 
+
 
 {% endblock content %}
