@@ -2,7 +2,10 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, CreateView, View
 from .models import Post
 from django.utils.text import slugify
-from .forms import ContactForm, BlogPost
+from .forms import ContactForm, BlogPost, CreatePost
+from django.contrib import messages
+
+
 
 
 class PostList(ListView):
@@ -31,6 +34,7 @@ class PostDetail(View):
             },
         )
 
+
 def update_post(request, post_id):
     """
     Users can update book reviews that they have
@@ -49,6 +53,7 @@ def update_post(request, post_id):
                   {'update-post': post, 'form': form})  
 
 
+
 def delete_post(request, post_id):
     """
     Users can delete post
@@ -63,6 +68,33 @@ def delete_post(request, post_id):
         return redirect('blog')
 
     return render(request, 'delete.html', context)
+
+
+class AddPost(CreateView):
+    """
+    Ensures that person is logged in to create
+    a blog post
+    """
+    template_name = 'add_post.html'
+    model = Post
+    form_class = CreatePost
+
+
+    def form_valid(self, form):
+        """_summary_
+        validates the form and adds a success message
+        to the template once a Post is successfully added
+        Sets the automatic slug for the object created
+        from the user input on the title
+        field
+        """
+        form.instance.author = self.request.user
+        messages.success(
+            self.request,
+            'Your blog post has now been posted')
+        form.slug = slugify(form.instance.title)
+        return super().form_valid(form)
+
 
 
 def contact(request):

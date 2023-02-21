@@ -38,7 +38,7 @@
 <div class="pb-4">
 <!-- Update or review button -->
 <a href="{% url 'update_post' x.id %}" class="btn mb-3 btn-signup btn active">Edit Post</a>
-<a href="{#}"class="btn mb-3 btn-outline-danger btn active">Delete Review</a>
+<a href="{% url 'delete_post' x.id %}"class="btn mb-3 btn-outline-danger btn active">Delete Review</a>
 
 {% else %}
 <a class="btn back mb-4" href="{% url 'blog' %}">Back </a>

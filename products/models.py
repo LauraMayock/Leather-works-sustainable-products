@@ -1,7 +1,8 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django.db.models import Avg
-
+from django.core.validators import MaxValueValidator,MinValueValidator
 
 class Category(models.Model):
 
@@ -26,7 +27,7 @@ class Product(models.Model):
     description = models.TextField()
     color_choice = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, default=0)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image_url_2 = models.URLField(max_length=1024, null=True, blank=True)
     image_url_3 = models.URLField(max_length=1024, null=True, blank=True)
@@ -41,7 +42,7 @@ class Product(models.Model):
         return Rating.objects.filter(post=self).aggregate(Avg("rating"))["rating__avg"] or 0
 
     def __str__(self):
-        return f"{self.name}: {self.average_rating()}"
+        return f"{self.title}: {self.average_rating()}"
 
     
 class Review(models.Model):
@@ -55,6 +56,7 @@ class Review(models.Model):
     username = models.ForeignKey(User, on_delete=models.CASCADE,
                                  related_name='user_reviews')
     message = models.TextField(help_text='Add your review here')
+    rating = models.IntegerField(default=0)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:

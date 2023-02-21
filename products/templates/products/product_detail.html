@@ -175,6 +175,7 @@
                             <!---User feature to add product review  -->
                             <form method="post" style="margin-top: 1.3em;">
                                 {{ review_form | crispy }} {% csrf_token %}
+
                                 <!---Button to submit product review -->
                                 <button type="submit" class="standard-btn">Submit
                                 </button>

@@ -60,12 +60,16 @@
                             <a href="{% url 'products' %}?category=womens_accessories" class="dropdown-item">Accessories</a>
                         </div>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item nav-item dropdown">
                         <a class="header-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <p class="my-0"> <a href="{% url 'blog' %}">Blog</a></p>
+                                <p class="my-0">Blog</p>
                             </div>
                         </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                            <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                            <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
+                        </div>
                     </li>
                     <li class="list-inline-item">
                         <a class="header-font nav-link" href="#" id="search" data-toggle="dropdown" aria-haspopup="true"
