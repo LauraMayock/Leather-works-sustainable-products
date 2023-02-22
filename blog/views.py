@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView, CreateView, View
 from .models import Post
 from django.utils.text import slugify
+from django.http import HttpResponseRedirect
 from .forms import ContactForm, BlogPost, CreatePost
 from django.contrib import messages
 
@@ -124,3 +125,25 @@ class Faqs(CreateView):
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name, {})
 
+
+def sustain(View):
+    model = Post
+    queryset = Post.objects.filter(title="What is Sustainable Leather?")
+    return HttpResponseRedirect('/blog/what_is_sustainable_leather/')
+
+
+def tanner(View):
+    model = Post
+    queryset = Post.objects.filter(title="Meet the chief Tanner")
+    return HttpResponseRedirect('/blog/meet-the-chief-tanner/')
+
+
+def certs(View):
+    model = Post
+    queryset = Post.objects.filter(title="We are a Certified Sustainable leather Manufacturer.")
+    return HttpResponseRedirect('/blog/We-are-cetfified/')
+
+def custom(View):
+    model = Post
+    queryset = Post.objects.filter(title="Bespoke Made to Order")
+    return HttpResponseRedirect('/blog/bespoke-made-to-order/')
