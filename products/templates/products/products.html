@@ -1,231 +1,143 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Products' %}{% endblock %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
 {% endblock %}
 
 {% block content %}
-</header>
-<div class="overlay"></div>
+<!-- Page header -->
 <div class="container-fluid">
+    <!-- Title -->
     <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="logo-font">Products</h2>
-            <p class="text-muted mt-3 text-right">
+        <div class="col mt-5 pt-5">
+            <div class="dropdown">
+                <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
+                    Categories
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?category=purse">Purses</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?category=satchels_and_bags">Satchels & bags</a>
+                  <a class="dropdown-item" href="{% url 'products' %}?category=wallets">Wallets</a>
+                </div>
+              </div>
+        </div>
+    </div>
+   
+    <!-- Product Count and Sorting Options -->
+    <div class="row">
+        <!-- Count of products in view -->
+        <div class="col-12 col-md-6 order-md-first">
+            <p class="text-muted mt-3 text-center">
                 {% if search_term or current_categories or current_sorting != 'None_None' %}
-                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                <span class="small all-products-link"><a href="{% url 'products' %}">All Products</a> | </span>
                 {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
-                            <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-                         <div class="position-sticky">
-                           <div class="list-group list-group-flush mx-3 mt-5 pt-5">  
-                            <a class="text-black pb-2" href="{% url 'home' %}">Home</a>
-                            <a class="text-black pb-2" href="{% url 'products' %}">All Products</a>
-                            <div class="hr1"></div>
-                    <div class="pb-2 text-left">
-                        <h4>Filters</h4>
-                    </div>
-                    <div class="py-2 border-bottom text-left">
-                        <h6 class="font-weight-bold">Sort by:</h6>
-                        {% for c in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
-                        </a>
-                    {% endfor %}
-                    </div>
-                </div>
-                                <div class="sort-select-wrapper w-80">
-                                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-8 col-md-6 order-md-first">
-                                    <h6 class="font-weight-bold pt-4">Categories:</h6>
-                                    <div><span class="fa fa-minus"></span></div>
-                                        <div class="nav-group">
-                                            <a href="{% url 'products' %}?category=Purse" class="dropdown-item">Purses</a>
-                                        </div>
-                                        <div class="nav-group">
-                                            <a href="{% url 'products' %}?category=bags" class="dropdown-item">Bags</a>
-                                        </div>
-                                        <div class="nav-group">
-                                            <div class="nav-group">
-                                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Wallets</a>
-                                            </div>
-                                        </div>
-                                        <div class="nav-group">
-                                            <div class="nav-group">
-                                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Large bags & Briefcases</a>
-                                            </div>
-                                        </div>  
-                                        <div class="nav-group">
-                                            <div class="nav-group">
-                                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Large bags & Briefcases</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8 col-md-6 order-md-first">
-                                            <h6 class="font-weight-bold pt-4">About Us</h6>
-                                            <div><span class="fa fa-minus"></span></div>                                       
-                                        </div>
-                    <div class="py-2 ml-3">
-                        <div class="nav-group">
-                            <div class="nav-group">
-                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Sustainability</a>
-                            </div>
-                        </div>   
-                        <div class="nav-group">
-                            <div class="nav-group">
-                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Meet the Tanner</a>
-                            </div>
-                        </div>   
-                        <div class="nav-group">
-                            <div class="nav-group">
-                                <a href="{% url 'products' %}?category=wallet" class="dropdown-item">Custom Products</a>
-                            </div>
-                        </div>   
-                            </div>
-                    </div>
-                </div>
-                            </div>
-                            </div>
-                            </nav>
-                        </header>
-     <!--Main layout-->
-<main style="margin-top: 58px">
-    <div class="container pt-4 ml-5 products">
-        {% for product in products %}
-        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
-            <div class="card h-100 border-0">
-                {% if product.thumbnail %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid" src="{{ product.thumbnail.url }}" alt="{{ product.name }}">
-                </a>
-                {% else %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                </a>
-                {% endif %}
-                <div class="card pb-0">
-                    <p class="mb-0">{{ product.name }}</p>
-                </div>
-                <div class="card-footer bg-white pt-0 border-0 text-left">
-                    <div class="row">
-                        <div class="col">
-                            <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                            {% if product.category %}
-                            <p class="2small mt-1 mb-0">
-                                <a class="text-muted" href="{% url 'products' %}category={{ product.category.name }}">
-                                    <i class="fas fa-tag mr-i"></i>{{ product.category.friendly_name }}
-                                </a>
-                            </p>
-                            {% endif %}
-                            {% if product.rating %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+        </div>
+        <!-- Sorting by category feature -->
+        <div class="col-12 col-md-6">
+            <div class="sort-select-wrapper mt-3 mb-3 text-center">
+                <select id="sort-selector"
+                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to
+                        high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high
+                        to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                    </option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                    </option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category
+                        (A-Z)</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                        Category (Z-A)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    
+        <!-- Grid layout for products -->
+        <div class="product-container col-10 mx-auto">
+            <div class="row mt-1 mb-2">
+                <!-- Bootstrap card combined with for loop to show all products -->
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 xl-screen-products-grid">
+                    <div class="card h-100 border-0">
+                        <!-- Product image (if available) -->
+                        <div class="product-img-container text-center">
+                            {% if product.thumbnail %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.thumbnail.url }}" alt="{{ product.name }}">
+                            </a>
                             {% else %}
-                                <small class="text-muted">No Rating</small>
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid mx-auto d-block" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="An image of this product is not available">
+                            </a>
+                            {% endif %}
+                        </div>
+                        <!-- Product details -->
+                        <div class="card-body pb-0">
+                            <h2 class="lead mb-0 text-left font-weight-bold">{{ product.name }}</h2>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                {% if product.category %}
+                                <p class="2small mt-1 mb-0">
+                                    <a class="text-muted" href="{% url 'products' %}category={{ product.category.name }}">
+                                        <i class="fas fa-tag mr-i"></i>{{ product.category.friendly_name }}
+                                    </a>
+                                </p>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'edit_product' product.id %}">Edit</a>
-                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                </small>
-                            {% endif %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_product' product.id %}">Edit</a>
+                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
+                </div>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
-        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}                        
-                        {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                                <hr>
-                            </div>
-                        {% endif %}
-                        {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
-                                 <!-- Back to top button -->
-<button onclick="topFunction()" id="myBtn" class="btn" title="Go to top">Top</button>
-                <hr>
-            </div>
-        {% endif %}
-    {% endfor %}
-        </div>
-  </main> 
- 
-
-
-
+    </div>
+</div>
 {% endblock %}
 
-<!---Javascript used when user is sorting products -->
 {% block postloadjs %}
-    {{ block.super }}
-<script type="text/javascript">
-    $('#sort-selector').change(function() {
-        let selector = $(this);
-        let currentUrl = new URL(window.location);
+{{ block.super }}
+<script>
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
-        let selectedVal = selector.val();
-        if(selectedVal != "reset") {
-            let sort = selectedVal.split("_")[0];
-            let direction = selectedVal.split("_")[1];
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
 
             currentUrl.searchParams.set("sort", sort);
             currentUrl.searchParams.set("direction", direction);
-            
+
             window.location.replace(currentUrl);
         } else {
-            currentUrl.searchParams.delete("sort")
+            currentUrl.searchParams.delete("sort");
             currentUrl.searchParams.delete("direction");
 
             window.location.replace(currentUrl);
         }
-
     })
-
-
-// Learned from  W3school
-let mybutton = document.getElementById("myBtn");
-  // When the user scrolls down 20px from the top of the document, show the button
-  window.onscroll = function() {
-    scrollFunction();
-   };
-  
-   function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-  // When the user clicks on the button, scroll to the top of the document
-  function topFunction() {
-    document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-  }
 </script>
-{% endblock %}                  
+{% endblock %}
