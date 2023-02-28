@@ -294,7 +294,13 @@ The database table scheme was created using [drawsql.app](https://drawsql.app) a
 
 
 
-### **SEO considerations**
+### **Web Marketing Strategy**
+
+The primary aim is to optimise search engine ranking and in turn increase traffic to the website.
+
+### **Search Engine Optimisation (SEO)
+SEO research is key to driving traffic from a browser based search i.e. Google to the website. The keyword research has played a crucial role in incorporating words that users typical search for when seeking to purchase Leather products online. To help improve the search engine ranking I ensured each web page has it's own title, and the site carries meta tags for a description and keywords which encapsulate the general content and focus of this B2C site.
+
 
 #### ***Keywords***
 
@@ -335,11 +341,11 @@ supporting Irish companies
   * What is the sustainable leather foundation's transparency dashboard?
   * What do customers want from the leather industry?
 
-I used ()[https://www.ryrob.com/keyword-tool/] to help find the best keywords to use. Unfortunately, it provided no information when I clicked Ireland or the United Kingdom as regions. There was no Europe option, so I decided to go with the United States for its large demographic.
+I used (ryrob.com)[https://www.ryrob.com/keyword-tool/] to help find the best keywords to use. Unfortunately, it provided no information when I clicked Ireland or the United Kingdom as regions. There was no Europe option, so I decided to go with the United States for its large demographic.
 
 Search using "Homemade sustainable leather products."
-[](media/keyword%20search%201.png)
-[](media/keyword%20search%202.png)
+[Keyword research](media/keyword%20search%201.png)
+[Keyword research](media/keyword%20search%202.png)
 
 
 The volume column in the above images shows the estimated google monthly volume using those keywords. 
@@ -398,30 +404,66 @@ This website also had a blog title generator to help with SEO. Here are a few op
 * Sustainable Leather: Reducing the Carbon Footprint of the Fashion Industry
 * What is sustainable leather?
 
-The output highlighted below helped with the naming conventions and descriptions for the products and page URLs to improve site searchability.
-
-#### ***Page Titles***
-
-
-
-#### ***Robots.txt and sitemap.xml***
-
 
 ### ***Content***
 
-The site did not have many opportunities for content in terms of paragraphs and text. A lot of the keywords are products themselves, so I have tried to leverage the use of heading tags and other semantic tags correctly  so that the quality of my site's search rating is as high as possible.
+The ecommerce site itself did not have many opportunities for content in terms of paragraphs and text. A lot of the keywords are products themselves, so I have tried to leverage the use of heading tags and image names so that the quality of my site's search rating is as high as possible. I also created a blog linked to the website in various areas. This has helped my optimise keywords, tailwords as well as optimal blog names that would help with SEO. I also added a FAQ page to provide extra information to the customer as well as links to outside sources.
 
-### **Surface**
+### XML Sitemap and Robots.txt file
 
-Once the project was planned I then had to decide on a theme. I wanted to keep it simple but have some color to help it stand out. I also wanted to keep it clean and easy to navigate. I have used a lot of white space and a simple color scheme to help with this.
+Additionally to help the search engines crawl the website, I've added an XML sitemap file to the main root directory. The file was created using the free service through [XML-Sitemaps.com](https://www.xml-sitemaps.com/). A sitemap is a way of organizing a website, identifying the URLs and the data under each section. Previously, the sitemaps were primarily geared for the users of the website. However, Google's XML format was designed for the search engines, allowing them to find the data faster and more efficiently. 
+
+I also created a robots.txt file but have not added any restrictions.
+
+A robots.txt file has also be included in the build to tell the search engine crawlers which URLs the crawler can access on this site. This is used mainly to avoid overloading the site with requests.
+
+### MailChimp Newsletter
+
+To allow the business to communicate with their customers to promote products and events through digital marketing, I've partnered with MailChimp. This is initially a free service with MailChimp to collect customers email addresses. The business can then construct the newsletter using MailChimp's online service. The feature is located on the Homepage, offering an opportunity for customers to enter their address to subscribe. Once the email address is submitted a success message is presented to thank them for signing up.
+
+<details>
+    <summary><b>MailChimp</b></summary>
+    <p>
+      <img src="media/mail chimp.png" alt="mailchimp newsletter subscription"/>
+    </p>
+</details><br>
+
+### Facebook Page
+
+To further increase traffic to the website, a Facebook page has been created that will display information about the products and family run business.
+
+<img src="media/facebook.image.png" alt="Facebook main image"/>
+Facebook header
+
+<img src="media/facebook.image2.png" alt="Facebook main page"/>
+Facebook main page 
+
+<img src="media/facebook.post.image.png" alt="Facebook post"/>
+Facebook Post 
+
+<img src="media/facebook.image1.png" alt="Facebook post"/>
+Facebook Post 
+
+
+<br>
+
 
 #### ***Colour Scheme***
 
-Black and white feature heavily throughout the site. However, I added color to help the content pop and to help with the branding. Below is the full-color grid I used to help me decide on the final color scheme. Some of my initial ideas changed due to contrasts, which are noted in [TESTING.md](TESTING.md).
+Black and white feature heavily throughout the site. However, I added color to help the content pop and to help with the branding. I chose gold, white and a dark grey.
 
-The final color scheme can be seen below:
+[Color Pallet](media/color%20pallet.png)
   
 
+* The logo was origionally created on [looka.com](https://looka.com/) I have used the logo on the main carousel. This ensures that when viewed on small screens, the branding is still visible even when the primary logo on the navbar disappears.
+<img src="media/Looka.com logo.png" alt="Logo"/>
+<br>
+  I based the rest of the color theme around this. Main Logo I got the gold effect for the navbar logo from [Codingartistweb](https://codingartistweb.com/)
+<img src="media/large navbar.png" alt="Large navebar"/>
+
+<img src="media/logo on small screen.png" alt="Logo on small screen"/>
+
+* I found another variation of the gold effect [Codepen](https://codepen.io/chilliconcode/pen/OWxqYR)
 
 #### ***Typography***
 
@@ -431,15 +473,6 @@ For this project, I have used the following fonts:
 * [Damion](https://fonts.google.com/specimen/Damion?query=damion) - This was for the logo. I initially wanted to make the V and the T cursive; however, I found this font perfect for all letters of the logo.
 
 
-## **Marketing Stratergy**
-
-As Vapor Town is a start-up business, the budget for marketing is limited. However, there are several ways that Vapor town can market itself to help increase sales and brand awareness. Using Facebook to pump out content and drive traffic is the first and most straightforward. The use of paid ads allows the business to target specific demographics and increase brand awareness. The use of social media is also a great way to get feedback from customers and to help with customer service. There is an image of the Facebook page in the features section below and a link to the page [here](https://www.facebook.com/people/Vapor-Town/100087760702549/).
-
-The second is the use of google ads which are a great way to increase brand awareness and help with SEO. The use of google ads can also help with the use of long-tail keywords and help with the ranking of the site.
-
-The third is the use of influencers. Influences are a great way to increase brand awareness. Free samples could be sent to popular vape reviewers on youtube in exchange for a mention/hashtag/ link in the description. Further helps raise brand awareness because the video could be posted on Facebook and the influencer tagged in the post, which with the help of the algorithm gods at Facebook, would help bring an organic audience to the Facebook page and, hopefully, the store.
-
-The final method would then be sending regular news letters to the mailing list obtained via the mailchimp form.  The newsletter would contain links to recent articles on vaping, the latest products and the highly sought after special offers and promotions. This would help with brand awareness building a community around the brand.
 
 # **Features**
 
