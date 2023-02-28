@@ -10,7 +10,7 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674150623/Project5/new_arrivals_leather_work_sustainable_leather.jpg" alt="Second slide">
+        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-ge-yonk-1152077.jpg" alt="Second slide">
         <div class="carousel-caption">
           <h5>We are Irish</h5>
           <a class="carousel-anchor" href="{% url 'blog' %}" aria-label="Navigates to view all products">
@@ -40,14 +40,42 @@
   </section>
 <section>
   <div class="container text-center">
-<h1>Irish owned company</h1>
+<h1 class="text-center">Irish owned company</h1>
     <div class="feature_divider"></div>
     <p>For years we have been working on making the best leather goods we can. Our emphasis is on durability,
       leather quality, Sustainability, craftmanship and unique style.</p>
 </div>
 <hr class="hr1"/>
 </section>
-
+<section>
+  <h2 class="text-center">Product Range</h2>
+  <div class="container d-inline-flex p-3 flex-wrap">
+  <div class="card flex-fill" style="width:300px">
+    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable-leather+wallets.jpg" alt="Leather wallet">
+    <div class="card-img-overlay">
+      <a href="{% url 'products' %}?category=wallets" class="btn btn-dark btn-lg">Wallets</a>
+    </div>
+  </div>
+  <div class="card flex-fill" style="width:300px">
+    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452400.jpg" alt="Leather purse">
+    <div class="card-img-overlay">
+      <a href="{% url 'products' %}?category=purse" class="btn btn-dark btn-lg">Purses</a>
+    </div>
+  </div>
+  <div class="card flex-fill" style="width:300px">
+    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-cottonbro-studio-6649429.jpg" alt="Leather bag">
+    <div class="card-img-overlay">
+      <a href="{% url 'products' %}?category=satchels_and_bags" class="btn btn-dark btn-lg">Satchels and Bags</a>
+    </div>
+  </div>
+  <div class="card flex-fill" style="width:300px">
+    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452643.jpg" alt="leather purse and bag">
+    <div class="card-img-overlay">
+      <a href="{% url 'products' %}" class="btn btn-dark btn-lg">All Products</a>
+    </div>
+  </div>
+</div>
+</section>
 <section>
   <div class="container">
     <div class="card-group vgr-cards">
@@ -62,7 +90,7 @@
             Cordwainers College London then worked with designer Bill Amberg in Notting Hill, London.
             Since coming home in 2001, I've been developing new designs and styles in the business.
           </p>
-          <a href="{% url 'blog' %}" class="btn font-weight-bold back">Learn More</a>
+          <a href="{% url 'blog' %}" class="btn btn-dark">Learn More</a>
         </div>
       </div>
       <div class="card">
@@ -73,20 +101,119 @@
             Today’s consumers are more mindful than ever before, and they expect the brands they purchase from to provide more
             they want environmentally friendly products from ethical, transparent brands.
             </p>
-            <a href="{% url 'sustain' %}" class="btn font-weight-bold back">Learn More</a>
+            <a href="{% url 'sustain' %}" class="btn btn-dark">Learn More</a>
         </div>
         <div class="card-img-body">
           <img class="img-thumbnail" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151618/Project5/pexels-dominika-roseclay-5462565_ujkufv.jpg" alt="Card image cap">
         </div>
+        <hr class="hr1"/>
   </div>
-
 </section>
 
 <section>
+<!-- Testimonials carousel section -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="First testimonial slide">
+        <div class="carousel-caption">
+          <h3>CUSTOMER TESTIMONIAL</h3>
+          <h5>THE BEST OF IRISH CRAFTMANSHIP</h5>
+          <p>I bought this bag as a gift for my sister. We both adore it. The quality of the leather
+            and the craftmanship are superb. It represents excellent value for money and exceeded our 
+            expectations. Suitable for use by anyone with a taste for Irish Luxury!
+          </p>
+        </div>
+      </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="Second testimmonial slide">
+          <div class="carousel-caption">
+            <h3>CUSTOMER TESTIMONIAL</h3>
+            <p>I am so pleased with this satchel bag! Arrived in three working days. Dary brown sustainable
+              leather. Description and photos are true to delivered product. The finish and 
+              attention to detail makes this a quality investment bag. Mine is for work and other family
+              members now have their eye on it too. The single[non divided] internal space makesit versatile
+              for so many uses. Would highly recommend!
+            </p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="Third testimonial slide">
+            <div class="carousel-caption">
+              <h3>CUSTOMER TESTIMONIAL</h3>
+              <h5>SO HAPPY I PURCHASED!!</h5>
+              <p>I bought the Biker bag in the lovely shop on County Mayo when visiting family recently. 
+                Such a beautiful bit of craftperson's work. Perfect size and weight. Tom the head tanner spent
+                time with us explaning the extent to which they go to to source sustainable leather. Their shop
+                is a must if you are in the West of Ireland. 
+              </p>
+            </div>
+        </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+    </div>
+    <hr class="hr1"/>
+  </section>
+<section>
+  <div class="container-fluid d-flex justify-content-center">
+      <div class="card-text">
+        <h4 class="card-title">FOR WHOLESALE ORDERS OF ANY QUESTIONS</h4>
+        <h3>PLEASE CALL OR EMAIL</h3>
+        <p><a target="_blank" rel="noopener noreferer"
+              aria-label="Send an email to The Leather Works"
+              href="leatherworkssustainability@gmail.com">leatherworkssustainability@gmail.com</a> 
+          <p>or call us on<a class="mailto-anchor" href="tel:+441618727795" aria-label="Call leather work" target="_blank"
+          rel="noopener noreferer"> 01618727795.</a></p>
+        <p>Vat No. IE655568209F</p>
+        <p class="mb-5">Registered in Ireland. 15768256</p>
+        </div>
+      </div>
+    </div>
+    <hr class="hr1"/>
+  </section>
 
-  <!-- MailChimp -->
-  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c1283ad29349d52ff28e0f2ae/b027505f437f9315c6318aa3c.js");</script>
-
+<section>
+          <!-- Begin Mailchimp Signup Form -->
+          <div class="container-fluid">
+          <div id="mc_embed_signup">
+            <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=c1283ad29349d52ff28e0f2ae&amp;id=7e71b104ff&amp;f_id=004d2fe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <h2>Sign Up:</h2>
+                <h3>For latest deals.</h3>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+        <div class="mc-field-group">
+          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+        </label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+        </div>
+          <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1283ad29349d52ff28e0f2ae_7e71b104ff" tabindex="-1" value=""></div>
+                <div class="optionalParent">
+                    <div class="clear foot">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-muted">
+                        <p class="brandingLogo"><a href="http://eepurl.com/ilvdfj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <!--End mc_embed_signup-->
+ 
 </section>
 
 

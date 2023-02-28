@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap:https://leather-works.herokuapp.com/sitemap.xml

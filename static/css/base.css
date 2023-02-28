@@ -10,7 +10,8 @@ section {
 }
 
 .carousel-caption {
-    background-color: #e1efe682;
+    background-color: #292b2c;
+    opacity: 0.5;
 }
 
 .carousel-anchor {
@@ -31,6 +32,15 @@ section {
 }
 
 
+
+/*---------------------------------------------mailchimp css*/
+#mc_embed_signup{
+    background:#fff; 
+    clear:left; 
+    font:14px 
+    Helvetica,Arial,sans-serif;  
+    width:600px;
+}
 
 /*----------------------------------------------Info cards*/
 
@@ -80,7 +90,7 @@ section {
 /*---------------------------------------- styling and hover effect on category badges --*/
 
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
+    background: #292b2c !important;
     color: #fff !important;
 }
 
@@ -130,7 +140,7 @@ a.category-badge > span.badge:hover {
 
 /*------------------------------------Change color of navbar */
 #topnav {
-    background-color: black;
+    background-color: #292b2c;
 }
 
 
@@ -191,9 +201,8 @@ a.category-badge > span.badge:hover {
     z-index: 99; 
     border: none; 
     outline: none; 
-    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
-                radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
-    color: black; 
+    background: #292b2c;
+    color: white; 
     cursor: pointer; 
     padding: 15px; 
     border-radius: 10px; 
@@ -330,7 +339,7 @@ input[name='q']::placeholder {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid#292b2c !important;
 }
 
 /* ------------------------------- Footer (Code inspired by @csscoding_ instagram page */
@@ -347,7 +356,7 @@ input[name='q']::placeholder {
 }
 
 .footer {
-    background: black;
+    background: #292b2c;
     padding: 70ox o;
 }
 

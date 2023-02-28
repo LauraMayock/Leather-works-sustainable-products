@@ -33,8 +33,11 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
-         <!-- MailChimp -->
-        <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/c1283ad29349d52ff28e0f2ae/b027505f437f9315c6318aa3c.js");</script>
+        <!--Mail chimp css-->
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+        	
+        </style>
         <!-- add font family-->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -44,6 +47,7 @@
 
     <title>Leather works {% block extra_title %}{% endblock %}</title>
   </head>
+  <!----Logo-->
   <body class="d-flex flex-column min-vh-100">
     <header id ="topnav" class="container-fluid fixed-top">
         <div class="row pt-lg-2 d-none d-lg-flex">
@@ -52,7 +56,7 @@
                     <h2 class="logo-font my-0"><strong>Leather Works</strong></h2>
                 </a>
             </div>
-            <!-- Search Feature -->
+            <!-- Navbar -->
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-right">	
                 <ul class="list-inline list-unstyled text-md-right my-0">
                     <li class="list-inline-item nav-item dropdown">
@@ -75,9 +79,12 @@
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                            {% if request.user.is_superuser %}
                             <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                            {% else %}
                             <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
                         </div>
+                        {% endif %}
                     </li>
                     <li class="list-inline-item">
                         <a class="header-font nav-link" href="#" id="search" data-toggle="dropdown" aria-haspopup="true"
@@ -137,9 +144,9 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-black">
+        <div class="row bg-muted">
             <nav class="navbar navbar-expand-lg navbar-dark w-100">
-                <button class="navbar-toggler back" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler btn-muted" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}

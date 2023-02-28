@@ -1,12 +1,17 @@
 # **Leather Works**
 
-[Live Website]()
+<img src="media/responsive mock up.png" alt="How the website displays on differing devices"/>
+
+[Live Website](https://leather-works.herokuapp.com/)<br>
+[GitHub Repo](https://github.com/LauraMayock/Leather-works-sustainable-products)
+
+## Business Background
+
+<br>
 
 Leather works is a small company making and selling leather products from sustainably sourced leather. With consumers being more mindful than ever, we aim to provide high-quality, environmentally friendly, and ethically sourced products that will last a lifetime. 
 
-
-**How does our product source ethical and enviromentally friendly leather?**
-
+<br>
 
 ## **Table of Contents**
 
@@ -162,7 +167,7 @@ To clearly understand the business owner's requests and requirements for this pr
 
 ### ***Agile Methodology***
 
-The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board, which can be seen here - (Leather Works)[]
+The Agile Methodology was used to plan this project. This was implemented through Github and the Project Board, which can be seen here - (Leather Works)[https://github.com/users/LauraMayock/projects/7]
 
 Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
 
@@ -171,7 +176,7 @@ Current Iteration
 In Progress
 Done
 
-(Image of Kanban)[]
+(Image of Kanban)[media/kanban-board.png]
 
 Github issues were used to create User Stories and any other Fixes or Updates for the project. This is where the project user was assigned; labels were added to show at a glance importance of tasks and help prioritize jobs. User story was added to the appropriate Iteration and the project. Each User Story, Fix or Update had a clear title, acceptance criteria and smaller tasks (if applicable).
 
@@ -181,20 +186,49 @@ Milestones were used to create Iterations. There were 3 Iterations, each dated a
 
 ##### ** - 1st Iteration:**
 
-* As a **Developer** I can...
-  * ...**Create a Git hub repository** so that I can **Store my project files online.**
-  * ...**Create a Heroku app** so that I can **link to the a virtually hosted the deployed site.**
+  As a **Shopper** I am able to...
+  * ...**view a list of products** so that I can **select some to purchase.**
+  * ...**view individual products in detail** so that I can **make a more informed decision**
+  * ...**sort site items** so that I can **easily identify the best price/ product.**
+  * ...**search items using a search bar** so that I can **easily search for a specific item and how many items fall under that search name**
+  * ...**easily register with the site** so that I can **have a personal account and profile**
+  * ...**As a shopper I am able to login/logout** so that I can **easily access my preexisting account**
+  * ...**view the footer** so that I can **access all relevant information in a click of a button**
+
 
 ##### ** 2ed Iteration:**
 
 * As a **Shopper** I want to be able to...
-  * ...**Clearly identity the sites purpose upon visiting** so that I can **determine if the site is what I am looking for.**
+  * ...**sort items by categories** so that I can **find the product I am looking for quickly or view all products that are alike on the same page** 
+  * ...**clearly see the colors available for each product** so that I can **easily choose the correct color.**
+  * ...**I am able to recover a lost password** so that I can **recover access to my account/profile**
+  * ...**amend and view my profile** so that I can **view orders history and confirmation and save my payment infromation**
+  * ...**view items In my basket** so that I can **view my chosen products as well as the total cost**
+  * ...**pay for items in a secure way** so that I can **confidently shop knowing that my personal/banking/card information is safe**
+  * ...**receive a confirmation email** so that I can **be assured the transaction was processed and have a record of the purchase.**
+
+As a **store owner** I am able to 
+  * ...**add a product to the database** so that I can add **new items to the store**
+  * ...**edit/update product information** so that I can **ensure my store has the correct description, price, images on each product**
+  * ...**delete a product** so that I can **remove items that are now longer for sale**
 
 
 ##### **3ed Interation:**
 
+* As a **Shopper** I want to be able to...
+  * ...**easily view the total of my purchase easily** so that I can **ensure that I am happy with my chosen item and so I dont spend over my budget**
+  * ...**easily see the purpose of the site from the landing page** so that I can **see if the site is relevant to my needs**
+  * ...**As a user I have easy accessible information that is relevant to me** sot that i can **make an informed decision on the shop I choose to buy from and the products I purchase**
+  * ...**keep upto date with leather works on their social media accounts** so that I can be **first to hear about new products and deals**
+  * ...**As a user I am able to suscribe to a newsletter** so that I can be **upto date on latest product releases and deals**
+
+
+
+##### **4th Interation:**
+
 * As a **Site User** I want to be able to...
   * ...**Register for an account** so that I can **save my personal details, view my order history online.**
+
 
 ### ***Opportunities***
 
@@ -255,6 +289,9 @@ Wireframes were created using Balsamiq wireframes to visualize how the site woul
 #### **Database Schema:**
 
 The database table scheme was created using [drawsql.app](https://drawsql.app) and can be seen below.
+
+[Database wireframe](media/database.png)
+
 
 
 ### **SEO considerations**
