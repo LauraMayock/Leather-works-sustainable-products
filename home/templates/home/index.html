@@ -49,34 +49,34 @@
 </section>
 <section>
   <h2 class="text-center">Product Range</h2>
-  <div class="container d-inline-flex p-3 flex-wrap">
-  <div class="card flex-fill" style="width:300px">
-    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable-leather+wallets.jpg" alt="Leather wallet">
+  <div class="container-cat d-flex justify-content-center mb-5">
+    <div class="card flex-fill" style="width:150px">
+        <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable-leather+wallets.jpg" alt="leather purse and bag">
+        <div class="card-img-overlay">
+          <a href="{% url 'products' %}?category=wallets" class="btn btn-dark btn-sm">Wallets</a>
+        </div>
+      </div>
+    <div class="card flex-fill" style="width:150px">
+        <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452400.jpg" alt="Leather purse">
+        <div class="card-img-overlay">
+            <a href="{% url 'products' %}?category=purse" class="btn btn-dark btn-sm">Purses</a>
+        </div>
+    </div>
+  <div class="card flex-fill" style="width:150px">
+    <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-cottonbro-studio-6649429.jpg" alt="Leather bag">
     <div class="card-img-overlay">
-      <a href="{% url 'products' %}?category=wallets" class="btn btn-dark btn-lg">Wallets</a>
+    <a href="{% url 'products' %}?category=satchels_and_bags" class="btn btn-dark btn-sm">Satchels and Bags</a>
     </div>
   </div>
-  <div class="card flex-fill" style="width:300px">
-    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452400.jpg" alt="Leather purse">
-    <div class="card-img-overlay">
-      <a href="{% url 'products' %}?category=purse" class="btn btn-dark btn-lg">Purses</a>
-    </div>
+  <div class="card flex-fill" style="width:150px">
+    <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452643.jpg" alt="leather purse and bag">
+        <div class="card-img-overlay">
+          <a href="{% url 'products' %}" class="btn btn-dark btn-sm">All Products</a>
+        </div>
   </div>
-  <div class="card flex-fill" style="width:300px">
-    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-cottonbro-studio-6649429.jpg" alt="Leather bag">
-    <div class="card-img-overlay">
-      <a href="{% url 'products' %}?category=satchels_and_bags" class="btn btn-dark btn-lg">Satchels and Bags</a>
-    </div>
-  </div>
-  <div class="card flex-fill" style="width:300px">
-    <img class="card-img-top m-5" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452643.jpg" alt="leather purse and bag">
-    <div class="card-img-overlay">
-      <a href="{% url 'products' %}" class="btn btn-dark btn-lg">All Products</a>
-    </div>
-  </div>
-</div>
 </section>
 <section>
+  <hr class="hr1"/>
   <div class="container">
     <div class="card-group vgr-cards">
       <div class="card">

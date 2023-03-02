@@ -28,7 +28,12 @@
               </div>
         </div>
     </div>
-   
+    
+        {% for c in current_categories %}
+        <a class="text-muted" href="{% url 'products' %}?category={{ c.name }}">
+            <h2>{{ c.friendly_name }}</h2>
+        </a>
+    {% endfor %}
     <!-- Product Count and Sorting Options -->
     <div class="row">
         <!-- Count of products in view -->

@@ -107,7 +107,7 @@
                             <div class="input-group-append">
                                 <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit" aria-label="search">
                                 <span class="icon">
-                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                                    <i class="fa-solid text-black fa-magnifying-glass fa-lg"></i>
                                 </span>
                                 </button>
                             </div>
@@ -122,15 +122,15 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
+                                {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
+                            {% if request.user.is_superuser %}
+                            <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                           {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
@@ -152,7 +152,7 @@
         </div>
         <div class="row bg-muted">
             <nav class="navbar navbar-expand-lg navbar-dark w-100">
-                <button class="navbar-toggler btn-muted" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler back" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
@@ -196,5 +196,5 @@
     {% endblock %}
 
     
-  </body>
+</body>
 </html>

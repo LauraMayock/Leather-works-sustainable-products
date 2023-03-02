@@ -171,10 +171,10 @@ The Agile Methodology was used to plan this project. This was implemented throug
 
 Through the use of the Kanban board in the projects view in Github, the project was divided into a few different sections:
 
-Backlog
-Current Iteration
-In Progress
-Done
+* Backlog
+* Current Iteration
+* In Progress
+* Done
 
 (Image of Kanban)[media/kanban-board.png]
 
@@ -184,7 +184,7 @@ Milestones were used to create Iterations. There were 3 Iterations, each dated a
 
 #### **User Stories:**
 
-##### ** - 1st Iteration:**
+##### **1st Iteration:**
 
   As a **Shopper** I am able to...
   * ...**view a list of products** so that I can **select some to purchase.**
@@ -196,7 +196,7 @@ Milestones were used to create Iterations. There were 3 Iterations, each dated a
   * ...**view the footer** so that I can **access all relevant information in a click of a button**
 
 
-##### ** 2ed Iteration:**
+##### **2ed Iteration:**
 
 * As a **Shopper** I want to be able to...
   * ...**sort items by categories** so that I can **find the product I am looking for quickly or view all products that are alike on the same page** 
@@ -463,7 +463,7 @@ Black and white feature heavily throughout the site. However, I added color to h
 
 <img src="media/logo on small screen.png" alt="Logo on small screen"/>
 
-* I found another variation of the gold effect [Codepen](https://codepen.io/chilliconcode/pen/OWxqYR)
+* I found another variation of the gold effect on codepen that I used to create a gold horrizontal line [Codepen](https://codepen.io/chilliconcode/pen/OWxqYR)
 
 #### ***Typography***
 
@@ -476,53 +476,51 @@ For this project, I have used the following fonts:
 
 # **Features**
 
-## **Common to All Pages**
-
 ### **Navbar**
 
 The navigation bar is the core navigation for the site. It differs slightly from mobile to desktop; however, both include all the same components.
 
-#### **Overall Appearance**
-
 ##### ***Desktop***
 
-![Desktop Navbar](docs/features/desktop/navbar-desktop.JPG)
+![Desktop Navbar](media/navbar-large.png)
 
 ##### ***Mobile***
 
-![Mobile Navbar](docs/features/mobile/navbar-mobile.JPG)
-
-#### **Common Navbar Features for both Desktop and Mobile**
+![Mobile Navbar](media/navbar-small.png)
 
 ##### ***Logo***
 
-The logo was designed to symbolize the brand. I made it myself using HTML and CSS (including bootstrap classes). The logo is then scattered around the website to add color and help develop brand familiarity and recognition.
+The logo on the navbar was created using HTML and CSS (including bootstrap classes). It was based on the logo hero image used in the image carousel.
 
-The size of the logo is responsive to the screen size. On mobile, it is smaller; on desktop, it is more prominent. Hence, it was important that the color scheme be vivid and the image relatable to the store's name.
+The size of the logo can also be used as a link to the home page. On mobile, the Logo is replaced with a hamburger menu for ease of use when navigating on smaller screens.
 
-###### ***Desktop***
-
-![Desktop Logo](docs/features/desktop/logo-desktop.JPG)
-
-###### ***Mobile***
-
-![Mobile Logo](docs/features/mobile/logo-mobile.JPG)
+![Logo, Top right of large screen](media/logo.png)
 
 ##### ***Search Bar***
 
-The search bar changes location according to the screen size, and this was to prevent squashing it on mobile. On desktop, it is in the center of the navbar, and on mobile, it is below the logo.
+The search bar is accessible by clicking on the universally recognisable search icon. This opens the input bar that allowes the user enter their search term, and the products page will return any products that match the search term. This function checks the product name and description; the search term is retained and displayed to the user next to the number of results displayed.
 
-###### ***Desktop***
+![Search bar Logo](media/search.png)
 
-![Desktop Search Bar](docs/features/desktop/search-desktop.JPG)
+![Search bar Logo](media/big-search.png)
 
-###### ***Mobile***
+![Search results](media/product%20results.png)
 
-![Mobile Search Bar](docs/features/mobile/search-mobile.JPG)
+#### **Product menu tab**
 
-The user can enter their search term, and the products page will return any products that match the search term. This function checks the product name and description; the search term is retained and displayed to the user next to the number of results displayed.
+The Product button is a dropdown button that provides the user access to each of the product categories available to them. Once a product category is chosen, the user will be brought to a page displaying the product category and the number of items in that class.
 
-![Search Bar](docs/features/search-term.JPG)
+![Product dropdown](media/product-drop.png)
+
+![Product category results](media/product%20results.png)
+
+#### **Blog menu**
+
+The Blog button shows a dropdown nav link which shows a link access to the blog or if you are a superuser you also have access to a Create Post link.
+
+![blog dropdown](media/blog.png)
+
+![Superuser access to blog dropdown](media/superuser%20blog.png)
 
 #### **Account menu**
 
@@ -530,107 +528,112 @@ The account menu is a drop-down menu that appears when the user clicks on the ac
 
 ##### ***Unauthenticated***
 
-![Unauthenticated Account Menu](docs/features/unauthenticated.JPG)
+![Unauthenticated Account Menu](media/my%20account%20not%20logged%20in.png)
 
-##### ***Authenticated***
+##### ***Superuser access***
 
-![Authenticated Account Menu](docs/features/authenticated.JPG)
+![Authenticated Account Menu](media/superuser%20acc.png)
 
-#### **Cart icon**
 
-The cart icon is visible in the navbar on all pages. The icon indicates the current total of all the items in the cart and how many things make up this total.
+#### **Basket icon**
 
-![Cart Icon](docs/features/cart-icon.JPG)
+The Basket icon is visible in the navbar on all pages. The icon indicates the current total of all the items in the basket and how many things make up this total.
+
+![Basket Icon](media/empty%20basket.png)
 
 A cart preview appears when the user adds an item to the cart. This cart preview relays the success message, gives a scrollable preview of the cart, the current total excluding delivery, and an informative message about how far the user is from the free delivery qualifier.
 
-![Cart Preview](docs/features/cart-preview.JPG)
+![Basket Preview](media/shopping%20bag%20dropdown.png)
 
-And the cart icon turns blue, and a small pill appears with the product count.
-
-![Cart Icon with pill](docs/features/cart-icon-pill.JPG)
-
-Clicking the cart icon any time will take the user to the shopping cart page described later.
+Clicking the cart icon any time will take the user to the shopping basket page described later.
 
 ### **Footer**
 
 #### ***Desktop***
 
-![Desktop Footer](docs/features/desktop/footer-desktop.JPG)
+![Desktop Footer](media/footer%20large.png)
 
 #### ***Mobile***
 
-![Mobile Footer](docs/features/mobile/footer-mobile.JPG)
+![Mobile Footer](media/footer%20small.png)
 
-#### **Common Features to both Desktop and Mobile**
-
-The footer is a simple footer that is present on all pages. It contains three main sections, a disclaimer and a copyright section at the bottom.
+The footer is present on all pages. It contains four main sections.
 
 The three sections typical to both desktop and mobile are:
 
-* Social Media Links
-* Newsletter Sign Up
-* Sitemap
+* Company Links
+    * About Us - Linking to relevant Blog post 
+    * Sustainability - Linking to relevent blog post
+    * Certificates - Linking to relevent blog post
 
-##### ***Social Media Links***
+* Get Help Links
+    * FAQ - Linking to FAQ page
+    * Contact us - Linking to contact us page
+
+* Shop
+    * All Products
+    * Customer orders - Linking to relevant blog post
+
+* Social media links
+    * Facebook 
+    * Linked in 
+    * Instagram
+    * Twitter
 
 I have included only one social media link for Facebook for the purposes of this project as it is the one I would like most to leverage in my marketing strategy. However, should this project ever grow further, it would also be expected to include Twitter and Instagram as a minimum.
 
-The current Facebook link will take the user directly to [Facebook](https://www.facebook.com/people/Vapor-Town/100087760702549/) where the shop will share promotions and news about the shop's ad internal vaping community regularly. More will be discussed about this in the marketing section.
+The current Facebook link will take the user directly to [Facebook](https://www.facebook.com/profile.php?id=10009067842726), where the shop will share promotions and news about the latest product drops as well as promote sustainable leather.
 
-I have included a screenshot of the Facebook page in case Facebook decides to remove it because it is not a real business at this stage.
-
-![facebook page](docs/features/facebook.JPG)
-
-##### ***Newsletter Sign Up***
-
-I contemplated creating my newsletter system. However, I decided to use [Mailchimp](https://mailchimp.com/) as it is a free service that is easy to use and has a good reputation with excellent analytics, which are vital for a new business when trying to understand the effectiveness of their marketing.
-
-##### ***Sitemap***
-
-The site map in the footer serves two purposes:
-
-  * It allows the user to navigate the site quickly and easily.
-  * It helps to increase the SEO of the site.
 
 ### **Notifications**
 
-Similar to the cart preview, the notifications are a small pop-up appearing on the screen's top right. They are used to inform the user of the status of their actions. For example, if the user adds an item to the cart, they will see a notification that says, "Item added to cart." If the user tries to add an item to the cart that is out of stock, they will see a notification that says, "Item out of stock." Where ever possible, when the cart preview is not required, the notifications do not include it. 
+Similar to the cart preview, the notifications are a small pop-up appearing on the screen's top right. They are used to inform the user of the status of their actions. For example, if the user adds an item to the cart, they will see a notification that says, "Item added to cart." If the user tries to add an item to the cart that is out of stock, they will see a notification that says, "Item out of stock." Where ever possible, when the cart preview is not required, the notifications do not include it This was acheived by using django toast messages. 
 
 These alerts are color-coded according to the default bootstrap colors/names below:
 
 ![Bootstrap Colors](docs/features/toasts-colors.JPG)
 
-** Kindly note that bg-secondary was not used for the toasts as it did not fit any specific purpose and alert type.
 ## **Page content**
 
 ### **Home Page**
 
 The home page is the first page on which a user lands. For this reason, it has to have a clearly defined purpose and be easy to navigate. The page will also be used to promote the shop and its products.
 
-To make the site's purpose immediately apparent, I included a hero image that was both colorful and eye-catching with a slogan relevant to the theme. I also had a call to action button that takes the user to the products page.
+To make the site's purpose immediately apparent, I included a carousel to view the two hero images that are both colorful, eye-catching and relevant to the theme. I also have two calls to action buttons one taking the user to the products page and one to the blog to learn more about sustainable leather and the company itself.
 
-Below, I have included four cards highlighting four popular product groupings. These demonstrate the site's purpose further and encourage the user to explore the site further.
+![Carousel image 1](media/corousel%201.png)
 
-![Home Page](docs/features/home-page.JPG)
+![Carousel image 2](media/carousel%202.png)
+
+Below , I have included a brief into to the business and four cards highlighting four product categories. These demonstrate the site's purpose further and encourage the user to explore the site further.
+
+![Home Page cards](media/cards.png)
+
+Next is a section encouraging users to find out more about the unique products, its benefits and to find out more about the craftspeople themselves.
+
+![Home Page Info section](media/info%20section.png)
+
+To solidify the trust and transparancy of the business I have added a carousel showing customer testimonials.
+
+![Home Page Testimonials](media/testimonial.png)
+
+And finally, information on purchasing wholesale and an option to Subscribe.
+
+![Home Page wholesale and subscribe section](media/wholesale.png)
 
 ### **Products Page**
 
-The products page is the main page of the site. It is where the user will go to browse the products and add them to the cart. It is also where users will go when they filter the products by category. 6 objects paginate the page at a time, and the user can navigate between pages using the pagination buttons at the bottom of the page.
+The product page is where the user will browse the products and add them to the cart. It is also where users will go when they filter the products by category. The user can navigate between pages using the pagination buttons at the bottom of the page.
 
-Wherever the filter set the user chooses, they can sort by price, rating, and name.
+As well as a All products button, there is a dropdown button on the page for filtering products by category. The category chosen is highlighted on the top left of the screen under the drop down. Wherever the filter set the user chooses, they can sort by price, rating, and name.
 
-On the individual product cards, the user can see the product name, price, rating, image, and, if relevant, a sale price. The user can also add the product to the cart from this page. Users can even add the product directly to their cart in the desired quantity without accessing the product details page. This intends to make the user experience as smooth as possible and reduce the number of clicks required to add an item to the cart.
+On the individual product cards, the user can see the product name, price, image, and category. The user can  accessing the product details page by clicking on the product card. In the product details page the user can choose quantities and color options where available.
 
-The product names are all displayed in h2 tags and resized using CSS to increase the SEO of the site.
+![Products Page](media/product%20page.png)
 
-A user accesses the product details by clicking on the product image.
+When logged in a super user will have access to and edit and delete button for each product card. This will allow for quick and easy update of the product range.
 
-![Products Page](docs/features/products-page.JPG)
-
-Further to the above, when a user searches for a product and no results are returned, a message is displayed informing them that no results were found.
-
-![No Results](docs/features/no-products.JPG)
+![Products Page Superuser](media/superuser%20product%20page.png)
 
 ### **Product Details Page**
 

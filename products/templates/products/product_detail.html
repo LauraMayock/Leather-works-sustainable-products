@@ -4,7 +4,7 @@
 {% block head_title %}- Product details {% endblock %}
 
 {% block page_header %}
-    <div class="container header-container">
+    <div class="container header-container-prod">
         <div class="row">
             <div class="col"></div>
         </div>
@@ -12,32 +12,41 @@
 {% endblock %}
 
 {% block content %}
+<section>
     <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">
-            <div>
-                <div class="image-container col-md-6">
-                    <div>
-                    {% if product.thumbnail %}
-                        <div>
-                                <img class="card-img-top img-fluid" src="{{ product.thumbnail.url }}" alt="{{ product.name }} ">
-                        </div>
-                    </div>
-                        <div class="row-cols-3 d-flex flex-row justify-content-center">
-                                <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
-                        <div>
-                                <img class="card-img-top img-fluid" src="{{ product.image_url_2 }}" alt="{{ product.name }}">
-                        </div>
-                        <div>
-                                <img class="card-img-top img-fluid" src="{{ product.image_url_3 }}" alt="{{ product.name }}">
-                        </div>
-                    </div>
-                    {% else %}
-                    <a href="">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+        <div class="row">  
+ {% if product.thumbnail %}
+     <!-- The grid: four columns -->
+     <div class="container-img2">
+<div class="row mt-md-5 mt-sm-3 mt-lg-3">
+    <div class="column">
+        <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{{ product.image_url }}" alt="{{ product.name }}" style="width:100%;" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{{ product.image_url_2 }}" alt="{{ product.name }}" style="width:100%;" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+        <img src="{{ product.image_url_3 }}" alt="{{ product.name }}" style="width:100%;" onclick="myFunction(this);">
+    </div>
+</div>
+<div class="container-img1">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+  <div id="thumbnail">
+  <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;">
+</div>
+    {% else %}
+    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+  {% endif %}
+  </div>
+
+  
          
             <div class="col-md-6">
                 <div class="product-details-container mb-5 mt-md-5">
@@ -112,13 +121,14 @@
                     </form>
                 </div>
             </div>
+    </section>
              <!--- Container for product reviews -->
     <div class="container-fluid mt-2 mb-4">
         <div class="row">
             <!--- Container for product reviews -->
             <div class="col-md-6 card mb-4 mt-3 border-0">
                 <div class="card-body">
-                    <h3 class="card-subtitle mb-2 cust-review-h3" style="color: #351c75">Customer Reviews
+                    <h3 class="card-subtitle mb-2 cust-review-h3" style="color: #cb9b51">Customer Reviews
                     </h3>
                     {% for review in reviews %}
                     <div class="card-body mt-3 mb-3">
@@ -133,19 +143,19 @@
                     {% endfor %}
                 </div>
                 <!-- Container for adding product reviews -->
-                <div class="card-body">
+                <div class="card-body mb-4">
                     <!--- Link to inform how registration is required -->
                     {% if not user.is_authenticated %}
                     <div class="card-body">
-                        <h3 class="card-subtitle mb-2" style="color: #351c75">Would you like to review this product?
+                        <h3 class="card-subtitle mb-2" style="color:  #cb9b51">Would you like to review this product?
                         </h3>
                         <div class="card-body mb-3">
-                            <p class="card-text register-text">Please either <a style="color:#351c75"
+                            <p class="card-text register-text">Please either <a style="color: #cb9b51"
                                     href="{% url 'account_login' %}"><strong>sign in</strong></a> to your account or
                                 register first.
                             </p>
-                            <a href="{% url 'account_signup' %}" class="btn standard-btn register-btn">Register
-                            </a>
+                            <button><a href="{% url 'account_signup' %}" class="btn btn-muted">Sign Up
+                            </a></button>
                         </div>
                     </div>
                     <!--- Signed in user can leave a product review -->

@@ -2,6 +2,25 @@ html {
     height: 100%;
 }
   
+/*---------------------------------NAVBAR STYLING */
+
+li.list-inline-item .nav-link:hover {
+    border-bottom: #cb9b51 solid 2px;
+    background-image: linear-gradient(
+	to right,
+	#814e01 0,
+    #cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#814e01 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
+   
+}
+
 
 /*---------------------------------HOMEPAGE STYLES */
 
@@ -31,8 +50,19 @@ section {
     color: white;
 }
 
+/*---------------------------------------------Category buttons main page*/
 
+.card-img-top {
+border: 1px solid #ddd; /* Gray border */
+border-radius: 4px;  /* Rounded border */
+padding: 5px; /* Some padding */
+width: 200px; /* Set a small width */
+}
 
+/* Add a hover effect (blue shadow) */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
 /*---------------------------------------------mailchimp css*/
 #mc_embed_signup{
     background:#fff; 
@@ -141,8 +171,9 @@ a.category-badge > span.badge:hover {
 /*------------------------------------Change color of navbar */
 #topnav {
     background-color: #292b2c;
+    width: 100VW;
+    margin-left: 0;
 }
-
 
 
 /*--------------------------------------background for buttons https://codepen.io/chilliconcode/pen/OWxqYR */
@@ -292,47 +323,69 @@ input[name='q']::placeholder {
 }
 
 
-/*---------------------------------------- image display--*/
-.myProducts-gallery img{
-    height: 100%;
-    width: 100%;
-    margin: 10px 0;
-    cursor: pointer;
-    display: block;
-    opacity: .5;
-    
-}
-    
-   
-.myProducts {
-    top: 25%;
-    left: 25%;
-    transform: translate(-25% , -25%);
-    position: absolute;
-}
-   
-.image-container img {
-    border: 5px solid white;
-    padding: 10px;
-    display: grid;
-    grid-gap:1rem;
-    grid-template-areas:
-    "img4 img4 img4"
-    "img4 img4 img4"
-    "img1 img 2 img3";
-}
-   
-.image-container img:hover{
-    transform: scale(1.25);
-    cursor: zoom-in;
-}
-   
-.image-container {
+/*---------------------------------------- image display inspored by w3 school tab gallery --*/
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
     float: right;
+    width: 25%;
     padding: 10px;
-}
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .header-container-prod {
+    margin-top: 100px;
+  }
 
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container-img1 {
+    position: relative;
+  }
+  
+  .thumbnail {
+    position: relative;
+    display: none;
+  }
 
+  .container-img2{
+    float:right;
+    width: 50%;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: black;
+    font-size: 20px;
+  }
+  
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
 
 .text-black {
     color: #000 !important;
@@ -367,7 +420,7 @@ input[name='q']::placeholder {
 
 .footer-col h4{
     font-size:18px;
-    color: white;
+    color: #cb9b51;
     text-transform: uppercase;
     margin-bottom: 30px;
     font-weight: 500;
@@ -393,7 +446,7 @@ input[name='q']::placeholder {
 }
 .footer-col ul li a{
     font-size: 16px;
-    color: #bbb;
+    color:  #cb9b51;
     text-decoration: none;
     font-weight: 300;
     display: block;
@@ -401,15 +454,16 @@ input[name='q']::placeholder {
 }
 
 .footer ul li a:hover{
-    color: #fff;
+    color:  #cb9b51;
     padding-left: 8px;
 }
 
 dl, ol, ul {
     list-style: none;
+    padding-left: 0;
 }
 
-.footer .social-links a{
+footer .social-links a{
     display: inline-block;
     height: 40px;
     width: 40px;
@@ -423,9 +477,6 @@ dl, ol, ul {
     transition: all 0.3s ease;
 }
 
-.footer-col .social-links a:hover{
-    font-size: 900;
-}
 
 /*---------------------------------Allauth form styling */
 
@@ -533,6 +584,7 @@ input[name='q']::placeholder {
     .footer-col{
         width: 50%;
         margin-bottom: 30px;
+        margin-left: 10px;
     }
     .header-container {
         padding-top: 116px;
@@ -540,6 +592,11 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+
+    .container-img2{
+        width:100%;
+    
     }
 
     .display-4.logo-font.text-black {
@@ -576,6 +633,7 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 
+
 }
 
 /* footer */
@@ -600,5 +658,34 @@ input[name='q']::placeholder {
     .carousel img {
         margin-top: 50px;
     }
+
+    #mc_embed_signup .foot {
+        width: 70%;
+    }
+
+    #mc_embed_signup .mc-field-group input {
+        width: 60%;
+    }
+
+    #mc_embed_signup .indicates-required {
+        width: 60%;
+    }
+
+    .container-cat {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    }
+
+    .card-img-top {
+        width:150px;
+        margin-left: 0;
+        padding: 5px;
+    }
     
+    .container-img2{
+        width:100%;
+    
+}
 }
