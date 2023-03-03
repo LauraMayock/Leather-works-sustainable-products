@@ -8,8 +8,7 @@ class NewProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-
+    
     def __init__(self, *args, **Kwargs):
         super().__init__(*args, **Kwargs)
         categories = Category.objects.all()

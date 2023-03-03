@@ -36,7 +36,7 @@
 <div class="container-img1">
     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
     <img id="expandedImg" style="width:100%">
-    <div id="imgtext"></div>
+    <div class="mt-2" id="imgtext"></div>
   </div>
   <div id="thumbnail">
   <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;">
@@ -123,15 +123,15 @@
             </div>
     </section>
              <!--- Container for product reviews -->
-    <div class="container-fluid mt-2 mb-4">
+    <section class="mb-5 pb-5">
+    <div class="container-fluid mt-2 mb-5">
         <div class="row">
             <!--- Container for product reviews -->
             <div class="col-md-6 card mb-4 mt-3 border-0">
-                <div class="card-body">
+                <div class="card-body mb-3">
                     <h3 class="card-subtitle mb-2 cust-review-h3" style="color: #cb9b51">Customer Reviews
                     </h3>
                     {% for review in reviews %}
-                    <div class="card-body mt-3 mb-3">
                         <p class="card-text">{{ review.username }} said:
                         </p>
                         <p class="card-text"><i>
@@ -157,13 +157,10 @@
                             <button><a href="{% url 'account_signup' %}" class="btn btn-muted">Sign Up
                             </a></button>
                         </div>
-                    </div>
                     <!--- Signed in user can leave a product review -->
                     {% else %} {% if user.is_authenticated %}
-                    <div class="card-body">
-                        <h3 class="card-subtitle cust-review-h3" style="color: #351c75">Leave your review
+                        <h3 class="card-subtitle cust-review-h3" style="color: #cb9b51">Leave your review
                         </h3>
-                        <div class="card-body">
                             <p class="card-text">
                                 Reviewing as:
                                 <span>{{ user.username }}
@@ -174,7 +171,7 @@
                                 {{ review_form | crispy }} {% csrf_token %}
 
                                 <!---Button to submit product review -->
-                                <button type="submit" class="standard-btn">Submit
+                                <button type="submit" class="standard-btn mb-5">Submit
                                 </button>
                             </form>
                         </div>
@@ -182,11 +179,7 @@
                     {% endif %} {% endif %}
                 </div>
             </div>
-        </div>
-    </div>
-        </div>
-    </div> 
-</div>
+        </section>
 {% endblock %}
 
 {% block postloadjs %}

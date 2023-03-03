@@ -639,46 +639,45 @@ When logged in a super user will have access to and edit and delete button for e
 
 Users can access the product details page when they need more information before committing to purchase an item. This page contains all the information the user needs to make an informed decision. The page is divided into four sections:
 
-* Breadcrumbs - A user can look at various other products in the same category or jump back to the home page.
-* Product Image
-* Name, Price, Rating, and select quantity
-* Tabs for product description and reviews.
+* Product Images - The main image container updates when one of the smaller images are clicked on.
+* Product Description - Name, Price, Rating, color if applicable, description and select quantity
+* Customer reviews and leave a review section.
 
-![Product Details Page](docs/features/desktop/details-desktop.JPG)
+![Product Details Page](media/product-detail-lg.png)
 
-The layout does change a little on a mobile view to improve the appearance
-
-![Product Details Page Mobile](docs/features/mobile/details-mobile.JPG)
-
-It is also worth noting that a superuser can see an edit and delete button on the details page to quickly improve certain felids and remove the product altogether should it be required. I decided to leverage the admin panel for most internal business functions; however, I will go into more detail later.
-
-![Product edit and delete for super users](docs/features/product-edit-del.JPG)
+![Product Details Page small](media/product-detail-sm.png)
 
 ### **Reviews**
 
-The reviews tab was best suited to be on the product details page, making it easy to determine for which product the review was intended. The reviews are displayed in an accordion to save space; however, this tab has a few different ways of displaying them depending on the user's verifications status.
+The reviews section was best suited to be on the product details page, making it easy to determine for which product the review was intended.
 
 #### ***Unauthenticated***
 
 The user can see all reviews when logged out; however, they cannot leave one. Above the accordion, they are prompted to log in or register to leave a review. The prompt also appears when there are no reviews, along with an invite to be the first to review the product.
 
-![Reviews when logged out](docs/features/reviews-logged-out.JPG)
+![Reviews when logged out](media/customer%20review%20login.png)
 
 #### ***Authenticated***
 
-If a product has no review and the user is logged in, they will see an inline review form. This review must have at least a title and a rating, and several checks are in place to ensure the rating is between 1 and 5, and the title is not empty.
+If a product has no review and the user is logged in, they will see an inline review form. 
 
-![inline review form](docs/features/reviews-inline.JPG)
+![review form](media/review.png)
 
-If there is already an existing review for a product, then the user has a button to take them to the same form but on a new page. Once the user submits the review, they are returned to the product details page of the product they were reviewing.
+Once the user submits the review, they are returned to the product details page of the product they were reviewing. A success alert will show and their review will be posted.
 
-![review form](docs/features/review-form.JPG)
+![review success](media/review-sucess.png)
 
-The last thing to mention here is that the review author (and the superuser in case of foul language) can delete or edit the review. Editing/deletion is performed by clicking the delete/edit button in the review body, visible only to them.
 
-![review edit and delete](docs/features/edit-review.JPG)
+### **Add a product - frontend form**
+This feature is enabled for super users only. Currently there is only one super user however the client may wish to add more as the inventory list increases. With this role based permission setting you can perform CRUD (Create, Review, Update and Delete) products from either the front or back end. The front end product management incorporates Bootstrap and Crispy to present clean forms to either Add, Edit or Delete a product. Super admins can review a product within the Product Details page - which when signed-in as a super user presents to links to either 'Edit' or 'Delete' and item. Otherwise this user type can add a product through the 'Account' drop-down nav menu, and selecting 'Add Products'. Below is an image of one of these screens, the ability to Update/Edit a product in the front end.
 
-From a programmatic perspective, the review calculation is amended each time a rating is added, edited, or deleted so that the overall rating is always accurate.
+![Edit or delete buttons](media/edit%20or%20delete.png)
+
+![Add product form](media/add%20a%20product.png)
+
+Once the product was added successfully and alert will show confirming this and the superuser will be redirected tho the product details page for the new product. They will have the option to view the product details as it will be viewed by the customer and edit or delete if required.
+
+![Success message](media/Screenshot%202023-03-03%20102748.png)
 
 ### **Edit product - frontend form**
 
