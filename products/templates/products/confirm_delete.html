@@ -3,28 +3,25 @@
 {% load i18n %}
 {% block title %}{% trans 'Delete Product' %}{% endblock %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/products.css' %}">
-{% endblock %}
+
 
 {% block content %}
 <!-- User must be authenticated to view these page and perform actions -->
 {% if request.user.is_superuser %}
+             
 <!-- Page header -->
 <div class="container-fluid">
     <div class="row">
-        <div class="col text-center mt-3 mb-3">
-            <h1 class="page-title">Product Management</h1>
+        <div class="col text-center mt-3 pt-5 mb-3">
             <hr class="w-50 mb-1">
         </div>
     </div>
     <!-- Container for Deleting a product -->
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
+        <div class="col-md-8 mt-3 pt-5 offset-md-2">
             <div class="card-body">
                 <h2 class="page-subtitle mb-3">Are you sure you would like to delete this product?</h2>
                 <!-- Confirming the product identified for deletion -->
-                <h3 class="page-h3-title">{{ product.name }}</h3>
             </div>
         </div>
     </div>
@@ -64,4 +61,5 @@
     </div>
 </div>
 {% endif %}
+
 {% endblock %}

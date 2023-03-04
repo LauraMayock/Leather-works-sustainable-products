@@ -410,7 +410,8 @@ input[name='q']::placeholder {
 
 .footer {
     background: #292b2c;
-    padding: 70ox o;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer- col{
@@ -574,8 +575,7 @@ input[name='q']::placeholder {
     .header-container {
         padding-top: 164px;
     }
-
-}
+}   
 
 /* pad the top a bit when navbar is collapsed on mobile */
 
@@ -586,6 +586,8 @@ input[name='q']::placeholder {
         margin-bottom: 30px;
         margin-left: 10px;
     }
+
+
     .header-container {
         padding-top: 116px;
     }

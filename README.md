@@ -681,30 +681,37 @@ Once the product was added successfully and alert will show confirming this and 
 
 ### **Edit product - frontend form**
 
-As shown above, the product details page has an edit button for the super user to make a quick edit should they spot a typo or want to change a picture. This button takes the superuser to a form pre-populated with the current product information. The user can then make the changes they require and submit the form. The form is validated on the front and back end, and the user is informed of any errors. The user is then redirected to the product details page.
+As shown above, the product details page has an edit button for the super user to make a quick edit should they spot a typo or want to change a picture. This button takes the superuser to a form pre-populated with the current product information. The user can then make the changes they require and submit the form. The form is validated on the front and back end, and the user is informed of any errors. The user is then redirected to the product details page and a confirmation message is shown.
 
-![Edit product form](docs/features/edit-product.JPG)
+![Edit product form](media/edit%20product.png)
+
+### **Delete product - frontend form**
+
+The super user can also choose to delete a product with delete button provided. When the delete option is clicked the super user is directed to another page requesting confirmation before finally deleting the product. You can either choose the cancel the request or delete the product. Once deleted you will be redirected to the products page and a confirmation of the products deletion will show.
+
+![Delete product](media/confirm_delete.png)
+
+![Delete confirmation](media/sucess-delete.png)
 
 ### **Shopping Cart**
 
-The shopping cart page is where the user can review the items for purchase, and there is a link that will skip the list of items and take the user directly to the totals at the bottom. The intention here is that if the user has a long list of items, they can quickly get to the checkout.
-
-The user can also amend the quantity of each update and click the update button to update the cart. The user can also remove an item from the cart by clicking the remove button. The user cannot add more of a product than is currently in stock.
+The shopping cart page is where the user can review the items for purchase.
+The user can also amend the quantity of each update and click the update button to update the cart. The user can also remove an item from the cart by clicking the remove button.
 
 Once the user is happy with the items in the cart, they can click the secure checkout button to proceed to the checkout page.
 
 The layout on this page changes slightly on mobile to improve the responsive nature. The quantity selector goes under the item on smaller screens. 
 #### ***Desktop***
 
-![Shopping Cart](docs/features/desktop/cart-desktop.JPG)
+![Shopping Cart]()
 
 #### ***Mobile***
 
-![Shopping Cart](docs/features/mobile/cart-mobile.JPG)
+![Shopping Cart](media/basket.png)
 
 Lastly, users will see the following message displayed if they try to access the shopping cart with no items.
 
-![Shopping Cart](docs/features/empty-cart.JPG)
+![Shopping Cart](media/empty%20shopping.png)
 
 ### **Checkout**
 
@@ -714,33 +721,19 @@ The user can also save their details from the checkout page. However, this optio
 
 The card element is injected by the stripe API and uses a payment system that is fully PCI compliant. The same API also handles any errors using the allocated div to display them to the user. For a list of test card numbers, please see the [stripe documentation.](https://stripe.com/docs/testing).
 
-When the form has been submitted, the pay now button converts into a spinner to show it is processing. Further to the spinner, there is a transparent overlay to prevent the user from clicking anything else and creating multiple orders.
-
 The page is fully responsive, and the display order changes slightly from mobile to desktop.
 
 #### ***Desktop***
 
-![Shopping Cart](docs/features/desktop/checkout-desktop.JPG)
+![Checkout](media/checkout.png)
 
 #### ***Mobile***
 
-![Shopping Cart](docs/features/mobile/checkout-mobile.JPG)
-
-Guests can also check out, and on the checkout page, they see the following in place of the save info checkbox.
-
-![Shopping Cart](docs/features/guest-checkout.JPG)
-
-If users are not logged in, there is no way to return to the checkout success page, as described below
-
-The last stage of the check out if for the user to receive an email like the sample below:
-
-![Shopping Cart](docs/features/confirmation-email.JPG)
+![checkout mobile](media/checkout%20sm.png)
 
 ### **Checkout Success**
 
-
-
-![Checkout Success]()
+![Checkout Success](media/sucess%20order.png)
 
 ### **Profile**
 
