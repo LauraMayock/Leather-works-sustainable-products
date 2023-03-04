@@ -124,7 +124,7 @@ def edit_product(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, isinstance=product)
+        form = NewProductForm(request.POST, request.FILES, isinstance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
@@ -133,7 +133,6 @@ def edit_product(request, product_id):
             messages.error(request, 'Failed to update product. Please ensure the form is valid before submitting.')
     else:
         form = NewProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_product.html'
     context = {

@@ -1,45 +1,51 @@
-{% extends "base.html" %} 
-{% load crispy_forms_tags %} 
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Edit Product' %}{% endblock %}
 
-{% block head_title %}- Edit Product{% endblock %}
+{% block extra_css %}
 
-{% block page_header %}
-<div class="container header-container">
-  <div class="row">
-    <div class="col"></div>
-  </div>
-</div>
 {% endblock %}
 
 {% block content %}
-  <div class="container fluid">
+<!-- Page header -->
+<div class="container-fluid">
     <div class="row">
-        <div>
-            <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+        <div class="col text-center mt-3 mb-3">
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Container for Edit Product form -->
+    <div class="row">
+        <div class="col-12 col-md-6 mb-4">
+            <h2 class="page-subtitle mb-3">Edit Product</h2>
+            <form action="{% url 'edit_product' product.id %}" class="form mb-2" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {% for field in form %}
                     {% if field.name != 'thumbnail' %}
-                       {{ field | as_crispy_field }}
+                        {{ field | as_crispy_field }}
                     {% else %}
-                       {{ field }}
-                   {% endif %}
+                        {{ field }}
+                    {% endif %}
                 {% endfor %}
-                <div class ="text-right">
-                    <a class="btn btn-dark rounded-0" href="{% url 'products' %}">Cancel</a>
-                    <button class="btn btn-dark rounded-0" type="submit">Add Product</button>
+                <div class="text-left">
+                    <!-- Cancel button -->
+                    <a href="{% url 'products' %}" class="btn rounded-0 btn-dark mt-3">Cancel</a>
+                    <!-- Submit button -->
+                    <button class="btn rounded-0 btn-dark mt-3" type="submit">Submit Updates</button>
                 </div>
             </form>
         </div>
-    {% endblock %}
-    
-    {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-    $('#new-image').change(function() {
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    $('#new-image').change(function () {
         var file = $('#new-image')[0].files[0];
         $('#filename').text(`Image will be set to: ${file.name}`);
     });
-    </script>
-    </div>
-  </div>
+</script>
 {% endblock %}
