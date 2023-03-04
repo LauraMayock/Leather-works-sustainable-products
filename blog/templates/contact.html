@@ -23,13 +23,14 @@
       <!-- Section Titile -->
       <p>Do you have a question, a concern?
         If so, please complete the form below and we will aim to respond within 24 hours.
-        Also visit our FAQs page to see whether your question has already been answered.</p>
+        Also visit our<a class="mailto-anchor" href="{% url 'faqs' %}"><strong> FAQs
+          page</strong></a> as you might find your question has already been answered there.</p>
     </div>
     <!-- contact form -->
     <div">
       <form id="contact-form" method="post"> {% csrf_token %} {{ form|crispy }}
         <!-- Form Submit -->
-        <button id="submitForm" class="btn back mb-3">Send</button>
+        <button id="submitForm" class="btn btn-dark mb-3">Send</button>
       </form>
     </div>
   </div>

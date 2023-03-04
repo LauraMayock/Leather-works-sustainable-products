@@ -738,96 +738,299 @@ The page is fully responsive, and the display order changes slightly from mobile
 ### **Profile**
 
 The profile page has a tab which is a form for the user to update their default shipping details
+It also shows previous order history. You can click on the blue order numbers to have a more detailed look at passed orders.
 
-![Profile]()
+![Profile](media/profile.png)
 
-And another tab to view the order history in a scrollable table
-
-![Completed orders]()
-
-The order number is truncated to save space, and when the user clicks on it, they are taken to a variation of the checkout success page. The only differences to the original checkout success page are the lack of a warning not to leave the page if not logged in and the button at the bottom, which takes the user back to the profile page.
-
-![return to profile]()
+![Passed order info](media/passed%20order%20info.png)
 
 ### ***Contact us***
 
-Finally, for the front end, I have created a simple contact form for the user to get in touch. I will discuss in detail shortly how this works from the point of view of replying. However, the form allows a platform for the user to send a message to the shop. The message will then be picked up from the admin panel and responded to via email, as is a standard convention.
+Users can contact the business via a form that can be navigated to either directly from the footer. In attempt to answer and questions or concerns as quick as possible, users are encouraged to first visit the FAQs page to see whether the question has already been answered If not, a short and simple form can be completed and submitted.
 
-![Contact us](docs/features/contact-us.JPG)
-
-### **Authentication**
-
-The user can log in and out using an adapted version of templates from the all-auth library.
-
-![Login](docs/features/allauth/login.JPG) ![Sign out](docs/features/allauth/logout.JPG)
-
-The user can reset their password via a form
-
-![Reset password step 1](docs/features/allauth/pass-reset.JPG)
-
-![Reset password - email sent](docs/features/allauth/pass-reset-2.JPG)
-
-Then receive an email with a link to reset their password on the store site.
-
-![reset email](docs/features/allauth/pass-reset-email.JPG)  
-
-![change password form](docs/features/allauth/change-password.JPG)
-
-Once changed, they will see the following message.
-
-![password changed](docs/features/allauth/pass-reset-conf.JPG)
-
-The user can also register for an account using the following form.
-
-![Register](docs/features/allauth/register.JPG)
-
-And will receive an email to verify their email, preventing spam accounts from being created.
-
-![Verify email](docs/features/allauth/verify-email.JPG)
-
-![Verify email](docs/features/allauth/email-verify.JPG)
-
-The link in the email brings them to this screen
-
-![Verify email](docs/features/allauth/conf-email.JPG)
-
-And once the email is confirmed, the user is invited to log in with their new account.
-
-### ***Stock management system***
-
-![not enough stock]()
-
-
-![out of stock]()
-
-
-### **Responsive Design**
-
-
-## **Admin Panel for Shop Administration**
+![Contact us](media/contack.png)
 
 
 
-### **Admin Panel Overview**
+#### **FAQs**
+A section of frequently asked questions have been included to help provide a positive user experiences. An accordion style feature has been selected to enable easy scrolling of the questions, and a simple drop down to reveal the answer once the user has found an appropriate question.
+
+![FAQ](media/faq.png)
 
 
+### **Blog**
 
-#### ***Products***
+I have included a blog to help with SEO and help the owner promote and spread information about his specialized product. The blog can be accessed via the main nav bar, as well as various access points throughout the site, this is to encourage customers to learn more. e.g., footer. Hero carousel, info section on the main page. I specifically chose a blog post that would help with SEO and be the most beneficial and informative to customers from their first visit to the site. Access points are highlighted in yellow in the images below.
+
+![Blog access 1](media/access1.png)
+![Blog access 2](media/access%202.png)
+![Blog access 3](media/access3.png)
 
 
-
-#### **Messages**
-
-
+## **Error Page**
+I have included custom 404 page so users can easily navigate back to the homepage if any errors occur. Therefore reducing the risk of the user leaving the site completely due to a bad user experience.
 
 
 ### **Future Features**
 
+<details>
+    <summary><b>User Stories</b></summary>
+    <p>
+      The objective of this test is to validate that the user requirements have been delivered for the MVP release. Further details of the Epics, Features and User Story tasks can be found either in the [GitHub Projects Kanban Board](https://github.com/users/LauraMayock/projects/7).
+
+Ref  | User Story                                                                                                                                                                                                                             | Acceptance Criteria                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Result       | Rationale                                                                                                                                                                                                                                                                                                                                                  
+---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+US01 | As a Site User, I can understand what the site aim is and my options from viewing the homepage, so that I can intuitively navigate the site and have a good e-commerce experience | 1\. The site structure and layout should be clear and simple to navigate <br>2\. Site Users should be able to find products either from homepage adverts, Nav menu or Search function<br>3\. Site Users will have an option to register for a user account from the Navbar | PASS | Positive lighthouse accessibility ensures the website is of a high standard.                                                                                                                                                             
+US02 | As a Site User, I can use the Footer for navigation, so that I can learn more about the business | 1\. Footer is located at the bottom of every page<br>2\. Footer provides links that are clear and accessible <br>3\. Links to social media are available  | PASS | There are links to company information within the footer. However from an accessibility perspective it is advised not to repeat menus within the same screen. As the navbar with links to company information is fixed to each page, only selective links have been added to the footer.                                                                   
+US03 | As Site Owner, I want a brand logo, so Site Users can easily learn the type of products being sold  | 1\. A logo that is identifiable as relating to Leather Works products that will help build the brand<br>2\. Logo to be used within the Navbar and is always prominent.| PASS  | The company name is clear within the navbar and throughout the homepage.                                                                                                                                                                                                  
+US04 | As a Site Owner, I can add products to the site, so I can manage the content and adapt to changes in stock as lines become obsolete and new products come on board. | 1\. Successfully add a product from either the back or front end  | 2\. Clear easy to use forms in both back and front end. | 3\. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user. | PASS | A site owner can add new products either from a front end form when signed in, or from using the Django admin panel. This is safe guarded to only allow superusers this access.                                                                                                                                         
+US05 | As a Site Owner, I can edit existing products on the site, so I can manage the content and adapt to changes in stock. | 1\. Successfully edit a product from either the back or front end  | 2\. Clear easy to use forms in both back and front end. | 3\. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user. | PASS | A site owner can edit existing products either from a front end form when signed in, or from using the Django admin panel.                                                                                                                                                                                                                      
+US06 | As a Site Owner, I can remove products from the site, so I can manage the content and adapt to changes in stock. | 1\. Successfully remove a product from either the back or front end  | 2\. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user. | PASS  | A site owner can remove existing products either from a front end form when signed in, or from using the Django admin panel.                                                                                                                                                                                                                      
+US07 | As a Shopper, i ca view individual products in detail so that I can make a more informed decision | 1\. Sufficient details on the product category pages that offer Title, Subtitle, Price with a view to enticing the user to click and learn more<br>2\. Product page with full descriptions in addition to those highlighted in products page. | PASS | Every product can be viewed in isolation complete with and description. Other key pieces of information are contained within the product details page such as color (if applicable) and price.                                                                                                                                                 
+US08 | As a shopper, i can sort site items so that I can easily identify the best price/ product. | 1\. Category views that are accessible from the Navbar menu<br>2\. Category views that correctly dissect product lines<br><br>  | PASS | Drop-down menus from the fixed Navbar allow users to navigate to specific categories or see all products. This can also be done in the products page. where shoppers can also sort products.                                                                                                                                  
+US09 | As a Site Owner, I would like to use the homepage to promote items and key messages to users, so that I can drive traffic to the most beneficial areas                                                                                 | 1\. The revolving carousal has an hero image with a banner advertising a new line<br>2\. A button within the banner allows Site Users to be navigated to the latest product drip | PASS | A carousal has been incorporated into the homepage and offers the ability to navigate users to specific pages. 
+
+US10 | As a Site User, I can view recommendations from existing customers, as it will help to inform my trust in the business | 1\. A dedicated section of the homepage, where Site Users will see recommendations from existing customers | PASS | Product reviews are enabled for all products. To leave a review you must be registered and have verified the account through email confirmation.                                                                                                                                                                                                           
+US11 | As a Site User, I can learn more about the business, so that I can assess trustworthiness and ethos. | 1\. A dedicated section of the homepage, where Site Users will learn more about the business, their ethos and the key people behind the business. | PASS | Users have access to the blog on the main nav bar and accesspoints through out the main paged that brings them to key infomation about the company and what they are doing for sustainability.                                                                                                                                 
+US12 | As a Site User, I would like to make a transaction without registering for a user account, as this is either a one off purchase or is my preference not to have a company hold my details | 1\. Not registered users can checkout without an account whilst still maintaining all checkout functionality<br>  |PASS | Site users can checkout without being a registered user.                                                                                                                                                                                                            
+US13 | As a Site User, I would like my delivery details to be pre-populated when I come to pay, as this would be more convenient and ease my experience and time to purchase | 1\. Pre-populated delivery details that can be overridden manually in the checkout area for authenticated users | PASS  | Site users with a registered account will either have their delivery details stored following their first transaction, or can add them manually to their profile before a transaction.                                                                                                                                                                     
+US14 | As a Site User, I would like to adjust the quantity or remove items from my shopping bag, in case I change my mind when assessing all my items before purchasing | 1\. Site Users can increase or decrease the quantity of items within them shopping bag as part of the checkout process | PASS | Site users have the functionality to increase or decrease items within their bag before checking out. Users can also remove items completely.                                                                                                                                                                                                              
+US15 | As a Site User, I can register an account, so that I can add reviews | 1\. Site Users are provided with a simple Form to complete in order to register an account<br>2\. Form fields should follow convention for sign-up forms<br>3\. Form buttons should enable the Form to be submitted or reset if an error has been made | PASS | Users can sign-up for an account using a simple form and following instructions within to verify their account.                                                                                                                      
+US16 | As a Site User, I can sign-in to my account, so that I can utilise member benefits | 1\. Site Users will be able to sign-in from clicking a link in the Navbar menu<br>2\. Sites Users will be required to enter their Username and Password to sign-in<br>3\. A message should confirm to Site Users when they have successfully signed in<br>4\. A message should inform Site Users if the information entered was not valid, and to try again | PASS | Site users can register for an account. Whilst for MVP the features are limited to storing default delivery details and viewing previous transactions, further benefits can be introduced for later releases as the foundations are built.                                                                                                                 
+US17 | As a Site User, I can be asked to confirm my request to sign-out, so that I can cancel if requested in error | 1\. Site Users will be able to sign-out from clicking a link in Navbar menu<br>2\. A page will display asking Site Users to confirm they would like to proceed to sign-out, or continue using the site<br>3\. If Site Users confirm they would like to sign-out they will be signed out and redirected to the home page<br>4\. A message should confirm to Site Users when they have successfully signed out<br>5\. If Site Users choose to continue using their account, access to features will remain | PASS         | Using the inbuilt functionality of Django, users are asked to confirm their request to sign-out.                                                                                                                                                                                 
+US18 | As a Site User, I can view and change profile details, so that they are correct when I come to checkout | 1\. Site Users can navigate to a restricted page that provides all the relevant profile details<br>2\. Site Users can amend any part of the information and save the changes<br>3\. A success message will confirm the changes have been saved | PASS| Registered site users can edit their default delivery details within the profile area. A success message confirm the changes have been saved.                                                                                                                                                                                                              
+US19 | As a Site User, I can add a product review, so that I can inform potential customers of what they might expect<br>  | 1\. Authenticated users will be able to post a review on a detailed product page | 2\. A button clearly stating to 'Submit' their review will be available<br>3\. Site Users will be able to see their post instantly<br> | PASS | Registered site users can add a product review directly to the website. Consideration was given to adding an approval step before publishing the comment, however to provide a positive user experience, I opted to publish the review straight away. These can be reviewed by the business owner and deleted from the Django admin area if deemed abusive.
+                
+US20 | As Site Owner, I would like Site Users to register for a monthly newsletter, so that I can build a relationship with customers and promote specific products | 1\. Site User can enter an email address and receive a success message within the browser<br>2\. Site Users will receive confirmation of sign-up to their inbox  | PASS | Site users can subscribe to the newsletter using the Mailchimp feature on the homepage. Users do not have to register to subscribe and stay updated with products and news.                                                                                                                                                                                
+US21 | As Site Owner, I would like to provide Site Users with more information on the business, so that Site Users can understand the history, manufacturing process, company ethos etc. with a view to increasing trust and building relationships | 1\. Site Users will be able to access the blog from either the Footer or the main nav bar <br>2\. Site Users will be navigated to a new page which informs of who, when, why and what the business is about<br>3\. Information about sustainable leather and the lengths Leather work gos to to produce sustainable leather products. | PASS | There is a blog dedicated to learning about the business, their products and the importance of sustainable leather.                                                                                                                                                                                                   
+US22 | As Site Owner, I can provide a contact form for Site Users, so they can provide feedback, request products, features etc.  | 1\. Site Users will be able to access this page from the Footer<br>2\. Site Users will be introduced to the FAQ page in case they hadn't already viewed this information and could of had their question answered<br>3\. Site Users will be provided with a Form to complete, learning where the Form is sent and when to expect a response<br>4\. Site Users will be redirected to the homepage when the form has been successfully submitted  | PASS | There is a contact form available for Site Users to send a query, concern or request to the business owners.<br>Feedback is provided to the users to confirm the form has been sent successfully.                                                                                                                                                          
+US23 | As a Site User, I can find answers to general questions, so that I don't have to wait for a response from the Site Owner | 1\. Site Users most popular questions can be answered in a single page that is conveniently accessed from the Footer<br>2\. Site Users will be provided with a link to contact Site Admin if a question cannot be answered | PASS | The FAQ's provide a broad range of answers to typical questions. These can be added to by the developers as required. FAQ's can be navigated to from the Footer.                                                                                                                                                              
+US24 | As a Site User, I can find out about sustainable leather and how the compancy unsure that their product are produced by sustainable leather | 1\. Site Users will be able to learn about sustainable leather and the certification of sustainability that the company holds.<b> | PASS  | Certification link in the footer and the sustainability link will divert users to a specific blog post dedicated to the subject.                                                                                                                                                                                                         
+US25 | As a Site User, I can access the site on differing devices, so I can interact with content on my preferred device  | 1\. Successful tests for Responsiveness using Developer Tools<br>2\. Successful tests for Responsiveness through manual testing on differing devices | PASS | Primarily using the Bootstrap framework the website is responsive across devices. This has been tested through a dedicated test for responsiveness.                                                                                                                                                                                                      
+US26 | As a Site User, I can search for products by entering descriptive words, so that I can find what I want quickly | 1\. Search functionality is accessible from the Navbar<br>2\. All keywords, names, descriptions return results  | PARTIAL PASS | Whilst the search functionality is operational, more than one search word produces zero results. This is being taken forward as a bug to fix.                                                                                                          
+<br>
+</p>
+</details><br>
+
+Page validation - check all features and links from across the site are working as designed and developed.
+Responsiveness - ensuring each page is responsive using media queries covering mobiles, tablets-laptops and desktop monitors.
+Accessibility - each page is tested for compliance with accessibility guidelines using the WAVE online assessment tool.
+Performance - using Chrome's developer tool 'Lighthouse Testing' pages are tested for performance, best-practice, SEO and accessibility.
+Browser - pages are tested for layout, features and general performance across Chrome, Firefox, Edge, Safari and Opera.
+Device - manual testing will be performed on an iOS and Android mobile, Tablet, Laptop and Desktop to ensure all users have a positive experience no matter which device or browser they prefer to use.
+Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
+
+## Validation
+
 
 ## **Testing Phase**
 
-
+ 
 ## **Deployment**
+
+<details>
+    <summary><b>Fork and Deploy Locally with GitHub</b></summary>
+    <p>
+     To fork this website to either propose changes or to use as an idea for another website, follow these steps:
+1. First, you should first set up Git. You should also set up authentication to GitHub.com from Git as well.
+1. Navigate to the [Leather Works](https://github.com/LauraMayock/Leather-works-sustainable-products).
+1. Click the 'Fork' button on the upper right part of the page. It's in between 'Watch' and 'Star'.
+1. You will now have a fork of 'Leather Works' repository added to your GitHub profile. Navigate to your own profile and find the forked repository to add the required files.
+1. Above the list of forked files click the 'Code' button.
+1. A drop-down menu will appear providing a choice of cloning options. Select the one which is applicable to your setup.
+</br>
+Further details on completing the last step can be found on GitHub's [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) page
+
+To deploy locally with GitHub, follow these steps:
+1. Log into your GitHub repository, create a GitHub account if necessary
+1. Click 'Settings' in the main Repository menu
+1. Click 'Pages' from the left-hand side navigation menu
+1. Within the Source section, click the "Branch" button and change from 'None' to 'Main'
+1. The page should automatically refresh with a url displayed
+1. Test the link by clicking on the url
+1. From this point you can push code to this page using the following steps from with GitPod;
+    1. With the application open, open the command line terminal (CLI)
+    1. Stage any changes using the command 'git add .' or by specifying the file with changes i.e 'git add settings.py'
+    1. Commit the changes to GitHub by adding a commit message describing the changes i.e. 'git commit -m "Update docbook dependency and generate epub"
+    1. Finally add the command 'git push' which will push all the code to GitHub. You can view the deployed code using the url generated within the steps above.
+    1. Additionally if you would like to run the application locally pre/post any changes, from the terminal type 'python3 manage.py runserver'.
+    1. A dialog box should open asking you to open port 8000, click 'Open' and navigate to the opened tab/window which should allow you to view the running application.
+    1. If the dialog box does not automatically appear, find the 'Remote Explorer' section of the left hand navbar within GitPod and click on the port '8000' and the internet/globe icon to the right which should open the running application.
+    </p>
+</details><br>
+
+<details>
+    <summary><b>To clone the repository on GitHub</b></summary>
+    <p>
+    1. Click on the code button which is underneath the main tab and repository name to the right.
+    2. In the 'Clone with HTTPS' section, click on the clipboard icon to copy the URL.
+    3. Open Git Bash in your IDE of choice.
+    4. Change the current working directory to where you want the cloned directory to be made.
+    5. Type git clone, and then paste the URL copied from GitHub.
+    6. Press enter and the clone of your repository will be created.
+
+  </p>
+
+</details>
+
+
+<details>
+    <summary><b>ElephantSQL Database</b></summary>
+    <p>
+      ElephantSQL.
+
+1. Navigate to elephantsql.com and click 'Get a managed database today'. When presented with options for differing plans, I chose the free 'Tiny Turtle' plan.
+1. Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account.
+1. In the Create new team form:
+    * Add a team name (your own name is fine).
+    * Read and agree to the Terms of Service.
+    * Select Yes for GDPR.
+    * Provide your email address.
+    * Click “Create Team”.
+1. Your account should now be created.
+1. Now you will need to create your database. Navigate to your elephantsql.com dashboard, and click "Create New Instance".
+1. Set up your plan:
+    * Give your plan a Name (this is commonly the name of the project).
+    * Select the Tiny Turtle (Free) plan.
+    * You can leave the Tags field blank.
+1. Select a data center near you.
+1. Then click "Review".
+1. Check your details are correct and then click "Create Instance".
+1. Return to the ElephantSQL dashboard and click on the database instance name for this project.
+1. You will return to this projects dashboard as part of the steps to 'Deploy with Heroku' as you will need the DATABASE_URL.
+
+    </p>
+</details><br>
+
+<details>
+    <summary><b>Gmail SMTP</b></summary>
+    <p>
+     Gmail SMTP has been used to send order confirmations and user contact emails in the deployed version. To use this configuration, copy and adapt the code below into your settings.py file.
+
+```
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = '(ADD YOUR EMAIL ADDRESS)@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER =  os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+```
+    </p>
+</details><br>
+
+<details>
+    <summary><b>Amazon Web Services (AWS) Storage</b></summary>
+    <p>
+     Considering the development of the site could require a significant volume of product images, AWS has been used as the cloud host for imagery. To implement this you will need and AWS account and to create an S3 Bucket and User Profile. Developer guidance can be followed on AWS's site.
+
+To serve the images you will need to add the following config to your settings.py file.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+    # Bucket config
+    AWS_STORAGE_BUCKET_NAME = 'the-coffee-collective'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+    # Override static and media URLs in Production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}'
+```
+    </p>
+</details><br>
+
+<details>
+    <summary><b>Stripe</b></summary>
+    <p>
+     Stripe has been used to receive payments from customers. To implement you need to have an account with Stripe and follow the [documentation](https://stripe.com/docs) add incorporate the guided HTML, Python and JavaScript code. Be sure to add the secret key generated with Stripe to your Heroku Config Variables.
+
+Once Stripe is activate you can test the checkout process with a test credit card detail provided by Stripe. Please use these details (below) and not real card details as there is no guarantee monies can be returned as this is a fictitious site.
+
+| CARD NO             | MM / YY | CVC | Post Code |
+| ------------------- | ------- | --- | --------- |
+| 4242 4242 4242 4242 | 04 / 24 | 242 | 42424     |
+
+</details>
+
+
+### Deploy with Heroku
+
+<details>
+    <summary></summary>
+
+1. Log in to Heroku at https://heroku.com - create an account if needed.
+1. From the Heroku dashboard, click the Create new app button. For a new account an icon will be visible on screen to allow you to Create an app, otherwise a link to this function is located under the New dropdown menu at the top right of the screen.
+1. On the Create New App page, enter a unique name for the application and select region. Then click Create app.
+1. On the Application Configuration page for the new app, click on the Resources tab.
+1. Next, click on Settings on the Application Configuration page and click on "Reveal Config Vars".
+1. Add a new Config Var called DISABLE_COLLECTSTATIC and assign it a value of 1, and click Add to save it. Remove this when releasing for Production.
+1. Add a new Config Var called SECRET_KEY and assign it a value - any random string of letters, digits and symbols, and click Add to save it.
+1. Add a new Config Var called DATABASE_URL and paste in the value for your ElephantSQL database, and click Add to save it.
+1. The settings.py file should be updated to use the DATABASE_URL and SECRET_KEY environment variable values as follows :
+
+        DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+
+        SECRET_KEY = os.environ.get('SECRET_KEY')
+
+1. In Gitpod, in the project terminal window, to initialize the data model in the postgres database, run the command : python3 manage.py migrate
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push any local changes to GitHub.
+1. In order to be able to run the application on localhost, add SECRET_KEY and DATABASE_URL and their values to env.py
+
+Connect GitHub Repo to Heroku App
+
+1. Navigate to Application Configuration page for the application on Heroku and click on the Deploy tab.
+1. Select GitHub as the Deployment Method and if prompted, confirm that you want to connect to GitHub. Enter and search for the required repository, then click on Connect to link them up..
+1. Scroll down the page and choose to either Automatically Deploy each time changes are pushed to GitHub, or Manually deploy - I chose the latter for the initial deployment to watch the build and then opted for Automatic Deployment.
+1. The application can be run from the Application Configuration page by clicking on the Open App button.
+1. Each time you push code from your GitHub Repo it will be automatically reflected in your Heroku App.
+
+The url for this website can be found here https://leather-works.herokuapp.com/
+</p>
+</details>
+
+### Pre Production Deployment
+details>
+    <summary></summary>
+
+When you are ready to move to production, the following steps must be taken to ensure your site works correctly and is secure.
+
+In GitPod:
+1. Set DEBUG flag to False in settings.py
+1. Check the following line exists in settings.py: X_FRAME_OPTIONS = 'SAMEORIGIN'
+1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
+1. Commit and push code to GitHub
+In the Heroku App:
+1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
+1. Deploy : Click on deploy branch
+</details>
+
+
+<br> 
+
+***
+
+<br>
+
+[Back to top](<#contents>)
+
+
 
 
 ## **Technologies used**

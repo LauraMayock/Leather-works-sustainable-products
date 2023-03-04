@@ -1,5 +1,5 @@
 .order-history {
-    max-height: 416px; /*height of profile form + submit button */
+    max-height: 416px; /* height of profile form + submit button */
     overflow-y: auto;
 }
 
@@ -7,7 +7,7 @@
     color: #000;
 }
 
-#profile-update-form input::placeholder[name='q']::placeholder {
+#profile-update-form input::placeholder {
     color: #aab7c4;
 }
 
