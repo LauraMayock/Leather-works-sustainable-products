@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans 'Delete Product' %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- User must be authenticated to view these page and perform actions -->
+{% if request.user.is_superuser %}
+<!-- Page header -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center mt-3 mb-3">
+            <h1 class="page-title">Product Management</h1>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <!-- Container for Deleting a product -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="card-body">
+                <h2 class="page-subtitle mb-3">Are you sure you would like to delete this product?</h2>
+                <!-- Confirming the product identified for deletion -->
+                <h3 class="page-h3-title">{{ product.name }}</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Container for delete form -->
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="card-body">
+                <!-- Form used to perform the action with the database -->
+                <form method="POST">
+                    <div class="form-group">
+                        <div class="input-group">
+                            {% csrf_token %}
+                            <!-- Option to cancel if navigated to in error -->
+							
+                            <a href="{% url 'products' %}" class="btn rounded-0 btn-dark m-1">Cancel</a>
+                            <!-- Button to delete the product from the database -->
+                            <input class="btn rounded-0 btn-danger m-1" type="submit" value="Delete">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<!-- Information to user if navigated to in error without being signed in -->
+<div class="container fluid">
+    <div class="row justify-content-center">
+        <div class="card-block">
+            <p class="card-text">
+                Sorry you must be signed in to access this page, use the button below to
+                return to our homepage
+            </p>
+            <a href="{% url 'home' %}" class="btn rounded-0 btn-muted">Home
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
