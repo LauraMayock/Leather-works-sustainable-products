@@ -695,6 +695,22 @@ input[name='q']::placeholder {
         align-items: center;
         
 }
+    .wallet {
+        width: 170px;
+    }
+
+    .satchel {
+        width: 170px;
+    }
+
+    .all-prod {
+        width: 170px;
+    }
+
+    .purse {
+        width: 170px;
+    }
+
 
 
 }
