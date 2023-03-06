@@ -66,29 +66,29 @@
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-right">	
                 <ul class="list-inline list-unstyled text-md-right my-0">
                     <li class="list-inline-item nav-item dropdown">
-                        <a class="header-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-font nav-link" href="#" aria-label="Product category dropdown menu" id="user-options-products" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <p class="my-0">Products</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                            <a href="{% url 'products' %}?category=wallets" class="dropdown-item">Wallets</a>
-                            <a href="{% url 'products' %}?category=purse" class="dropdown-item">Purses</a>
-                            <a href="{% url 'products' %}?category=satchels_and_bags" class="dropdown-item">Satchels & Bags</a>
+                            <a href="{% url 'products' %}?category=wallets" class="dropdown-item"  aria-label="Wallets Category page">Wallets</a>
+                            <a href="{% url 'products' %}?category=purse" class="dropdown-item" aria-label="Purses Category page">Purses</a>
+                            <a href="{% url 'products' %}?category=satchels_and_bags" class="dropdown-item" aria-label="Satchels and bags category page">Satchels & Bags</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
                     </li>
                     <li class="list-inline-item nav-item dropdown">
-                        <a class="header-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-font nav-link" href="#" aria-label="Blog dropdown menu" id="user-options-blog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <p class="my-0">Blog</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_post' %}" class="dropdown-item">Add Post</a>
+                            <a href="{% url 'add_post' %}" class="dropdown-item" aria-label="Add a post page">Add Post</a>
                             {% else %}
-                            <a href="{% url 'blog' %}" class="dropdown-item">Blog</a>
+                            <a href="{% url 'blog' %}" class="dropdown-item" aria-label="view blog">Blog</a>
                         </div>
                         {% endif %}
                     </li>
@@ -114,7 +114,7 @@
                              </form>
                             </div>
                     <li class="list-inline-item dropdown">
-                        <a class="header-font nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-font nav-link" href="#" id="user-options-account" aria-label="My Account dropdown menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -122,14 +122,14 @@
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Access my profile page">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="log out">Logout</a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Register">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Add products page">Add Product</a>
                            {% endif %}
                         </div>
                     </li>

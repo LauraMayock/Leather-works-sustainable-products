@@ -52,17 +52,25 @@ section {
 
 /*---------------------------------------------Category buttons main page*/
 
-.card-img-top {
-border: 1px solid #ddd; /* Gray border */
-border-radius: 4px;  /* Rounded border */
-padding: 5px; /* Some padding */
-width: 200px; /* Set a small width */
+.category-btn {
+    display: flex;
+    justify-content: center;
+    margin:10px;
+
 }
 
-/* Add a hover effect (blue shadow) */
-img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-  }
+/*---------------------------------------------wholesale links*/
+a.mailto-anchor {
+    color:#007bff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+a.email {
+    color:#007bff;
+    font-weight: 700;
+    font-size: 20px;
+}
 /*---------------------------------------------mailchimp css*/
 #mc_embed_signup{
     background:#fff; 
@@ -72,6 +80,9 @@ img:hover {
     width:600px;
 }
 
+#mc-embedded-subscribe.button{
+    background-color: #343a40;
+}
 /*----------------------------------------------Info cards*/
 
 
@@ -203,8 +214,6 @@ a.category-badge > span.badge:hover {
     position: relative;
 }    
     
-    
-
   
 .card-img {
     width: 100%;
@@ -214,8 +223,6 @@ a.category-badge > span.badge:hover {
     transform: translateX(-50%);
 }   
     
-    
-
 
 .card-body {
     flex: 2;
@@ -638,8 +645,6 @@ input[name='q']::placeholder {
 
 
 }
-
-/* footer */
 @media (max-width: 564px) {
     .footer-col{
         width: 100%;
@@ -674,21 +679,22 @@ input[name='q']::placeholder {
         width: 60%;
     }
 
-    .container-cat {
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    }
-
     .card-img-top {
         width:150px;
         margin-left: 0;
         padding: 5px;
+        height:auto;
     }
     
     .container-img2{
         width:100%;
     
 }
+    .category-btn {
+        flex-direction: column;
+        align-items: center;
+        
+}
+
+
 }

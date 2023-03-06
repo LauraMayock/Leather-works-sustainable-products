@@ -10,18 +10,17 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-ge-yonk-1152077.jpg" alt="Second slide">
+        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/leather+bag+main+img.webp" alt="Second slide">
         <div class="carousel-caption">
-          <h5>We are Irish</h5>
-          <a class="carousel-anchor" href="{% url 'blog' %}" aria-label="Navigates to view all products">
-          <p>Find out more about our family.</p>
+          <a class="carousel-anchor" href="{% url 'products' %}" aria-label="Navigates to view all products">
+            <h5>Check out our product range</h5>
         </div>
       </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674315994/Project5/large_logo_1_kzcakd.png" alt="Second slide">
+          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/large-logo-_1_.webp" alt="Second slide">
           <div class="carousel-caption">
             <h5>Sustainable Leather</h5>
-            <a class="carousel-anchor" href="{% url 'sustain' %}" aria-label="Navigates to view all products">
+            <a class="carousel-anchor" href="{% url 'sustain' %}" aria-label="Navigates to blog showing info on sustainability">
             <p>Want to find out more about sustainable leather?</p>
           </div>
         </div>
@@ -49,31 +48,20 @@
 </section>
 <section>
   <h2 class="text-center">Product Range</h2>
-  <div class="container-cat d-flex justify-content-center mb-5">
-    <div class="card flex-fill" style="width:150px">
-        <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable-leather+wallets.jpg" alt="leather purse and bag">
-        <div class="card-img-overlay">
-          <a href="{% url 'products' %}?category=wallets" class="btn btn-dark btn-sm">Wallets</a>
-        </div>
+    <div class="category-btn">
+      <div>
+      <a href="{% url 'products' %}?category=purse" class="btn btn-dark m-2" role="button">Purses</a>
+    </div>
+    <div>
+      <a href="{% url 'products' %}?category=wallet" class="btn btn-dark m-2" role="button">Wallets</a>
+    </div>
+    <div>
+      <a href="{% url 'products' %}?category=satchels_and_bags" class="btn btn-dark m-2" role="button">Satchels and Bags</a>
+    </div>
+    <div>
+      <a href="{% url 'products' %}" class="btn btn-dark m-2" role="button">All Products</a>
+    </div>
       </div>
-    <div class="card flex-fill" style="width:150px">
-        <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452400.jpg" alt="Leather purse">
-        <div class="card-img-overlay">
-            <a href="{% url 'products' %}?category=purse" class="btn btn-dark btn-sm">Purses</a>
-        </div>
-    </div>
-  <div class="card flex-fill" style="width:150px">
-    <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-cottonbro-studio-6649429.jpg" alt="Leather bag">
-    <div class="card-img-overlay">
-    <a href="{% url 'products' %}?category=satchels_and_bags" class="btn btn-dark btn-sm">Satchels and Bags</a>
-    </div>
-  </div>
-  <div class="card flex-fill" style="width:150px">
-    <img class="card-img-top" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-vlada-karpovich-4452643.jpg" alt="leather purse and bag">
-        <div class="card-img-overlay">
-          <a href="{% url 'products' %}" class="btn btn-dark btn-sm">All Products</a>
-        </div>
-  </div>
 </section>
 <section>
   <hr class="hr1"/>
@@ -81,7 +69,7 @@
     <div class="card-group vgr-cards">
       <div class="card">
         <div class="card-img-body">
-        <img class="card-img" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674323734/Project5/pexels-anna-shvets-5830634_2_akfksb.jpg" alt="Card image cap" style="height:100%; width:100%; overflow: hidden;">
+        <img class="card-img" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/meet+the+tanner.webp" alt="Leather works Tanner" style="height:auto; width:100%; overflow: hidden;">
         </div>
         <div class="card-body">
           <h4 class="card-title">Meet the Tanner</h4>
@@ -104,7 +92,7 @@
             <a href="{% url 'sustain' %}" class="btn btn-dark">Learn More</a>
         </div>
         <div class="card-img-body">
-          <img class="img-thumbnail" src="https://res.cloudinary.com/dyhess8yw/image/upload/v1674151618/Project5/pexels-dominika-roseclay-5462565_ujkufv.jpg" alt="Card image cap">
+          <img class="img-thumbnail" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable+leather+purse.webp" alt="Leather purse">
         </div>
         <hr class="hr1"/>
   </div>
@@ -115,8 +103,8 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="First testimonial slide">
-        <div class="carousel-caption">
+        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888+(2).webp" alt="First testimonial slide">
+        <div class="carousel-caption-test">
           <h3>CUSTOMER TESTIMONIAL</h3>
           <h5>THE BEST OF IRISH CRAFTMANSHIP</h5>
           <p>I bought this bag as a gift for my sister. We both adore it. The quality of the leather
@@ -126,8 +114,8 @@
         </div>
       </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="Second testimmonial slide">
-          <div class="carousel-caption">
+          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888+(2).webp" alt="Second testimmonial slide">
+          <div class="carousel-caption-test">
             <h3>CUSTOMER TESTIMONIAL</h3>
             <p>I am so pleased with this satchel bag! Arrived in three working days. Dary brown sustainable
               leather. Description and photos are true to delivered product. The finish and 
@@ -138,8 +126,8 @@
           </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888.jpg" alt="Third testimonial slide">
-            <div class="carousel-caption">
+            <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/pexels-pixabay-157888+(2).webp" alt="Third testimonial slide">
+            <div class="carousel-caption-test">
               <h3>CUSTOMER TESTIMONIAL</h3>
               <h5>SO HAPPY I PURCHASED!!</h5>
               <p>I bought the Biker bag in the lovely shop on County Mayo when visiting family recently. 
@@ -168,7 +156,7 @@
       <div class="card-text">
         <h4 class="card-title">FOR WHOLESALE ORDERS OF ANY QUESTIONS</h4>
         <h3>PLEASE CALL OR EMAIL</h3>
-        <p><a target="_blank" rel="noopener noreferer"
+        <p><a target="_blank" class="email" rel="noopener noreferer"
               aria-label="Send an email to The Leather Works"
               href="leatherworkssustainability@gmail.com">leatherworkssustainability@gmail.com</a> 
           <p>or call us on<a class="mailto-anchor" href="tel:+441618727795" aria-label="Call leather work" target="_blank"
@@ -203,8 +191,8 @@
             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1283ad29349d52ff28e0f2ae_7e71b104ff" tabindex="-1" value=""></div>
                 <div class="optionalParent">
                     <div class="clear foot">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-muted">
-                        <p class="brandingLogo"><a href="http://eepurl.com/ilvdfj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-dark">
+                        <p class="brandingLogo"><a href="http://eepurl.com/ilvdfj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"  aria-label="Mailchimp logo for subscription company"></a></p>
                     </div>
                 </div>
             </div>
