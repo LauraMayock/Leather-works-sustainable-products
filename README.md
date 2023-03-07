@@ -833,6 +833,119 @@ Page validation - check all features and links from across the site are working 
 
 To perform the test I used a Chrome browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
 
+| Features                      | Expectation                                                         | Links Active/Features (Desktop)              | Links Active/Features (Mobile)                |
+|-------------------------------|---------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|
+| Home Page                     |                                                                     |                                              |                                               |
+| Navbar Logo Link              | Link to home page                                                   | Pass                                         | Pass                                          |
+| Product Dropdown              | Links to all categories with header and product count visible       | Pass                                         | Pass                                          |
+| Blog Dropdown                 | dropdown works                                                      | Pass                                         | Pass                                          |
+| Super User                    | Link create blog                                                    | Pass                                         | Pass                                          |
+| User                          | Link to blog only                                                   | Pass                                         | Pass                                          |
+| Search bar                    | Button works and searches product name and description              | Bug: Shows no results for more than one word | Bug: Shows  no results for more then one word |
+| My Account                    | dropdown                                                            | Pass                                         | Pass                                          |
+| Not logged in                 | Access to Login/Register links                                      | Pass                                         | Pass                                          |
+| Super User                    | Linls to Logout/MyAccount/Create Product                            | Pass                                         | Pass                                          |
+| User                          | My account/logout                                                   | Pass                                         | Pass                                          |
+| Shopping bag empty            | Link to page highlighting bag is empty                              | Pass                                         | Pass                                          |
+| Carousel buttons left & right | when chicked buttons move carousel                                  | Pass                                         | Pass                                          |
+| Sustainable leather button    | Link to relevant blog post                                          | Pass                                         | Pass                                          |
+| Check out our products        | Link to products page                                               | Pass                                         | Pass                                          |
+| Product category section      |                                                                     |                                              |                                               |
+| Purse                         | Link to purse category with product count & heading visable         | Pass                                         | Pass                                          |
+| Wallet                        | Link to Wallet category with product count & heading visable        | Pass                                         | Pass                                          |
+| Satchels and Bags             | Link to Satchel&Bags category with product count & heading visable  | Pass                                         | Pass                                          |
+| All Products                  | Link to All Products category with product count & heading visable  | Pass                                         | Pass                                          |
+| Meet the Tanner section       | Link to blog post about the tanner                                  | Pass                                         | Pass                                          |
+| Sustainable leather section   | Link to blog post about sustainable leather                         | Pass                                         | Pass                                          |
+| Testimonials carousel         | moves automatically                                                 | Pass                                         | Pass                                          |
+| Carousel buttons left & right | when chicked buttons move carousel                                  | Fail Known bug                               | Fail Known bug                                |
+| Wholesale Section             |                                                                     |                                              |                                               |
+| Email Link                    | link to gmail                                                       | Pass                                         | Pass                                          |
+| Phone number                  | Link to make a call                                                 | Pass                                         | Pass                                          |
+| Mail Chimp                    |                                                                     |                                              |                                               |
+| Error message                 | Invalid email error message                                         | Pass                                         | Pass                                          |
+| submit                        | Confirms subscription                                               | Pass                                         | Pass                                          |
+| Footer                        |                                                                     |                                              |                                               |
+| About us                      | Link to relevant blog post                                          | Pass                                         | Pass                                          |
+| Sustainability                | Link to relevant blog post                                          | Pass                                         | Pass                                          |
+| Certifications                | Link to relevant blog post                                          | Pass                                         | Pass                                          |
+| FAQ                           | Link to relevant page                                               | Pass                                         | Pass                                          |
+| Contact us                    | Link to relevant page                                               | Pass                                         | Pass                                          |
+| Social medial links           |                                                                     |                                              |                                               |
+| Facebook                      | Link to Facebook site                                               | Pass                                         | Pass                                          |
+| Instagram                     | Link to Instagram                                                   | Pass                                         | Pass                                          |
+| twitter                       | Link to Twitter                                                     | Pass                                         | Pass                                          |
+| Linkedin                      | Link to Linked in                                                   | Pass                                         | Pass                                          |
+| Products page                 |                                                                     |                                              |                                               |
+| Categories dropdown           | Links to page chosen category                                       | Pass                                         | Pass                                          |
+| Category result header        | Header shows which category has been chosen                         | No header for All Products                   | No header for All Products                    |
+| All Products button           | Link showing all products                                           | Pass                                         | Pass                                          |
+| Product count                 | Show total product found per category/search                        | Pass                                         | Pass                                          |
+| Sort By Bar                   | Sorts product py chosen sort                                        | Pass                                         | Pass                                          |
+| Link to Product details page  | Click on product to bring you to product details page               | Pass                                         | Pass                                          |
+| Super user buttons            | Buttons available specifically for super users                      | Pass                                         | Pass                                          |
+| Edit button                   | Link to edit product form                                           | Pass                                         | Pass                                          |
+| Delete Button                 | Link to delete the product confirmation page                        | Pass                                         | Pass                                          |
+| Product Details Page          |                                                                     |                                              |                                               |
+| Product display               | Click on smaller images to show them as the large image.            | Fail (Future Feature)                        | Fail (Future Feature)                         |
+| Color option                  | Color option only when relevant                                     | Pass                                         | Pass                                          |
+|                               | dropdown working and choice being added to basket                   | Pass                                         | Pass                                          |
+| Quantity                      | wont go lower then 1 or higher then pp                              | Pass                                         | Pass                                          |
+| Keep shopping                 | reverts back to product page                                        | Pass                                         | Pass                                          |
+| Add item                      | Adds item to basket                                                 | Pass                                         | Pass                                          |
+| Super User                    |                                                                     | Pass                                         | Pass                                          |
+| Edit button                   | Goes to relevant page only accessible to superuser                  | Pass                                         | Pass                                          |
+| Delete button                 | Goes to relevant page only accessible to superuser                  | Pass                                         | Pass                                          |
+| Cutomer reviews               | Visable to all                                                      | Pass                                         | Pass                                          |
+|                               | Can only add a review if logged in                                  | Pass                                         | Pass                                          |
+|                               | Review posting is instant                                           | Pass                                         | Pass                                          |
+|                               | User name is posted automatically                                   | Pass                                         | Pass                                          |
+|                               | Date and time added automatically                                   | Pass                                         | Pass                                          |
+| Shopping Bag                  |                                                                     | Pass                                         | Pass                                          |
+| Bag total                     | Total showing and accurate                                          | Pass                                         | Pass                                          |
+| Delivery cost                 | Delivery cost accurate or free over $50                             | Pass                                         | Pass                                          |
+| Keep shopping button          | link to products page                                               | Pass                                         | Pass                                          |
+| secure checkout button        |                                                                     | Pass                                         | Pass                                          |
+| update button                 | Add total requested                                                 | Updates when amount more then 99             | Updates when amount more then 99              |
+| remove button                 | removes product                                                     | Pass                                         | Pass                                          |
+| reduce quantity button        | reduces quantity wont allow anything below 0                        | Pass                                         | Pass                                          |
+| add on quantity button        | will not go highter then 99 but you can type in number higher       | Pass                                         | Pass                                          |
+| color description             | shows color chosen                                                  | Pass                                         | Pass                                          |
+| Secure checkout page          |                                                                     |                                              |                                               |
+| Subtotal                      | calcuted correctly                                                  | Pass                                         | Pass                                          |
+| total                         | total calculated correctly                                          | Pass                                         | Pass                                          |
+| delivery cost                 | delivery total                                                      | Pass                                         | Pass                                          |
+| form validation               | Error messages and alerts will show                                 | Pass                                         | Pass                                          |
+| spinner                       | when order is being submitted spinner apears                        | Pass                                         | Pass                                          |
+| Success alert                 | Alert confirming order and order number                             | Pass                                         | Pass                                          |
+| Confirmation page             | Full details of order and confirmation page appears after submit    | Pass                                         | Pass                                          |
+| save deliver info tick box    | when box is ticked it saves info to profile                         | Pass                                         | Pass                                          |
+|                               | Whenk box is unticked info is not saved.                            | Pass                                         | Pass                                          |
+| Blog                          |                                                                     |                                              |                                               |
+| Read More button              | Button takes you to full blog post                                  | Pass                                         | Pass                                          |
+| In blog links                 | All links in post go to relevant pages                              | Pass                                         | Pass                                          |
+|                               |                                                                     | Pass                                         | Pass                                          |
+| Create Post page              | /blog/add_post/                                                     | Pass                                         | Pass                                          |
+| Form vaildation               | Shows errors if not filled out correctly                            | Pass                                         | Pass                                          |
+| Success alert                 | Shows success message when posted                                   | Pass                                         | Pass                                          |
+|                               |                                                                     |                                              |                                               |
+| Login button                  | takes you to relevant page                                          | Pass                                         | Pass                                          |
+|                               | form validation                                                     | Pass                                         | Pass                                          |
+|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
+|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
+| logout button                 | takes you to relevant page                                          | Pass                                         | Pass                                          |
+|                               | form validation                                                     | Pass                                         | Pass                                          |
+|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
+|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
+| Sign up button                | takes you to relevant page                                          | Pass                                         | Pass                                          |
+|                               | form validation                                                     | Pass                                         | Pass                                          |
+|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
+|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
+| My Profile                    | Info is updated when requested                                      | Pass                                         | Pass                                          |
+|                               | Order history is showing                                            | Pass                                         | Pass                                          |
+| Order Number links            | Links to confirmaiton page with all relevant info                   | Pass                                         | Pass                                          |
+
+
 </p>
 </details>
 
