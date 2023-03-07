@@ -27,12 +27,12 @@
                     <div class="d-block d-md-none">
                         <div class="row">
                             <div class="col">
-                                {% include "bag/bag-total.html" %}
+                                {% include "bag/includes/bag-total.html" %}
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                {% include "bag/checkout-buttons.html" %}
+                                {% include 'bag/includes/checkout-buttons.html' %}
                                 <hr>
                                 <p class="text-muted mb-5">A summary of your bag contents is below</p>
                             </div>
@@ -40,17 +40,17 @@
                         {% for item in bag_items %}
                             <div class="row">
                                 <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-image.html" %}
+                                    {% include "bag/includes/product-image.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 mb-2">
-                                    {% include "bag/product-info.html" %}
+                                    {% include "bag/includes/product-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
                                     <p class="my-0">Price Each: ${{ item.product.price }}</p>
                                     <p><strong>Subtotal: </strong>${{ item.product.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    {% include "bag/quantity-form.html" %}
+                                    {% include "bag/includes/quantity-form.html" %}
                                 </div>
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
@@ -76,16 +76,16 @@
                             {% for item in bag_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% include "bag/product-image.html" %}
+                                        {% include "bag/includes/product-image.html" %}
                                     </td>
                                     <td class="py-3">
-                                        {% include "bag/product-info.html" %}
+                                        {% include 'bag/includes/product-info.html' %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        {% include "bag/quantity-form.html" %}
+                                        {% include "bag/includes/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -94,12 +94,12 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    {% include "bag/bag-total.html" %}
+                                    {% include "bag/includes/bag-total.html" %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    {% include "bag/checkout-buttons.html" %}
+                                    {% include 'bag/includes/checkout-buttons.html' %}
                                 </td>
                             </tr>
                         </table>

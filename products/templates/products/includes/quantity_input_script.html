@@ -1,100 +1,74 @@
-<script type="text/javascript">	
-    // Disable +/- buttons outside 1-99 range	
-    function handleEnableDisable(itemId) {	
-        var currentValue = parseInt($(`#id_qty_${itemId}`).val());	
-    /* 	
-    * Disable +/- buttons outside 1-99 range.	
-    * If no color options is passed to the function, the parameter will have a value of undefined by default,	
-    * which prevents any errors 	
-    */	
-    function handleEnableDisable(itemId, color) {	
-        if (color) {	
-            var currentValue = parseInt($(`.color_${itemId}_${color}`).val());	
-        } else {	
-            var currentValue = parseInt($(`.id_qty_${itemId}`).val());	
-        }	
-        var minusDisabled = currentValue < 2;	
-        var plusDisabled = currentValue > 98;	
-        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);	
-        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);	
-        if (color) {	
-            $(`.decrement-color_${itemId}_${color}`).prop('disabled', minusDisabled);	
-            $(`.increment-color_${itemId}_${color}`).prop('disabled', plusDisabled);	
-        } else {	
-            $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);	
-            $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);	
-        }	
-    }	
-    // Ensure proper enabling/disabling of all inputs on page load	
-    var allQtyInputs = $('.qty_input');	
-    for(var i = 0; i < allQtyInputs.length; i++){	
-        var itemId = $(allQtyInputs[i]).data('item_id');	
-        handleEnableDisable(itemId);	
-        var color = $(allQtyInputs[i]).data('color');	
-        handleEnableDisable(itemId, color);	
-    }	
-    // Check enable/disable every time the input is changed	
-    $('.qty_input').change(function() {	
-        var itemId = $(this).data('item_id');	
-        handleEnableDisable(itemId);	
-        var color = $(this).data('color');	
-        handleEnableDisable(itemId, color);	
-    });	
-    // Increment quantity	
-    $('.increment-qty').click(function(e) {	
-       e.preventDefault();	
-       var itemId = $(this).data('item_id');	
-       var color = $(this).data('color');	
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];	
-       if (color) {	
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-color='${color}']`);	
-       } else {	
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);	
-       }	
-       var currentValue = parseInt($(closestInput).val());	
-       $(closestInput).val(currentValue + 1);	
-       var itemId = $(this).data('item_id');	
-       handleEnableDisable(itemId);	
-       $(allQuantityInputs).val(currentValue + 1);	
-       handleEnableDisable(itemId, color);	
-    });	
-    // Decrement quantity	
-    $('.decrement-qty').click(function(e) {	
-       e.preventDefault();	
-       var itemId = $(this).data('item_id');	
-       var color = $(this).data('color');	
-       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];	
-       if (color) {	
-          var allQuantityInputs = $(`.input-group-${itemId} input[data-color='${color}']`);	
-       } else {	
-          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);	
-       }	
-       var currentValue = parseInt($(closestInput).val());	
-       $(closestInput).val(currentValue - 1);	
-       var itemId = $(this).data('item_id');	
-       handleEnableDisable(itemId);	
-       $(allQuantityInputs).val(currentValue - 1);	
-       handleEnableDisable(itemId, color);	
-    });	
-}
+<!-- Functionality to enable quantity selectors -->
+<script>
 
-//Image grid inspired by w3 school
-function myFunction(imgs) {
-  // Get the expanded image
-  var expandImg = document.getElementById("expandedImg");
-  // Get the image text
-  var imgText = document.getElementById("imgtext");
-  // Use the same src in the expanded image as the image being clicked on from the grid
-  expandImg.src = imgs.src;
-  // Use the value of the alt attribute of the clickable image as text inside the expanded image
-  imgText.innerHTML = imgs.alt;
-  // Show the container element (hidden with CSS)
-  document.getElementById("thumbnail").style.visibility = "hidden";
-  expandImg.parentElement.style.display = "block";
-  
+    /* 
+    * Disable +/- buttons outside 1-99 range.
+    * If no color is passed to the function, the parameter will have a value of undefined by default,
+    * which prevents any errors 
+    */
+    function handleEnableDisable(itemId, color) {
+        if (color) {
+            var currentValue = parseInt($(`.color_${itemId}_${color}`).val());
+        } else {
+            var currentValue = parseInt($(`.id_qty_${itemId}`).val());
+        }
 
+        var minusDisabled = currentValue < 2;
+        var plusDisabled = currentValue > 98;
 
-}
+        if (color) {
+            $(`.decrement-color_${itemId}_${color}`).prop('disabled', minusDisabled);
+            $(`.increment-color_${itemId}_${color}`).prop('disabled', plusDisabled);
+        } else {
+            $(`.decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+            $(`.increment-qty_${itemId}`).prop('disabled', plusDisabled);
+        }
+    }
 
+    // Ensure proper enabling/disabling of all inputs on page load
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        var color = $(this).data('color');
+        handleEnableDisable(itemId, color);
+    });
+
+    // Check enable/disable every time the input is changed
+    $('.qty_input').change(function() {
+        var itemId = $(this).data('item_id');
+        var color = $(this).data('color');
+        handleEnableDisable(itemId, color);
+    });
+
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+       e.preventDefault();
+       var itemId = $(this).data('item_id');
+       var color = $(this).data('color');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       if (color) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-color='${color}']`);
+       } else {
+          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+       }
+       var currentValue = parseInt($(closestInput).val());
+       $(allQuantityInputs).val(currentValue + 1);
+       handleEnableDisable(itemId, color);
+    });
+
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+       e.preventDefault();
+       var itemId = $(this).data('item_id');
+       var color = $(this).data('color');
+       var closestInput = $(this).closest('.input-group').find('.qty_input')[0];
+       if (color) {
+          var allQuantityInputs = $(`.input-group-${itemId} input[data-color='${color}']`);
+       } else {
+          var allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
+       }
+       var currentValue = parseInt($(closestInput).val());
+       $(allQuantityInputs).val(currentValue - 1);
+       handleEnableDisable(itemId, color);
+    });
 
 </script>

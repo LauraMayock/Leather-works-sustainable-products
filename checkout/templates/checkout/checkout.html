@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-7">
                     <p class="my-0">{{ item.product.name }}</p>
-                    <p class="my-0 small">Color: {% if item.product.has_color %}{{ item.color }}{% else %}N/A{% endif %}
+                    <p class="my-0 small">Color: {% if item.product.color_choice %}{{ item.color }}{% else %}N/A{% endif %}
                     </p>
                     <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                 </div>
@@ -114,10 +114,10 @@
                 </fieldset>
                 <!-- Container for buttons to go back / proceed -->
                 <div class="submit-button text-right mb-2">
-                    <a href="{% url 'shopping_bag' %}" class="btn back-btn mt-3 mb-3">
+                    <a href="{% url 'shopping_bag' %}" class="btn btn-dark mt-3 mb-3">
                         <span>Adjust<br>Bag</span>
                     </a>
-                    <button id="submit-button" class="btn standard-btn mt-3 mb-3">
+                    <button id="submit-button" class="btn btn-dark mt-3 mb-3">
                         <span>Place Order</span>
                     </button>
                     <br>
