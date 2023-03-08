@@ -581,11 +581,14 @@ input[name='q']::placeholder {
 
 /* Slightly larger container on xl screens */
 
-
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .header-container {
         padding-top: 164px;
+    }
+
+    .footer {
+        width: 100%;
     }
 }   
 

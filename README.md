@@ -828,10 +828,22 @@ Code validation - ensuring the code base is validated using industry standard to
 Page validation - check all features and links from across the site are working as designed and developed.
 
 <details>
-<summary><b>Page Validation </b></summary>
+<summary><b>Page Validation</b></summary>
 <p>This test aims to check all features and links from across the site are working as designed and developed.
 
 To perform the test I used a Chrome browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
+
+The results are largely positive with these two noticable fails.
+
+   * Search bar - Searches will work when using only one word. When searching more then one word it comes up with 0 results.
+
+   * Category Header - Category header in the products page shows clearly on the top left of the page but does not show if the Category All Products is chosen.
+
+   * Update button in the checkout page will allow you to update a quantiy higher then 99.
+
+   * Testimonial carousel left and right buttons arent working although it is working automatically.
+
+   NB - With the below testing I noticed that the product image display wasnt working anymore. I realised taht i deleted the javascript code out of the quantity_input_scirpt.html page in order to create its own Javascript page. Due to time constraints I have decieded against this and will add it to future features.
 
 | Features                      | Expectation                                                         | Links Active/Features (Desktop)              | Links Active/Features (Mobile)                |
 |-------------------------------|---------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|
@@ -945,18 +957,55 @@ To perform the test I used a Chrome browser, and validated each page from a mobi
 |                               | Order history is showing                                            | Pass                                         | Pass                                          |
 | Order Number links            | Links to confirmaiton page with all relevant info                   | Pass                                         | Pass                                          |
 
+</p>
+</details>
+
+<details>
+<summary><b>Responsiveness </b></summary>
+<p>
+To test the websites layout and content remains well structured and accessible across differing screen sizes, I used Chrome's Developer Tools to virtualise how the website and all it's pages look and feel. In consideration that I opted to use Bootstrap which provides standard media queries for screen sizes from XS through to XL, I selected the following screens to test on; iPhone SE, Samsung Galaxy S8, Surface Pro, Nest hub Max, Laptop L -1440px.
+
+* Given more time, I would like to amend the Hamburger to kick in a smaller screen. At the moment, it is kicking in at 991.98px. Showing the logo on table-size screens would be more beneficial for the business for logo recognition.
+
+| Page                               | Mobile | Tablet  | Desktop |
+|------------------------------------|--------|---------|---------|
+| Home Page                          | PASS   | PASS    | PASS    |
+| /products/                         | PASS   | PASS    | PASS    |
+| /products/1/                       | PASS   | PASS    | PASS    |
+| /accounts/signup/                  | PASS   | PASS    | PASS    |
+| /accounts/login/                   | PASS   | PASS    | PASS    |
+| /accounts/password/reset/          | PASS   | PASS    | PASS    |
+| /products/add                      | PASS   | PASS    | PASS    |
+| /bag/                              | PASS   | PASS    | PASS    |
+| /profile/                          | PASS   | PASS    | PASS    |
+| /profile/order_history/            | PASS   | PASS    | PASS    |
+| /blog/                             | PASS   | PASS    | PASS    |
+| /blog/We-are-cetfified/            | PASS   | PASS    | PASS    |
+| /blog/what_is_sustainable_leather/ | PASS   | PASS    | PASS    |
+| /blog/meet-the-chief-tanner/       | PASS   | PASS    | PASS    |
+| /blog/faqs                         | PASS   | PASS    | PASS    |
+| /blog/contact                      | PASS   | PASS    | PASS    |
+| /blog/bespoke-made-to-order/       | PASS   | PASS    | PASS    |
+| /checkout/checkout_success.html    | PASS   | PASS    | PASS    |
+| /products/delete/                  | PASS   | PASS    | PASS    |
+| /products/edit/                    | PASS   | PASS    | PASS    |
 
 </p>
 </details>
 
 <details>
-<summary><b>Page Validation </b></summary>
-<p></p>
-</details>
+<summary><b>Accessibility</b></summary>
+<p>
+Key to any successful eCommerce website is ensuring its accessibility. Whilst in the design phase I consulted colour contrasting checkers to test for accessibility but overlooked image sizing. Origionally I had images in the categories section. But they required <scrset></scrset> to be used to ensure images were resized accurately. Due to timing constraintes i decided to remove the images and add to future features. 
 
-<details>
-<summary><b>Page Validation </b></summary>
-<p></p>
+[Origional section](media/Screenshot_20230301_222903.png)
+
+[Section now](media/Products-range.png)
+
+[Origional lighthouse test](media/main%20desktop%20lighthouse.png)
+
+
+</p>
 </details>
 
 <details>
