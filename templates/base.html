@@ -2,8 +2,8 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-
+  
+<head>
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -48,8 +48,6 @@
         <script src="https://js.stripe.com/v3/"></script>
         <!--Mail chimp css-->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-        	
-        </style>
         <!-- add font family-->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -59,7 +57,7 @@
 
     <title>Leather works {% block extra_title %}{% endblock %}</title>
   </head>
-  <!----Logo-->
+  <!--Logo-->
   <body class="d-flex flex-column min-vh-100">
     <header id ="topnav" class="container-fluid fixed-top">
         <div class="row pt-lg-2 d-none d-lg-flex">
@@ -75,11 +73,9 @@
                         <a class="header-font nav-link" href="#" aria-label="Product category dropdown menu"
                         id="user-options-products" data-toggle="dropdown" aria-haspopup="true" 
                         aria-expanded="false">
-                            <div class="text-center">
-                                <p class="my-0">Products</p>
-                            </div>
+                                <h4 class="my-0">Products</h4>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                        <span class="dropdown-menu border-0" aria-labelledby="All Products-link">
                             <a href="{% url 'products' %}?category=wallets" class="dropdown-item"  
                                 aria-label="Wallets Category page">Wallets</a>
                             <a href="{% url 'products' %}?category=purse" class="dropdown-item" 
@@ -87,17 +83,17 @@
                             <a href="{% url 'products' %}?category=satchels_and_bags" class="dropdown-item"
                                 aria-label="Satchels and bags category page">Satchels & Bags</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                        </div>
+                        </span>
                     </li>
                     <li class="list-inline-item nav-item dropdown">
                         <a class="header-font nav-link" href="#" aria-label="Blog dropdown menu"
                             id="user-options-blog" data-toggle="dropdown" aria-haspopup="true" 
                             aria-expanded="false">
                             <div class="text-center">
-                                <p class="my-0">Blog</p>
+                                <h4 class="my-0">Blog</h4>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                        <div class="dropdown-menu border-0" aria-labelledby="product-link">
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_post' %}" class="dropdown-item" 
                             aria-label="Add a post page">Add Post</a>
@@ -183,7 +179,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-muted">
+        <span class="row bg-muted">
             <nav class="navbar navbar-expand-lg navbar-dark w-100">
                 <button class="navbar-toggler back" type="button" data-toggle="collapse" 
                     data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" 
@@ -192,7 +188,7 @@
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
             </nav>
-        </div>
+        </span>
     </div>
     </header>
 
