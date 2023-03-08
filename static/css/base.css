@@ -673,6 +673,7 @@ input[name='q']::placeholder {
 
     .carousel img {
         margin-top: 50px;
+        height: 80vw;
     }
 
     #mc_embed_signup .foot {

@@ -1199,7 +1199,6 @@ When you are ready to move to production, the following steps must be taken to e
 
 In GitPod:
 1. Set DEBUG flag to False in settings.py
-1. Check the following line exists in settings.py: X_FRAME_OPTIONS = 'SAMEORIGIN'
 1. Update the requirements.txt file with all necessary supporting files by entering the command : pip freeze > requirements.txt
 1. Commit and push code to GitHub
 In the Heroku App:

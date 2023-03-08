@@ -9,16 +9,16 @@
         <meta charset="utf-8">
         <meta name="author" content="Laura Mayock">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description"
-    content="An irish owned company, which design and create stunning, well made leather product from sustainable leather.
-    ">
-  <meta name="keywords"
-    content="sustainable leather products, leather products, Irish products, handmade leather products, ethical product, 
-    luxury leather bags, irish owned, irish tanner, luxury leather gifts, handmade gifts, Is leather sustainable,Irish leather products,
-    supporting Irish companies, Sustainable leather foundation, Sustainable leather brands, Ethically sourced leather, 
-    sustainable leather alternatives, purluxe leather alternatives, leather goods store near me, leather goods stores nearby, 
-    leather goods for sale, leather bags shop near me, handmade leather bags near me, custom leather goods, sustainable bags brands, 
-    sustainable bags meaning, ethical leather bags, ethical bag companies">
+        <meta name="description" content="An irish owned company, which design and create stunning, 
+        well made leather product from sustainable leather.">
+        <meta name="keywords" content="sustainable leather products, leather products, Irish products,
+        handmade leather products, ethical product, luxury leather bags, irish owned, irish tanner,
+        luxury leather gifts, handmade gifts, Is leather sustainable,Irish leather products,
+        supporting Irish companies, Sustainable leather foundation, Sustainable leather brands, 
+        Ethically sourced leather, sustainable leather alternatives, purluxe leather alternatives, 
+        leather goods store near me, leather goods stores nearby, leather goods for sale, leather 
+        bags shop near me, handmade leather bags near me, custom leather goods, sustainable bags brands, 
+        sustainable bags meaning, ethical leather bags, ethical bag companies">
     
     {% endblock %}
 
@@ -26,7 +26,9 @@
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
     {% endblock %}
 
     {% block extra_css %}
@@ -34,14 +36,18 @@
 
     {% block corejs %}
         <script src="https://kit.fontawesome.com/9fec73d71e.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+        crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
         <!--Mail chimp css-->
         <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
         	
         </style>
         <!-- add font family-->
@@ -66,34 +72,44 @@
             <div class="col-12 col-lg-8 my-auto py-1 py-lg-0 text-right">	
                 <ul class="list-inline list-unstyled text-md-right my-0">
                     <li class="list-inline-item nav-item dropdown">
-                        <a class="header-font nav-link" href="#" aria-label="Product category dropdown menu" id="user-options-products" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-font nav-link" href="#" aria-label="Product category dropdown menu"
+                        id="user-options-products" data-toggle="dropdown" aria-haspopup="true" 
+                        aria-expanded="false">
                             <div class="text-center">
                                 <p class="my-0">Products</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                            <a href="{% url 'products' %}?category=wallets" class="dropdown-item"  aria-label="Wallets Category page">Wallets</a>
-                            <a href="{% url 'products' %}?category=purse" class="dropdown-item" aria-label="Purses Category page">Purses</a>
-                            <a href="{% url 'products' %}?category=satchels_and_bags" class="dropdown-item" aria-label="Satchels and bags category page">Satchels & Bags</a>
+                            <a href="{% url 'products' %}?category=wallets" class="dropdown-item"  
+                                aria-label="Wallets Category page">Wallets</a>
+                            <a href="{% url 'products' %}?category=purse" class="dropdown-item" 
+                                aria-label="Purses Category page">Purses</a>
+                            <a href="{% url 'products' %}?category=satchels_and_bags" class="dropdown-item"
+                                aria-label="Satchels and bags category page">Satchels & Bags</a>
                             <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                         </div>
                     </li>
                     <li class="list-inline-item nav-item dropdown">
-                        <a class="header-font nav-link" href="#" aria-label="Blog dropdown menu" id="user-options-blog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="header-font nav-link" href="#" aria-label="Blog dropdown menu"
+                            id="user-options-blog" data-toggle="dropdown" aria-haspopup="true" 
+                            aria-expanded="false">
                             <div class="text-center">
                                 <p class="my-0">Blog</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_post' %}" class="dropdown-item" aria-label="Add a post page">Add Post</a>
+                            <a href="{% url 'add_post' %}" class="dropdown-item" 
+                            aria-label="Add a post page">Add Post</a>
                             {% else %}
-                            <a href="{% url 'blog' %}" class="dropdown-item" aria-label="view blog">Blog</a>
+                            <a href="{% url 'blog' %}" class="dropdown-item" 
+                            aria-label="view blog">Blog</a>
                         </div>
                         {% endif %}
                     </li>
                     <li class="list-inline-item">
-                        <a class="header-font nav-link" href="#" id="search" data-toggle="dropdown" aria-haspopup="true"
+                        <a class="header-font nav-link" href="#" id="search" 
+                            data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="text-center">
                                 <div class="nav-icon"><i class="fas fa-search fa-lg"></i></div>
@@ -102,34 +118,51 @@
                         </a>
                             <div class="dropdown-menu w-100 p-3 rounded-0 my-0" aria-labelledby="search">
                                 <form method="GET" action="{% url 'products' %}">
-                            <div class="input-group w-100">
-                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                            <div class="input-group-append">
-                                <button class="form-control btn btn-outline-success border border-black rounded-0" type="submit" aria-label="search">
-                                <span class="icon">
-                                    <i class="fa-solid text-black fa-magnifying-glass fa-lg"></i>
-                                </span>
-                                </button>
-                            </div>
-                             </form>
+                                    <div class="input-group w-100">
+                                        <input class="form-control border border-black rounded-0" type="text" 
+                                            name="q" placeholder="Search our site">
+                                        </div>
+                                    <div class="input-group-append">
+                                        <button class="form-control btn btn-outline-success border 
+                                            border-black rounded-0" type="submit" aria-label="search">
+                                                <span class="icon">
+                                                    <i class="fa-solid text-black fa-magnifying-glass fa-lg"></i>
+                                                </span>
+                                        </button>
+                                    </div>
+                                </form>
                             </div>
                     <li class="list-inline-item dropdown">
-                        <a class="header-font nav-link" href="#" id="user-options-account" aria-label="My Account dropdown menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
-                            </div>
+                        <a class="header-font nav-link" href="#" id="user-options-account" 
+                            aria-label="My Account dropdown menu" data-toggle="dropdown" 
+                            aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                   <div>
+                                        <i class="fas fa-user fa-lg"></i>
+                                   </div>
+                                        <p class="my-0">My Account</p>
+                                </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
-                                <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Access my profile page">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="log out">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" 
+                                    aria-label="Access my profile page">My Profile
+                                </a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item" 
+                                    aria-label="log out">Logout
+                                </a>
                                 {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Register">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item" 
+                                    aria-label="Register">Register
+                                </a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item" 
+                                    aria-label="Login">Login
+                                </a>
                             {% endif %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Add products page">Add Product</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item" 
+                                aria-label="Add products page">Add Product
+                            </a>
                            {% endif %}
                         </div>
                     </li>
@@ -152,13 +185,14 @@
         </div>
         <div class="row bg-muted">
             <nav class="navbar navbar-expand-lg navbar-dark w-100">
-                <button class="navbar-toggler back" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler back" type="button" data-toggle="collapse" 
+                    data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
             </nav>
         </div>
-
     </div>
     </header>
 
@@ -193,8 +227,6 @@
     <script type="text/javascript">
           $('.toast').toast('show');
         </script>
-    {% endblock %}
-
-    
+    {% endblock %}  
 </body>
 </html>
