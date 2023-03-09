@@ -7,21 +7,24 @@
 
 {% block content %}
 <!-- Homepage carousel section -->
+<section>
 <div id="carouselExampleControl" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/leather+bag+main+img.webp" alt="Second slide">
+        <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/leather+bag+main+img.webp" alt="Leather bag">
         <div class="carousel-caption">
           <a class="carousel-anchor" href="{% url 'products' %}" aria-label="Navigates to view all products">
             <h5>Check out our product range</h5>
+          </a>
         </div>
       </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/large-logo-_1_.webp" alt="Second slide">
+          <img class="d-block w-100" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/large-logo-_1_.webp" alt="Leather works logo">
           <div class="carousel-caption">
-            <a class="carousel-anchor"href="{% url 'sustain' %}" aria-label="Navigates to blog showing info on sustainability">
+            <a class="carousel-anchor" href="{% url 'sustain' %}" aria-label="Navigates to blog showing info on sustainability">
               <h5>Sustainable Leather</h5>
               <p>Want to find out more about sustainable leather?</p>
+            </a>
           </div>
         </div>
       <!-- Left and right controls -->
@@ -35,7 +38,6 @@
       </a>
     </div>
   </div>
-    </div>
   </section>
 <section>
   <div class="container text-center">
@@ -44,7 +46,7 @@
     <p>For years we have been working on making the best leather goods we can. Our emphasis is on durability,
       leather quality, Sustainability, craftmanship and unique style.</p>
 </div>
-<hr class="hr1"/>
+<span class="hr1"></span>
 </section>
 <section>
   <h2 class="text-center">Product Range</h2>
@@ -64,7 +66,7 @@
       </div>
 </section>
 <section>
-  <hr class="hr1"/>
+  <span class="hr1"></span>
   <div class="container">
     <div class="card-group vgr-cards">
       <div class="card">
@@ -95,7 +97,9 @@
         <div class="card-img-body">
           <img class="img-thumbnail" src="https://leather-works.s3.eu-west-1.amazonaws.com/media/sustainable+leather+purse.webp" alt="Leather purse">
         </div>
-        <hr class="hr1"/>
+        </div>
+        <span class="hr1"></span>
+  </div>
   </div>
 </section>
 
@@ -149,8 +153,7 @@
       </a>
     </div>
   </div>
-    </div>
-    <hr class="hr1"/>
+    <span class="hr1"></span>
   </section>
 <section>
   <div class="container-fluid d-flex justify-content-center">
@@ -166,43 +169,38 @@
         <p class="mb-5">Registered in Ireland. 15768256</p>
         </div>
       </div>
-    </div>
-    <hr class="hr1"/>
+    <span class="hr1"></span>
   </section>
 
 <section>
           <!-- Begin Mailchimp Signup Form -->
-          <div class="container-fluid">
-          <div id="mc_embed_signup">
-            <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=c1283ad29349d52ff28e0f2ae&amp;id=7e71b104ff&amp;f_id=004d2fe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                <div id="mc_embed_signup_scroll">
-                  <h2>Sign Up:</h2>
-                <h3>For latest deals.</h3>
-                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-        <div class="mc-field-group">
-          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-        </label>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-          <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-        </div>
-          <div id="mce-responses" class="clear foot">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1283ad29349d52ff28e0f2ae_7e71b104ff" tabindex="-1" value=""></div>
-                <div class="optionalParent">
-                    <div class="clear foot">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button btn-dark">
-                        <p class="brandingLogo"><a href="http://eepurl.com/ilvdfj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"  alt="Mailchimp logo for subscription company"></a></p>
-                    </div>
-                </div>
+<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+<div id="mc_embed_signup">
+    <form action="https://herokuapp.us9.list-manage.com/subscribe/post?u=c1283ad29349d52ff28e0f2ae&amp;id=7e71b104ff&amp;f_id=004d2fe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        <h2>Be the first to hear about the latest stock and deals.</h2>
+        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+	<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+</div>
+	<div id="mce-responses" class="clear foot">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c1283ad29349d52ff28e0f2ae_7e71b104ff" tabindex="-1" value=""></div>
+        <div class="optionalParent">
+            <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <p class="brandingLogo"><a href="http://eepurl.com/ilvdfj" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt=""MailChimp logo></a></p>
             </div>
-          </div>
-        </form>
         </div>
-        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+    </div>
+</form>
+        </div>
         <!--End mc_embed_signup-->
- 
 </section>
 
 

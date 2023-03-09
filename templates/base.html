@@ -128,6 +128,7 @@
                                     </div>
                                 </form>
                             </div>
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a class="header-font nav-link" href="#" id="user-options-account" 
                             aria-label="My Account dropdown menu" data-toggle="dropdown" 
@@ -179,17 +180,14 @@
                 </ul>
             </div>
         </div>
-        <span class="row bg-muted">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100">
+            <div class="navbar navbar-expand-lg navbar-dark w-100">
                 <button class="navbar-toggler back" type="button" data-toggle="collapse" 
                     data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" 
                     aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
-            </nav>
-        </span>
-    </div>
+            </div>
     </header>
 
     {% if messages %}

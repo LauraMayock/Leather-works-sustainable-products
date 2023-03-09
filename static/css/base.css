@@ -63,11 +63,10 @@ a.email {
     clear:left; 
     font:14px 
     Helvetica,Arial,sans-serif;  
-    width:600px;
 }
 
-#mc-embedded-subscribe.button{
-    background-color: #343a40;
+#mc_embed_signup #mc-embedded-subscribe.button {
+    background-color: rgb(86, 83, 83);
 }
 /*----------------------------------------------Info cards*/
 
@@ -652,18 +651,6 @@ input[name='q']::placeholder {
     .carousel img {
         margin-top: 50px;
         height: 80vw;
-    }
-
-    #mc_embed_signup .foot {
-        width: 70%;
-    }
-
-    #mc_embed_signup .mc-field-group input {
-        width: 60%;
-    }
-
-    #mc_embed_signup .indicates-required {
-        width: 60%;
     }
 
     .card-img-top {

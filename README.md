@@ -1012,6 +1012,31 @@ Key to any successful eCommerce website is ensuring its accessibility. Whilst in
 <summary><b>Page Validation </b></summary>
 <p></p>
 </details>
+
+<details>
+<summary><b>Page Validation </b></summary>
+<p></p>
+</details>
+
+<details>
+<summary><b>Page Validation </b></summary>
+<p></p>
+</details>
+
+<details>
+<summary><b>Code Validation </b></summary>
+<p>
+Writing well formed, quality code is essential for the future development of this, or any website. To support this aim I have used industry standard tools [list below] to validate every line of code using the input method. As well as using this tools, using GitPod as IDE allowed me to utilise the inbuilt code checkers such as Pycodestyle for Python.
+
+W3 Validator for HTML
+W3 Jigsaw for CSS
+JS Hint for JavaScript
+CI Python Linter for Python
+
+
+</p>
+</details>
+
 ## **Deployment**
 
 <details>
