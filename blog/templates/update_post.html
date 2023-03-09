@@ -11,16 +11,17 @@
 </div>
 {% endblock %}
 
-{% if user.is_authenticated %} 
-{% if user.id == x.author.id %}
+{% if user.is_superuser %} 
 <div class="container">
     <h1>Edit the Blog Post:</h1>
     <div class="row">
-      <div class="col-md-8 mt-3 offset-md-2">
+      <div class="col-md-8 mt-3 offset-md-2 mb-2">
         <form method=POST> {% csrf_token %} {{ form|crispy }}
           <br>
-          <input type="submit" value="Update" class="btn btn-signup">
+          <input type="submit" value="Update" class="btn btn-dark">
+          <a class="btn btn-dark" href="{% url 'blog' %}">Back </a>
         </form>
+       
       </div>
     </div>
 
@@ -28,9 +29,8 @@
     <div class="ml-5">
     <h3>This is not your Post.</h3> 
     <p>Only the Post Author can amend this blog post.</p>
-    <a class="btn back" href="{% url 'blog' %}">Back </a>
+    <a class="btn btn-dark" href="{% url 'blog' %}">Back </a>
 </div> 
-{% endif %}
 {% endif %}
 
 {% endblock %}

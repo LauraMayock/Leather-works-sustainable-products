@@ -39,6 +39,12 @@
             <p class="card-text ml-3">{{post.snippet}}</p>
             <a href="{% url 'post_detail' post.slug %}" class="btn btn-dark">Read More</a>
           </div>
+          {% if request.user.is_superuser %}
+          <small class="ml-3">
+              <a href="{% url 'update_post' post.id %}">Edit</a>
+              <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+          </small>
+      {% endif %}
           </div>
           <div class="hr"></div>
         {% endfor %}

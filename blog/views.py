@@ -1,12 +1,10 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView, CreateView, View
 from .models import Post
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
 from .forms import ContactForm, BlogPost, CreatePost
 from django.contrib import messages
-
-
 
 
 class PostList(ListView):
@@ -47,7 +45,7 @@ def update_post(request, post_id):
         return redirect('This is not your Post')
     if form.is_valid():
         form.save()
-        return redirect('blog')
+        return HttpResponseRedirect('/blog')
 
     return render(request,
                   'update_post.html',
@@ -63,7 +61,7 @@ def delete_post(request, post_id):
     context = {'pst': pst}
 
     if request.method == 'POST':
-        rev.delete()
+        pst.delete()
         messages.success(request,
                          ('You have deleted this review sucessfully.'))
         return redirect('blog')

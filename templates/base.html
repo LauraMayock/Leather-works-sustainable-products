@@ -97,6 +97,8 @@
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_post' %}" class="dropdown-item" 
                             aria-label="Add a post page">Add Post</a>
+                            <a href="{% url 'blog' %}" class="dropdown-item" 
+                            aria-label="view blog">Blog</a>
                             {% else %}
                             <a href="{% url 'blog' %}" class="dropdown-item" 
                             aria-label="view blog">Blog</a>
