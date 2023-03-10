@@ -766,6 +766,7 @@ I have included a blog to help with SEO and help the owner promote and spread in
 ![Blog access 2](media/access%202.png)
 ![Blog access 3](media/access3.png)
 
+The super user also has the ability to edit and delete post on the front end when logged in.
 
 ## **Error Page**
 I have included custom 404 page so users can easily navigate back to the homepage if any errors occur. Therefore reducing the risk of the user leaving the site completely due to a bad user experience.
@@ -1033,7 +1034,9 @@ W3 Jigsaw for CSS
 JS Hint for JavaScript
 CI Python Linter for Python
 
-
+![code validation1](media/Code%20Validation%20error1.png)
+![code validation1](media/Code%20Validation%20error2.png)
+![code validation1](media/Code%20Validation%20error3.png)
 </p>
 </details>
 
