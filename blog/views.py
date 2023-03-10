@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView, CreateView, View
 from .models import Post
+from django.contrib.auth.decorators import login_required
 from django.utils.text import slugify
 from django.http import HttpResponseRedirect
 from .forms import ContactForm, BlogPost, CreatePost
@@ -34,6 +35,7 @@ class PostDetail(View):
         )
 
 
+@login_required
 def update_post(request, post_id):
     """
     Users can update book reviews that they have
@@ -52,7 +54,7 @@ def update_post(request, post_id):
                   {'update-post': post, 'form': form})  
 
 
-
+@login_required
 def delete_post(request, post_id):
     """
     Users can delete post
@@ -69,6 +71,7 @@ def delete_post(request, post_id):
     return render(request, 'delete.html', context)
 
 
+@login_required
 class AddPost(CreateView):
     """
     Ensures that person is logged in to create
@@ -139,7 +142,8 @@ def meet_the_tanner(View):
 def certs(View):
     model = Post
     queryset = Post.objects.filter(title="We are a Certified Sustainable leather Manufacturer.")
-    return HttpResponseRedirect('/blog/We-are-cetfified/')
+    return HttpResponseRedirect('/blog/we-are-a-certified/')
+
 
 def custom(View):
     model = Post
