@@ -1020,7 +1020,9 @@ Key to any successful eCommerce website is ensuring its accessibility. Whilst in
 ![Lighthouse product page desktop](media/product%20page%20desktop.png)
 ![Lighthouse product page mobile](media/product%20page%20mobile.png)
 
-
+# shopping bag
+![Lighthouse shopping bag page mobile](media/shopping%20bag%20mobile.png)
+![Lighthouse shopping bag page desktop](media/shopping%20bag%20mobile.png)
 
 </p>
 </details>
