@@ -14,16 +14,16 @@
 {% block content %}
 <!-- Blog Entries Column -->
 
-  <div class="container-fluid">
+  <div class="container-fluid col-10">
       <div class="row">
             {% for post in post_list %}
                 <div class="col mt-3 mb-3">
                   <h1>{{ post.title }}</h1>
-                    <hr class="mb-1">
+                    <hr class="hr1">
                 </div>
             </div>
           <div class="card mb-10">
-            <div class="card-body">
+            <div class="card-body col-8">
               <div class="img-container">
                 {% if "placeholder" in post.featured_image.url %}
                 <img class="card-img-top" src="{{ post.featured_image }}" style="width:80%; height:auto"
@@ -46,7 +46,7 @@
           </small>
       {% endif %}
           </div>
-          <div class="hr"></div>
+          <hr class="hr1">
         {% endfor %}
       <div>
         <!-- Back to top button -->

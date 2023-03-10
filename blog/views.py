@@ -124,13 +124,13 @@ class Faqs(CreateView):
         return render(request, self.template_name, {})
 
 
-def sustain(View):
+def sustainable_leather(View):
     model = Post
     queryset = Post.objects.filter(title="What is Sustainable Leather?")
-    return HttpResponseRedirect('/blog/what_is_sustainable_leather/')
+    return HttpResponseRedirect('/blog/what-is-sustainable-leather/')
 
 
-def tanner(View):
+def meet_the_tanner(View):
     model = Post
     queryset = Post.objects.filter(title="Meet the chief Tanner")
     return HttpResponseRedirect('/blog/meet-the-chief-tanner/')

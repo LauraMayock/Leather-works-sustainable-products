@@ -33,13 +33,12 @@
         </div>
         </div>
 
-    {% if user.is_authenticated %} 
-{% if user.id == x.author.id %}
-<div class="pb-4">
-<!-- Update or review button -->
-<a href="{% url 'update_post' x.id %}" class="btn mb-3 btn-signup btn active">Edit Post</a>
-<a href="{% url 'delete_post' x.id %}"class="btn mb-3 btn-outline-danger btn active">Delete Review</a>
-
+        {% if request.user.is_superuser %}
+        <small class="ml-3">
+            <a href="{% url 'update_post' post.id %}">Edit</a>
+            <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+        </small>
+        <a class="btn btn-dark mb-4" href="{% url 'blog' %}">Back </a>
 {% else %}
 <a class="btn back mb-4" href="{% url 'blog' %}">Back </a>
 </div>
