@@ -1,3 +1,4 @@
+<ul>
 <li class="list-inline-item">
     <a class="header-font nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
@@ -54,8 +55,8 @@
         </div>
     </a>
 </li>
-<li class="navbar-nav w-auto mx-auto">
-    <span class="collapse navbar-collapse" id="main-nav">
+<span class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-lg-none">
             <a class="nav-link m-2" href="{% url 'home' %}" id="home-link">
                 Home
@@ -70,6 +71,7 @@
             <a class="nav-link m-2" href="{% url 'blog' %}" id="blog-link"  aria-label="link to page showing all blog posts">
                 Blog
             </a> 
-        </li>  
+        </li>
+        </ul>
     </span>
-</li>
+</ul>

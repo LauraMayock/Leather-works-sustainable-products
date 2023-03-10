@@ -1002,16 +1002,25 @@ Key to any successful eCommerce website is ensuring its accessibility. Whilst in
 [Origional section](media/Screenshot_20230301_222903.png)
 
 [Section now](media/Products-range.png)
-
 [Origional lighthouse test](media/main%20desktop%20lighthouse.png)
-
 
 </p>
 </details>
 
 <details>
-<summary><b>Page Validation </b></summary>
-<p></p>
+<summary><b>Lighthouse Scores</b></summary>
+<p>
+#Home Page
+
+![Lighthouse home page mobile](media/lighthouse%20mobile%20main%20page.png)
+![Lighthouse home page desktop](media/lighthouse%20desktop.png)
+
+![Lighthouse product page desktop](media/product%20page%20desktop.png)
+![Lighthouse home page desktop](media/lighthouse%20desktop.png)
+
+
+
+</p>
 </details>
 
 <details>
@@ -1037,6 +1046,7 @@ CI Python Linter for Python
 ![code validation1](media/Code%20Validation%20error1.png)
 ![code validation1](media/Code%20Validation%20error2.png)
 ![code validation1](media/Code%20Validation%20error3.png)
+
 </p>
 </details>
 
