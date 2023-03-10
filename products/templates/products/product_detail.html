@@ -8,18 +8,17 @@
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
 {% endblock %}
 
 {% block content %}
 <section>
     <div class="overlay"></div>
     <div class="container-fluid">
-        <div class="row">  
+        <div class="row"></div> 
  {% if product.thumbnail %}
      <!-- The grid: four columns -->
      <div class="container-img2">
-<div class="row mt-md-5 mt-sm-3 mt-lg-3">
+        <div class="row mt-md-5 mt-sm-3 mt-lg-3">
     <div class="column">
         <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;" onclick="myFunction(this);">
     </div>
@@ -35,12 +34,12 @@
 </div>
 <div class="container-img1">
     <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-    <img id="expandedImg" style="width:100%">
-    <div class="mt-2" id="imgtext"></div>
-  </div>
-  <div id="thumbnail">
-  <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;">
+    <span id="expandedImg" style="width:100%"></span>
+        <div class="mt-2" id="imgtext"></div>
 </div>
+    <div id="thumbnail">
+       <img src="{{ product.thumbnail.url }}" alt="{{ product.name }}" style="width:100%;">
+    </div>
     {% else %}
     <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
   {% endif %}
@@ -49,13 +48,13 @@
             <div class="col-md-6">
                 <div class="product-details-container mb-5 mt-md-5">
                     <h3 class="mb-0">{{ product.name }}</h3>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                        </a>
-                    </p>
+                        <p class="small mt-1 mb-0">
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                               <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            </a>
+                         </p>
                     {% endif %}
                     {% if request.user.is_superuser %}
                     <small class="ml-3">
@@ -119,7 +118,7 @@
                     </form>
                 </div>
             </div>
-    </section>
+        </section>
              <!--- Container for product reviews -->
     <section class="mb-5 pb-5">
     <div class="container-fluid mt-2 mb-5">
@@ -177,6 +176,7 @@
                     {% endif %} {% endif %}
                 </div>
             </div>
+        </div>
         </section>
 {% endblock %}
 
