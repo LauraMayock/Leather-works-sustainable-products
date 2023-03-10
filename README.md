@@ -1010,13 +1010,15 @@ Key to any successful eCommerce website is ensuring its accessibility. Whilst in
 <details>
 <summary><b>Lighthouse Scores</b></summary>
 <p>
-#Home Page
+
+# Home Page
 
 ![Lighthouse home page mobile](media/lighthouse%20mobile%20main%20page.png)
 ![Lighthouse home page desktop](media/lighthouse%20desktop.png)
 
+# Product page
 ![Lighthouse product page desktop](media/product%20page%20desktop.png)
-![Lighthouse home page desktop](media/lighthouse%20desktop.png)
+![Lighthouse product page mobile](media/product%20page%20mobile.png)
 
 
 
