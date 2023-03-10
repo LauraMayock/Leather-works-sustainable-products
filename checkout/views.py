@@ -72,7 +72,8 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for color, quantity in item_data['items_by_color'].items():
+                        for color, quantity in item_data['items_by_color']\
+                                                         .items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,

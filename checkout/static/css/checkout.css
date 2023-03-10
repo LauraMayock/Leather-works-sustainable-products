@@ -51,9 +51,10 @@ select option[value=""] {
 	position: fixed;
     top: 0;
     left: 0;
+    background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%); ;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
     z-index: 9999;
 }
 

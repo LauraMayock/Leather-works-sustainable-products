@@ -51,7 +51,7 @@ def update_post(request, post_id):
 
     return render(request,
                   'update_post.html',
-                  {'update-post': post, 'form': form})  
+                  {'update-post': post, 'form': form})
 
 
 @login_required
@@ -81,7 +81,6 @@ class AddPost(CreateView):
     model = Post
     form_class = CreatePost
 
-
     def form_valid(self, form):
         """_summary_
         validates the form and adds a success message
@@ -98,10 +97,10 @@ class AddPost(CreateView):
         return super().form_valid(form)
 
 
-
 def contact(request):
     """
     Submits contact us form to the admin dashboard.
+
     """
     submitted = False
     if request.method == "POST":
@@ -141,7 +140,8 @@ def meet_the_tanner(View):
 
 def certs(View):
     model = Post
-    queryset = Post.objects.filter(title="We are a Certified Sustainable leather Manufacturer.")
+    queryset = Post.objects.filter(
+        title="We are a Certified Sustainable leather Manufacturer.")
     return HttpResponseRedirect('/blog/we-are-a-certified/')
 
 

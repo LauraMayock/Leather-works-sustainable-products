@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, HttpResponse, get_object_or_404
+)
 from django.contrib import messages
 from products.models import Product
 
@@ -26,20 +28,26 @@ def add_item(request, item_id):
         if item_id in list(bag.keys()):
             if color in bag[item_id]['items_by_color'].keys():
                 bag[item_id]['items_by_color'][color] += quantity
-                messages.success(request, f'Updated color {color.upper()} {product.name} quantity to {bag[item_id]["items_by_color"][color]}')
+                messages.success(
+                    request, f'Updated color {color.upper()} {product.name} \
+                        quantity to {bag[item_id]["items_by_color"][color]}')
             else:
                 bag[item_id]['items_by_color'][color] = quantity
-                messages.success(request, f'Added color{color.upper()} {product.name} to your bag')
+                messages.success(request, f'\
+                    Added color{color.upper()} {product.name} to your bag')
         else:
             bag[item_id] = {'items_by_color': {color: quantity}}
-            messages.success(request, f'Added color{color.upper()} {product.name} to your bag')
+            messages.success(request, f'\
+                Added color{color.upper()} {product.name} to your bag')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'\
+                Updated {product.name} quantity to {bag[item_id]}')
         else:
             bag[item_id] = quantity
-            messages.success(request, f'Added {quantity}|{product.name} to your bag')
+            messages.success(request, f'Added {quantity}|{product.name}\
+                 to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -57,16 +65,20 @@ def adjust_bag(request, item_id):
     if color:
         if quantity > 0:
             bag[item_id]['items_by_color'][color] = quantity
-            messages.success(request, f'Updated color{color.upper()}{product.name} quantity to {bag[item_id]["items_by_color"][color]}')
+            messages.success(request, f'\
+                Updated color{color.upper()}{product.name} \
+                    quantity to {bag[item_id]["items_by_color"][color]}')
         else:
             del bag[item_id]['items_by_color'][color]
             if not bag[item_id]['items_by_color']:
                 bag.pop(item_id)
-                messages.success(request, f'Remove color{color.upper()}{product.name} from your bag')         
+                messages.success(request, f'\
+                    Remove color{color.upper()}{product.name} from your bag')
     else:
         if quantity > 0:
             bag[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
+            messages.success(request, f'\
+                Updated {product.name} quantity to {bag[item_id]}')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
@@ -88,11 +100,11 @@ def remove_item(request, item_id):
             del bag[item_id]['items_by_color'][color]
             if not bag[item_id]['items_by_color']:
                 bag.pop(item_id)
-                messages.success(request, f'Removed {product.name} from your bag')
+                messages.success(request, f'\
+                    Removed {product.name} from your bag')
         else:
             bag.pop(item_id)
             messages.success(request, f'Removed {product.name} from your bag')
-
 
         request.session['bag'] = bag
         return HttpResponse(status=200)

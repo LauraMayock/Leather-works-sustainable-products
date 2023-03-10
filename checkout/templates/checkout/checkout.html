@@ -5,7 +5,7 @@
 {% block title %}{% trans 'Checkout' %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -29,13 +29,13 @@
                     <p class="mb-1 mt-0 mb-2"><strong>Subtotal</strong></p>
                 </div>
             </div>
-            <hr class="hr1">
+             <hr class="hr1">
             <!-- Container to confirm bag items -->
             {% for item in bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
                     <a href="{% url 'product_detail' item.product.id %}">
-                        {% if item.product.image %}
+                        {% if item.product.thumbnail %}
                         <img class="w-100" src="{{ item.product.thumbnail.url }}" alt="{{ product.name }}">
                         {% else %}
                         <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
@@ -116,7 +116,7 @@
                 <!-- Container for buttons to go back / proceed -->
                 <div class="submit-button text-right mb-2">
                     <a href="{% url 'shopping_bag' %}" class="btn btn-dark mt-3 mb-3">
-                        <span>Adjust<br>Bag</span>
+                        <span>Adjust Bag</span>
                     </a>
                     <button id="submit-button" class="btn btn-dark mt-3 mb-3">
                         <span>Place Order</span>
@@ -134,11 +134,12 @@
     </div>
 </div>
 <div id="loading-overlay">
-    <h1 class="text-light logo-font loading-spinner">Loading...</h1>
+    <h1 class="text-black text center mt-5 pt-5">LOADING........</h1>
+    <h2 class="text-black text center mt-5 pt-5 logo-font loading-spinner">
         <span class="icon">
             <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </span>
-    </h1>
+    </h2>
 </div>
 {% endblock %}
 
