@@ -13,101 +13,45 @@ Leather works is a small company making and selling leather products from sustai
 
 <br>
 
+
+
 ## **Table of Contents**
-[**Content**](#Content)
+[**top**](#top)
 * [**Planning Phase**](#planning-phase)
   * [**User Experience**](#user-experience)
-    * [***Site Aims***](#site-aims)
-    * [***Opportunities***](#opportunities)
     * [***Scope***](#scope)
     * [**Agile Methodology:**](#agile-methodology)
+    * [**Opportunities**](#opportunities)
       * [**User Stories:**](#user-stories)
-        * [**EPIC 1 - Set up and Deployment:**](#epic-1---set-up-and-deployment)
-        * [**EPIC 2 - Viewing and Navigation:**](#epic-2---viewing-and-navigation)
-        * [**EPIC 3 - Registration and User Accounts:**](#epic-3---registration-and-user-accounts)
-        * [**EPIC 4 - Sorting and Searching:**](#epic-4---sorting-and-searching)
     * [**Wireframes:**](#wireframes)
       * [***Home Page:***](#home-page)
       * [***Products Page:***](#products-page)
       * [***Product Details Page:***](#product-details-page)
       * [**Database Schema:**](#database-schema)
+    * [**Web Marketing Strategy:**](#web-marketing-strategy)
     * [**SEO considerations**](#seo-considerations)
       * [***Keywords***](#keywords)
       * [***Page Titles***](#page-titles)
-      * [***Robots.txt and sitemap.xml***](#robotstxt-and-sitemapxml)
     * [***Content***](#content)
-    * [**Surface**](#surface)
+     * [***Robots.txt and sitemap.xml***](#robotstxt-and-sitemapxml)
       * [***Colour Scheme***](#colour-scheme)
       * [***Typography***](#typography)
-  * [**Agile Development Process**](#agile-development-process)
-  * [**E-commerce Application Type**](#e-commerce-application-type)
-  * [**Marketing Stratergy**](#marketing-stratergy)
 * [**Features**](#features)
-  * [**Common to All Pages**](#common-to-all-pages)
-    * [**Navbar**](#navbar)
-      * [**Overall Appearance**](#overall-appearance)
-        * [***Desktop***](#desktop)
-        * [***Mobile***](#mobile)
-      * [**Common Navbar Features for both Desktop and Mobile**](#common-navbar-features-for-both-desktop-and-mobile)
-        * [***Logo***](#logo)
-          * [***Desktop***](#desktop-1)
-          * [***Mobile***](#mobile-1)
-        * [***Search Bar***](#search-bar)
-          * [***Desktop***](#desktop-2)
-          * [***Mobile***](#mobile-2)
-      * [**Account menu**](#account-menu)
-        * [***Unauthenticated***](#unauthenticated)
-        * [***Authenticated***](#authenticated)
-      * [**Cart icon**](#cart-icon)
-    * [**Footer**](#footer)
-      * [***Desktop***](#desktop-3)
-      * [***Mobile***](#mobile-3)
-      * [**Common Features to both Desktop and Mobile**](#common-features-to-both-desktop-and-mobile)
-        * [***Social Media Links***](#social-media-links)
-        * [***Newsletter Sign Up***](#newsletter-sign-up)
-        * [***Sitemap***](#sitemap)
-    * [**Notifications**](#notifications)
-  * [**Page content**](#page-content)
     * [**Home Page**](#home-page-1)
     * [**Products Page**](#products-page-1)
     * [**Product Details Page**](#product-details-page-1)
     * [**Reviews**](#reviews)
-      * [***Unauthenticated***](#unauthenticated-1)
-      * [***Authenticated***](#authenticated-1)
     * [**Edit product - frontend form**](#edit-product---frontend-form)
     * [**Shopping Cart**](#shopping-cart)
-      * [***Desktop***](#desktop-4)
-      * [***Mobile***](#mobile-4)
     * [**Checkout**](#checkout)
-      * [***Desktop***](#desktop-5)
-      * [***Mobile***](#mobile-5)
     * [**Checkout Success**](#checkout-success)
     * [**Profile**](#profile)
     * [***Contact us***](#contact-us)
-    * [**Authentication**](#authentication)
-    * [***Stock management system***](#stock-management-system)
-    * [**Age verification pop-up**](#age-verification-pop-up)
-    * [**Responsive Design**](#responsive-design)
-  * [**Admin Panel for Shop Administration**](#admin-panel-for-shop-administration)
-    * [**Admin Panel Overview**](#admin-panel-overview)
-      * [***Products***](#products)
-      * [**Messages**](#messages)
-      * [**Orders**](#orders)
     * [**Future Features**](#future-features)
-      * [***Automation of the stock system***](#automation-of-the-stock-system)
-      * [***Dynamically add nav links for new categories/subcategories***](#dynamically-add-nav-links-for-new-categoriessubcategories)
-      * [***Sales reports***](#sales-reports)
-      * [***Additional shipping choices***](#additional-shipping-choices)
-      * [***Additional payment methods***](#additional-payment-methods)
-      * [***Additional user account features***](#additional-user-account-features)
-      * [***Product options***](#product-options)
-      * [***Ticketing Sytem***](#ticketing-sytem)
   * [**Testing Phase**](#testing-phase)
   * [**Deployment**](#deployment)
   * [**Technologies used**](#technologies-used)
-  * [**Honorable Mentions**](#honorable-mentions)
   * [**Credits**](#credits)
-    * [**Media**](#media)
 
 
 # **Planning Phase**
@@ -229,8 +173,9 @@ As a **store owner** I am able to
 * As a **Site User** I want to be able to...
   * ...**Register for an account** so that I can **save my personal details, view my order history online.**
 
+[Back to top](<#top>)
 
-### ***Opportunities***
+### **Opportunities**
 
 In the course of providing a fully functioning E-commerce platform, the following opportunities are available: -
 
@@ -269,6 +214,8 @@ Ability to edit order until status set to processing | 1 | 5
 ---------------------- | --- | ---  
 Totals | 129 | 138
 
+[Back to top](<#top>)
+
 #### **Wireframes:**
 
 Wireframes were created using Balsamiq wireframes to visualize how the site would look and function. Included below are the wireframes used to plan the site's layout. However, some changes/omissions were made during the development process due to time or practicality.
@@ -292,7 +239,7 @@ The database table scheme was created using [drawsql.app](https://drawsql.app) a
 
 [Database wireframe](media/database.png)
 
-
+[Back to top](<#top>)
 
 ### **Web Marketing Strategy**
 
@@ -446,7 +393,7 @@ Facebook Post
 
 
 <br>
-
+[Back to top](<#top>)
 
 #### ***Colour Scheme***
 
@@ -472,7 +419,7 @@ For this project, I have used the following fonts:
 * [DM Sans](https://fonts.google.com/specimen/DM+Sans?query=dm+s) - This font is used for the main headings and the logo. It is a clean and simple font that is easy to read and stands out well.
 * [Damion](https://fonts.google.com/specimen/Damion?query=damion) - This was for the logo. I initially wanted to make the V and the T cursive; however, I found this font perfect for all letters of the logo.
 
-
+[Back to top](<#top>)
 
 # **Features**
 
@@ -771,8 +718,45 @@ The super user also has the ability to edit and delete post on the front end whe
 ## **Error Page**
 I have included custom 404 page so users can easily navigate back to the homepage if any errors occur. Therefore reducing the risk of the user leaving the site completely due to a bad user experience.
 
+[Back to top](<#top>)
 
 ### **Future Features**
+
+Aiming for a MVP due to project deadline there are a lot of additional features I would like to add in the future.
+
+* Automated stock system
+
+To hold info on stock levels, alert when stock is low or sold and prompt to reorder.
+
+* Search bar 
+
+To look into the bug in the searches. At the moment it will only search sucessfully if using one word searches.
+
+* Image Category section
+
+Due to Low lighthouse accessibility and the looming deadline I decided to remove the product category images. 
+
+![Product category](media/Screenshot_20230301_222903.png) 
+
+I would love to reinstate this as I think its more visually appealing. Please see testing section for more information on this can be amended.
+
+* Product color choice visual
+
+I would like to add a visual instead of a text description in the color choice section. Where if a customer chooses a color box an image of the product in that color would show.
+
+* New release section
+
+A section where new products are automatically highlighted on the main page by pulling information from the created on section of the product model.
+
+* Paypal
+
+The addition of quick secure payment system such as paypal would be a great asset.
+
+* SEO
+
+Although the project rated high on SEO. I would like to add more blog posts that would help more. Using heading like 'Looking after your leather' with helpful information on how to care for your leather products and highlight Leather works 'loved leather workshop' where goods can be sent to get repaired or cleaned.
+
+[Back to top](<#top>)
 
 ## **Testing Phase**
 
@@ -784,275 +768,8 @@ Browser - pages are tested for layout, features and general performance across C
 Device - manual testing will be performed on an iOS and Android mobile, Tablet, Laptop and Desktop to ensure all users have a positive experience no matter which device or browser they prefer to use.
 Code validation - ensuring the code base is validated using industry standard tools for HTML, CSS, JavaScript and Python code.
 
+Testing can be found in [TESTING.md](TESTING.md).
 
-<details>
-    <summary><b>User Stories</b></summary>
-    <p>
-      The objective of this test is to validate that the user requirements have been delivered for the MVP release. Further details of the Epics, Features and User Story tasks can be found either in the [GitHub Projects Kanban Board](https://github.com/users/LauraMayock/projects/7).
-
-| Ref  | User Story                                                                                                                                                                                                                                   | ACCEPTANCE CRITERIA                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | RESULT       | RATIONALE                                                                                                                                                                                                                                                                                                                                                   |
-|------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| US01 | As a Site User, I can understand what the site aim is and my options from viewing the homepage, so that I can intuitively navigate the site and have a good e-commerce experience                                                            | 1\. The site structure and layout should be clear and simple to navigate <br> 2\. Site Users should be able to find products either from homepage adverts, Nav menu or Search function <br>3\. Site Users will have an option to register for a user account from the Navbar                                                                                                                                                                                                             | PASS         | Positive lighthouse accessibility ensures the website is of a high                                                                                                                                                                                                                                                                                          |
-| US02 | As a Site User, I can use the Footer for navigation, so that I can learn more about the business                                                                                                                                             | 1\. Footer is located at the bottom of every page <br> 2\. Footer provides links that are clear and accessible  <br> 3\. Links to social media are available                                                                                                                                                                                                                                                                                                                             | PASS         | There are links to company information within the footer. However from an accessibility perspective it is advised not to repeat menus within the same screen. As the navbar with links to company information is fixed to each page, only selective links have been added to the footer.                                                                    |
-| US03 | As Site Owner, I want a brand logo, so Site Users can easily learn the type of products being sold                                                                                                                                           | 1\. A logo that is identifiable as relating to Leather Works products that will help build the brand <br> 2\. Logo to be used within the Navbar and is always prominent.                                                                                                                                                                                                                                                                                                                 | PASS         | The company name is clear within the navbar and throughout the homepage.                                                                                                                                                                                                                                                                                    |
-| US04 | As a Site Owner, I can add products to the site, so I can manage the content and adapt to changes in stock as lines become obsolete and new products come on board.                                                                          | 1\. Successfully add a product from either the back or front end  </br> 2\. Clear easy to use forms in both back and front end. <br>. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user.                                                                                                                                                                                                                                             | PASS         | A site owner can add new products either from a front end form when signed in, or from using the Django admin panel. This is safe guarded to only allow superusers this access.                                                                                                                                                                             |
-| US05 | As a Site Owner, I can edit existing products on the site, so I can manage the content and adapt to changes in stock.                                                                                                                        | 1\. Successfully edit a product from either the back or front end  <br> 2\. Clear easy to use forms in both back and front end. <br> 3\. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user.                                                                                                                                                                                                                                          | PASS         | A site owner can edit existing products either from a front end form when signed in, or from using the Django admin panel.                                                                                                                                                                                                                                  |
-| US06 | As a Site Owner, I can remove products from the site, so I can manage the content and adapt to changes in stock                                                                                                                              | 1\. Successfully remove a product from either the back or front end <br> 2\. Alerts, sucess messages and warning messages are there for safe guards and are prominent for the user.                                                                                                                                                                                                                                                                                                      | PASS         | A site owner can remove existing products either from a front end form when signed in, or from using the Django admin panel.                                                                                                                                                                                                                                |
-| US07 | As a Shopper, i ca view individual products in detail so that I can make a more informed decision                                                                                                                                            | 1\. Sufficient details on the product category pages that offer Title, Subtitle, Price with a view to enticing the user to click and learn more2\. Product page with full descriptions in addition to those highlighted in products page.                                                                                                                                                                                                                                                | PASS         | Every product can be viewed in isolation complete with and description. Other key pieces of information are contained within the product details page such as color (if applicable) and price.                                                                                                                                                              |
-| US08 | As a shopper, i can sort site items so that I can easily identify the best price/ product.                                                                                                                                                   | 1\. Category views that are accessible from the Navbar menu <br> 2\. Category views that correctly dissect product lines                                                                                                                                                                                                                                                                                                                                                                 | PASS         | Drop-down menus from the fixed Navbar allow users to navigate to specific categories or see all products. This can also be done in the products page. where shoppers can also sort products.                                                                                                                                                                |
-| US09 | As a Site Owner, I would like to use the homepage to promote items and key messages to users, so that I can drive traffic to the most beneficial areas | 1\. The revolving carousal has an hero image with a banner advertising a new line   | 2\. A button within the banner allows Site Users to be navigated to the latest product drip                                                                                                                                                                                                                                                                                                                                                                                              | PASS         | A carousal has been incorporated into the homepage and offers the ability to navigate users to specific pages.                                                                                                                                                                                                                                              |
-| US10 | As a Site User, I can view recommendations from existing customers, as it will help to inform my trust in the business                                                                                                                       | 1\. A dedicated section of the homepage, where Site Users will see recommendations from existing customers                                                                                                                                                                                                                                                                                                                                                                               | PASS         | Product reviews are enabled for all products. To leave a review you must be registered and have verified the account through email confirmation.                                               |                                                                                                                                                            |
-| US11 | As a Site User, I can learn more about the business, so that I can assess trustworthiness and ethos.                                                                                                                                         | 1\. A dedicated section of the homepage, where Site Users will learn more about the business, their ethos and the key people behind the business.                                                                                                                                                                                                                                                                                                                                        | PASS         | Users have access to the blog on the main nav bar and accesspoints through out the main paged that brings them to key infomation about the company and what they are doing for sustainability.                                                                                                                                                              |
-| US12 | As a Site User, I would like to make a transaction without registering for a user account, as this is either a one off purchase or is my preference not to have a company hold my details                                                    | 1\. Not registered users can checkout without an account whilst still maintaining all checkout functionality                                                                                                                                                                                                                                                                                                                                                                             | PASS         | Site users can checkout without being a registered user.                                                                                                                                                                                                                                                                                                    |
-| US13 | As a Site User, I would like my delivery details to be pre-populated when I come to pay, as this would be more convenient and ease my experience and time to purchase                                                                        | 1\. Pre-populated delivery details that can be overridden manually in the checkout area for authenticated users                                                                                                                                                                                                                                                                                                                                                                          | PASS         | Site users with a registered account will either have their delivery details stored following their first transaction, or can add them manually to their profile before a transaction.                                                                                                                                                                      |
-| US14 | As a Site User, I would like to adjust the quantity or remove items from my shopping bag, in case I change my mind when assessing all my items before purchasing                                                                             | 1\. Site Users can increase or decrease the quantity of items within them shopping bag as part of the checkout process                                                                                                                                                                                                                                                                                                                                                                   | PASS         | Site users have the functionality to increase or decrease items within their bag before checking out. Users can also remove items completely.                                                                                                                                                                                                               |
-| US15 | As a Site User, I can register an account, so that I can add reviews                                                                                                                                                                         | 1\. Site Users are provided with a simple Form to complete in order to register an account2\. Form fields should follow convention for sign-up forms3\. Form buttons should enable the Form to be submitted or reset if an error has been made                                                                                                                                                                                                                                           | PASS         | Users can sign-up for an account using a simple form and following instructions within to verify their account.                                                                                                                                                                                                                                             |
-| US16 | As a Site User, I can sign-in to my account, so that I can utilise member benefits                                                                                                                                                           | 1\. Site Users will be able to sign-in from clicking a link in the Navbar menu2\. Sites Users will be required to enter their Username and Password to sign-in3\. A message should confirm to Site Users when they have successfully signed in4\. A message should inform Site Users if the information entered was not valid, and to try again                                                                                                                                          | PASS         | Site users can register for an account. Whilst for MVP the features are limited to storing default delivery details and viewing previous transactions, further benefits can be introduced for later releases as the foundations are built.                                                                                                                  |
-| US17 | As a Site User, I can be asked to confirm my request to sign-out, so that I can cancel if requested in error                                                                                                                                 | 1\. Site Users will be able to sign-out from clicking a link in Navbar menu2\. A page will display asking Site Users to confirm they would like to proceed to sign-out, or continue using the site3\. If Site Users confirm they would like to sign-out they will be signed out and redirected to the home page4\. A message should confirm to Site Users when they have successfully signed out5\. If Site Users choose to continue using their account, access to features will remain | PASS         | Using the inbuilt functionality of Django, users are asked to confirm their request to sign-out.                                                                                                                                                                                                                                                            |
-| US18 | As a Site User, I can view and change profile details, so that they are correct when I come to checkout                                                                                                                                      | 1\. Site Users can navigate to a restricted page that provides all the relevant profile details <br> 2\. Site Users can amend any part of the information and save the changes3\. A success message will confirm the changes have been saved                                                                                                                                                                                                                                             | PASS         | Registered site users can edit their default delivery details within the profile area. A success message confirm the changes have been saved.                                                                                                                                                                                                               |
-| US19 | As a Site User, I can add a product review, so that I can inform potential customers of what they might expect                                                                                                                               | 1\. Authenticated users will be able to post a review on a detailed product page | 2\. A button clearly stating to 'Submit' their review will be available3\. Site Users will be able to see their post instantly                                                                                                                                                                                                                                                                        | PASS         | Registered site users can add a product review directly to the website. Consideration was given to adding an approval step before publishing the comment, however to provide a positive user experience, I opted to publish the review straight away. These can be reviewed by the business owner and deleted from the Django admin area if deemed abusive. |
-| US20 | As Site Owner, I would like Site Users to register for a monthly newsletter, so that I can build a relationship with customers and promote specific products                                                                                 | 1\. Site User can enter an email address and receive a success message within the browser2\. Site Users will receive confirmation of sign-up to their inbox                                                                                                                                                                                                                                                                                                                              | PASS         | Site users can subscribe to the newsletter using the Mailchimp feature on the homepage. Users do not have to register to subscribe and stay updated with products and news.                                                                                                                                                                                 |
-| US21 | As Site Owner, I would like to provide Site Users with more information on the business, so that Site Users can understand the history, manufacturing process, company ethos etc. with a view to increasing trust and building relationships | 1\. Site Users will be able to access the blog from either the Footer or the main nav bar 2\. Site Users will be navigated to a new page which informs of who, when, why and what the business is about3\. Information about sustainable leather and the lengths Leather work gos to to produce sustainable leather products.                                                                                                                                                            | PASS         | There is a blog dedicated to learning about the business, their products and the importance of sustainable leather.                                                                                                                                                                                                                                         |
-| US22 | As Site Owner, I can provide a contact form for Site Users, so they can provide feedback, request products, features etc.                                                                                                                    | 1\. Site Users will be able to access this page from the Footer2\. Site Users will be introduced to the FAQ page in case they hadn't already viewed this information and could of had their question answered3\. Site Users will be provided with a Form to complete, learning where the Form is sent and when to expect a response4\. Site Users will be redirected to the homepage when the form has been successfully submitted                                                       | PASS         | There is a contact form available for Site Users to send a query, concern or request to the business owners.Feedback is provided to the users to confirm the form has been sent successfully.                                                                                                                                                               |
-| US23 | As a Site User, I can find answers to general questions, so that I don't have to wait for a response from the Site Owner                                                                                                                     | 1\. Site Users most popular questions can be answered in a single page that is conveniently accessed from the Footer2\. Site Users will be provided with a link to contact Site Admin if a question cannot be answered                                                                                                                                                                                                                                                                   | PASS         | The FAQ's provide a broad range of answers to typical questions. These can be added to by the developers as required. FAQ's can be navigated to from the Footer.                                                                                                                                                                                            |
-| US24 | As a Site User, I can find out about sustainable leather and how the compancy unsure that their product are produced by sustainable leather |                                                                                                | 1\. Site Users will be able to learn about sustainable leather and the certification of sustainability that the company holds.                                                                                                                                                                                                                                                                                                                                                           | PASS         | Certification link in the footer and the sustainability link will divert users to a specific blog post dedicated to the subject.                                                                                                                                                                                                                            |
-| US25 | As a Site User, I can access the site on differing devices, so I can interact with content on my preferred device                                                                                                                            | 1\. Successful tests for Responsiveness using Developer Tools2\. Successful tests for Responsiveness through manual testing on differing devices                                                                                                                                                                                                                                                                                                                                         | PASS         | Primarily using the Bootstrap framework the website is responsive across devices. This has been tested through a dedicated test for responsiveness.                                                                                                                                                                                                         |
-| US26 | As a Site User, I can search for products by entering descriptive words, so that I can find what I want quickly                                                                                                                              | 1\. Search functionality is accessible from the Navbar2\. All keywords, names, descriptions return results                                                                                                                                                                                                                                                                                                                                                                               | PARTIAL PASS | Whilst the search functionality is operational, more than one search word produces zero results. This is being taken forward as a bug to fix.                                                                                                                                                                                                               |
-                                                                                                     
-                                       
-<br>
-</p>
-</details><br>
-
-## Validation
-
-Page validation - check all features and links from across the site are working as designed and developed.
-
-<details>
-<summary><b>Page Validation</b></summary>
-<p>This test aims to check all features and links from across the site are working as designed and developed.
-
-To perform the test I used a Chrome browser, and validated each page from a mobile and desktop perspective using the inbuilt developer tool as some features were unique to a particular screen size.
-
-The results are largely positive with these two noticable fails.
-
-   * Search bar - Searches will work when using only one word. When searching more then one word it comes up with 0 results.
-
-   * Category Header - Category header in the products page shows clearly on the top left of the page but does not show if the Category All Products is chosen.
-
-   * Update button in the checkout page will allow you to update a quantiy higher then 99.
-
-   * Testimonial carousel left and right buttons arent working although it is working automatically.
-
-   NB - With the below testing I noticed that the product image display wasnt working anymore. I realised taht i deleted the javascript code out of the quantity_input_scirpt.html page in order to create its own Javascript page. Due to time constraints I have decieded against this and will add it to future features.
-
-| Features                      | Expectation                                                         | Links Active/Features (Desktop)              | Links Active/Features (Mobile)                |
-|-------------------------------|---------------------------------------------------------------------|----------------------------------------------|-----------------------------------------------|
-| Home Page                     |                                                                     |                                              |                                               |
-| Navbar Logo Link              | Link to home page                                                   | Pass                                         | Pass                                          |
-| Product Dropdown              | Links to all categories with header and product count visible       | Pass                                         | Pass                                          |
-| Blog Dropdown                 | dropdown works                                                      | Pass                                         | Pass                                          |
-| Super User                    | Link create blog                                                    | Pass                                         | Pass                                          |
-| User                          | Link to blog only                                                   | Pass                                         | Pass                                          |
-| Search bar                    | Button works and searches product name and description              | Bug: Shows no results for more than one word | Bug: Shows  no results for more then one word |
-| My Account                    | dropdown                                                            | Pass                                         | Pass                                          |
-| Not logged in                 | Access to Login/Register links                                      | Pass                                         | Pass                                          |
-| Super User                    | Linls to Logout/MyAccount/Create Product                            | Pass                                         | Pass                                          |
-| User                          | My account/logout                                                   | Pass                                         | Pass                                          |
-| Shopping bag empty            | Link to page highlighting bag is empty                              | Pass                                         | Pass                                          |
-| Carousel buttons left & right | when chicked buttons move carousel                                  | Pass                                         | Pass                                          |
-| Sustainable leather button    | Link to relevant blog post                                          | Pass                                         | Pass                                          |
-| Check out our products        | Link to products page                                               | Pass                                         | Pass                                          |
-| Product category section      |                                                                     |                                              |                                               |
-| Purse                         | Link to purse category with product count & heading visable         | Pass                                         | Pass                                          |
-| Wallet                        | Link to Wallet category with product count & heading visable        | Pass                                         | Pass                                          |
-| Satchels and Bags             | Link to Satchel&Bags category with product count & heading visable  | Pass                                         | Pass                                          |
-| All Products                  | Link to All Products category with product count & heading visable  | Pass                                         | Pass                                          |
-| Meet the Tanner section       | Link to blog post about the tanner                                  | Pass                                         | Pass                                          |
-| Sustainable leather section   | Link to blog post about sustainable leather                         | Pass                                         | Pass                                          |
-| Testimonials carousel         | moves automatically                                                 | Pass                                         | Pass                                          |
-| Carousel buttons left & right | when chicked buttons move carousel                                  | Fail Known bug                               | Fail Known bug                                |
-| Wholesale Section             |                                                                     |                                              |                                               |
-| Email Link                    | link to gmail                                                       | Pass                                         | Pass                                          |
-| Phone number                  | Link to make a call                                                 | Pass                                         | Pass                                          |
-| Mail Chimp                    |                                                                     |                                              |                                               |
-| Error message                 | Invalid email error message                                         | Pass                                         | Pass                                          |
-| submit                        | Confirms subscription                                               | Pass                                         | Pass                                          |
-| Footer                        |                                                                     |                                              |                                               |
-| About us                      | Link to relevant blog post                                          | Pass                                         | Pass                                          |
-| Sustainability                | Link to relevant blog post                                          | Pass                                         | Pass                                          |
-| Certifications                | Link to relevant blog post                                          | Pass                                         | Pass                                          |
-| FAQ                           | Link to relevant page                                               | Pass                                         | Pass                                          |
-| Contact us                    | Link to relevant page                                               | Pass                                         | Pass                                          |
-| Social medial links           |                                                                     |                                              |                                               |
-| Facebook                      | Link to Facebook site                                               | Pass                                         | Pass                                          |
-| Instagram                     | Link to Instagram                                                   | Pass                                         | Pass                                          |
-| twitter                       | Link to Twitter                                                     | Pass                                         | Pass                                          |
-| Linkedin                      | Link to Linked in                                                   | Pass                                         | Pass                                          |
-| Products page                 |                                                                     |                                              |                                               |
-| Categories dropdown           | Links to page chosen category                                       | Pass                                         | Pass                                          |
-| Category result header        | Header shows which category has been chosen                         | No header for All Products                   | No header for All Products                    |
-| All Products button           | Link showing all products                                           | Pass                                         | Pass                                          |
-| Product count                 | Show total product found per category/search                        | Pass                                         | Pass                                          |
-| Sort By Bar                   | Sorts product py chosen sort                                        | Pass                                         | Pass                                          |
-| Link to Product details page  | Click on product to bring you to product details page               | Pass                                         | Pass                                          |
-| Super user buttons            | Buttons available specifically for super users                      | Pass                                         | Pass                                          |
-| Edit button                   | Link to edit product form                                           | Pass                                         | Pass                                          |
-| Delete Button                 | Link to delete the product confirmation page                        | Pass                                         | Pass                                          |
-| Product Details Page          |                                                                     |                                              |                                               |
-| Product display               | Click on smaller images to show them as the large image.            | Fail (Future Feature)                        | Fail (Future Feature)                         |
-| Color option                  | Color option only when relevant                                     | Pass                                         | Pass                                          |
-|                               | dropdown working and choice being added to basket                   | Pass                                         | Pass                                          |
-| Quantity                      | wont go lower then 1 or higher then pp                              | Pass                                         | Pass                                          |
-| Keep shopping                 | reverts back to product page                                        | Pass                                         | Pass                                          |
-| Add item                      | Adds item to basket                                                 | Pass                                         | Pass                                          |
-| Super User                    |                                                                     | Pass                                         | Pass                                          |
-| Edit button                   | Goes to relevant page only accessible to superuser                  | Pass                                         | Pass                                          |
-| Delete button                 | Goes to relevant page only accessible to superuser                  | Pass                                         | Pass                                          |
-| Cutomer reviews               | Visable to all                                                      | Pass                                         | Pass                                          |
-|                               | Can only add a review if logged in                                  | Pass                                         | Pass                                          |
-|                               | Review posting is instant                                           | Pass                                         | Pass                                          |
-|                               | User name is posted automatically                                   | Pass                                         | Pass                                          |
-|                               | Date and time added automatically                                   | Pass                                         | Pass                                          |
-| Shopping Bag                  |                                                                     | Pass                                         | Pass                                          |
-| Bag total                     | Total showing and accurate                                          | Pass                                         | Pass                                          |
-| Delivery cost                 | Delivery cost accurate or free over $50                             | Pass                                         | Pass                                          |
-| Keep shopping button          | link to products page                                               | Pass                                         | Pass                                          |
-| secure checkout button        |                                                                     | Pass                                         | Pass                                          |
-| update button                 | Add total requested                                                 | Updates when amount more then 99             | Updates when amount more then 99              |
-| remove button                 | removes product                                                     | Pass                                         | Pass                                          |
-| reduce quantity button        | reduces quantity wont allow anything below 0                        | Pass                                         | Pass                                          |
-| add on quantity button        | will not go highter then 99 but you can type in number higher       | Pass                                         | Pass                                          |
-| color description             | shows color chosen                                                  | Pass                                         | Pass                                          |
-| Secure checkout page          |                                                                     |                                              |                                               |
-| Subtotal                      | calcuted correctly                                                  | Pass                                         | Pass                                          |
-| total                         | total calculated correctly                                          | Pass                                         | Pass                                          |
-| delivery cost                 | delivery total                                                      | Pass                                         | Pass                                          |
-| form validation               | Error messages and alerts will show                                 | Pass                                         | Pass                                          |
-| spinner                       | when order is being submitted spinner apears                        | Pass                                         | Pass                                          |
-| Success alert                 | Alert confirming order and order number                             | Pass                                         | Pass                                          |
-| Confirmation page             | Full details of order and confirmation page appears after submit    | Pass                                         | Pass                                          |
-| save deliver info tick box    | when box is ticked it saves info to profile                         | Pass                                         | Pass                                          |
-|                               | Whenk box is unticked info is not saved.                            | Pass                                         | Pass                                          |
-| Blog                          |                                                                     |                                              |                                               |
-| Read More button              | Button takes you to full blog post                                  | Pass                                         | Pass                                          |
-| In blog links                 | All links in post go to relevant pages                              | Pass                                         | Pass                                          |
-|                               |                                                                     | Pass                                         | Pass                                          |
-| Create Post page              | /blog/add_post/                                                     | Pass                                         | Pass                                          |
-| Form vaildation               | Shows errors if not filled out correctly                            | Pass                                         | Pass                                          |
-| Success alert                 | Shows success message when posted                                   | Pass                                         | Pass                                          |
-|                               |                                                                     |                                              |                                               |
-| Login button                  | takes you to relevant page                                          | Pass                                         | Pass                                          |
-|                               | form validation                                                     | Pass                                         | Pass                                          |
-|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
-|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
-| logout button                 | takes you to relevant page                                          | Pass                                         | Pass                                          |
-|                               | form validation                                                     | Pass                                         | Pass                                          |
-|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
-|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
-| Sign up button                | takes you to relevant page                                          | Pass                                         | Pass                                          |
-|                               | form validation                                                     | Pass                                         | Pass                                          |
-|                               | Success alert when signed in                                        | Pass                                         | Pass                                          |
-|                               | sign up button diverts to correct page                              | Pass                                         | Pass                                          |
-| My Profile                    | Info is updated when requested                                      | Pass                                         | Pass                                          |
-|                               | Order history is showing                                            | Pass                                         | Pass                                          |
-| Order Number links            | Links to confirmaiton page with all relevant info                   | Pass                                         | Pass                                          |
-
-</p>
-</details>
-
-<details>
-<summary><b>Responsiveness </b></summary>
-<p>
-To test the websites layout and content remains well structured and accessible across differing screen sizes, I used Chrome's Developer Tools to virtualise how the website and all it's pages look and feel. In consideration that I opted to use Bootstrap which provides standard media queries for screen sizes from XS through to XL, I selected the following screens to test on; iPhone SE, Samsung Galaxy S8, Surface Pro, Nest hub Max, Laptop L -1440px.
-
-* Given more time, I would like to amend the Hamburger to kick in a smaller screen. At the moment, it is kicking in at 991.98px. Showing the logo on table-size screens would be more beneficial for the business for logo recognition.
-
-| Page                               | Mobile | Tablet  | Desktop |
-|------------------------------------|--------|---------|---------|
-| Home Page                          | PASS   | PASS    | PASS    |
-| /products/                         | PASS   | PASS    | PASS    |
-| /products/1/                       | PASS   | PASS    | PASS    |
-| /accounts/signup/                  | PASS   | PASS    | PASS    |
-| /accounts/login/                   | PASS   | PASS    | PASS    |
-| /accounts/password/reset/          | PASS   | PASS    | PASS    |
-| /products/add                      | PASS   | PASS    | PASS    |
-| /bag/                              | PASS   | PASS    | PASS    |
-| /profile/                          | PASS   | PASS    | PASS    |
-| /profile/order_history/            | PASS   | PASS    | PASS    |
-| /blog/                             | PASS   | PASS    | PASS    |
-| /blog/We-are-cetfified/            | PASS   | PASS    | PASS    |
-| /blog/what_is_sustainable_leather/ | PASS   | PASS    | PASS    |
-| /blog/meet-the-chief-tanner/       | PASS   | PASS    | PASS    |
-| /blog/faqs                         | PASS   | PASS    | PASS    |
-| /blog/contact                      | PASS   | PASS    | PASS    |
-| /blog/bespoke-made-to-order/       | PASS   | PASS    | PASS    |
-| /checkout/checkout_success.html    | PASS   | PASS    | PASS    |
-| /products/delete/                  | PASS   | PASS    | PASS    |
-| /products/edit/                    | PASS   | PASS    | PASS    |
-
-</p>
-</details>
-
-<details>
-<summary><b>Accessibility</b></summary>
-<p>
-Key to any successful eCommerce website is ensuring its accessibility. Whilst in the design phase I consulted colour contrasting checkers to test for accessibility but overlooked image sizing. Origionally I had images in the categories section. But they required <scrset></scrset> to be used to ensure images were resized accurately. Due to timing constraintes i decided to remove the images and add to future features. 
-
-[Origional section](media/Screenshot_20230301_222903.png)
-
-[Section now](media/Products-range.png)
-[Origional lighthouse test](media/main%20desktop%20lighthouse.png)
-
-</p>
-</details>
-
-<details>
-<summary><b>Lighthouse Scores</b></summary>
-<p>
-
-# Home Page
-
-![Lighthouse home page mobile](media/lighthouse%20mobile%20main%20page.png)
-![Lighthouse home page desktop](media/lighthouse%20desktop.png)
-
-# Product page
-![Lighthouse product page desktop](media/product%20page%20desktop.png)
-![Lighthouse product page mobile](media/product%20page%20mobile.png)
-
-# shopping bag
-![Lighthouse shopping bag page mobile](media/shopping%20bag%20mobile.png)
-![Lighthouse shopping bag page desktop](media/shopping%20bag%20mobile.png)
-
-</p>
-</details>
-
-<details>
-<summary><b>Page Validation </b></summary>
-<p></p>
-</details>
-
-<details>
-<summary><b>Page Validation </b></summary>
-<p></p>
-</details>
-
-<details>
-<summary><b>Code Validation </b></summary>
-<p>
-Writing well formed, quality code is essential for the future development of this, or any website. To support this aim I have used industry standard tools [list below] to validate every line of code using the input method. As well as using this tools, using GitPod as IDE allowed me to utilise the inbuilt code checkers such as Pycodestyle for Python.
-
-W3 Validator for HTML
-W3 Jigsaw for CSS
-JS Hint for JavaScript
-CI Python Linter for Python
-
-![code validation1](media/Code%20Validation%20error1.png)
-![code validation1](media/Code%20Validation%20error2.png)
-![code validation1](media/Code%20Validation%20error3.png)
-
-</p>
-</details>
 
 ## **Deployment**
 
@@ -1234,8 +951,6 @@ The url for this website can be found here https://leather-works.herokuapp.com/
 </details>
 
 ### Pre Production Deployment
-details>
-    <summary></summary>
 
 When you are ready to move to production, the following steps must be taken to ensure your site works correctly and is secure.
 
@@ -1246,7 +961,6 @@ In GitPod:
 In the Heroku App:
 1. Settings > Config Vars : Delete environment variable : DISABLE_COLLECTSTATIC
 1. Deploy : Click on deploy branch
-</details>
 
 
 <br> 
@@ -1255,9 +969,7 @@ In the Heroku App:
 
 <br>
 
-[Back to top](<#contents>)
-
-
+[Back to top](<#top>)
 
 
 ## **Technologies used**
@@ -1269,7 +981,7 @@ In the Heroku App:
   * Django all auth was used to handle user authentication and related tasks i.e. sign in, sign up, sign out.
 * Heroku
   * Used to deploy the page and make it publicly available.
-* Heroku PostgreSQL & ElephantSQL
+* Heroku ElephantSQL
   * Used for the database during deployment.
 * SQLlite3
 	* Was used during development as a database to test models.
@@ -1278,7 +990,7 @@ In the Heroku App:
 * CSS
   * Custom CSS is used to style the page and make the appearance look a little more unique.
 * Javascript
-  * I have used Javascript to manipulate the DOM and communicate with the backend to create, read, update, and delete data from the database.
+  * I have used Javascript to manipulate the DOM.
 * Bootstrap 4.6
   * Used to style HTML, CSS, minor javascript. The more I used this framework the most I realized retrospectively how it could have saved me writing several parts of the code I had already written.
 * Font awesome
@@ -1288,15 +1000,33 @@ In the Heroku App:
 * Stripe
   * Used to handle payments.
 
+[Back to top](<#top>)
+
 ## **Credits**
 
 * [Code Institute](https://codeinstitute.net/) - For the course material and the support throughout.  Some of the project may reflect similarities to the course material, but I have tried to make it as unique as possible.
 * Balsamiq was used to create the wireframes.
 * GitHub was used to store my repository.
-* I lived in the [django documentation](https://docs.djangoproject.com/en/3.2/) and [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for the duration of the project live they were a bibles.
-* [W3cschool](https://www.w3schools.com) used to remeber the syntax of various languages.
+* [django documentation](https://docs.djangoproject.com/en/3.2/) and [Bootstrap](https://getbootstrap.com/  
+docs/4.6/getting-started/introduction/) where used for the duration of the project.
+* [W3cschool](https://www.w3schools.com) used to remeber the syntax of various languages and to help with the product detail images [Lightbox](https://www.w3schools.com/howto/howto_js_lightbox.asp).
 * [Stackoverflow](https://stackoverflow.com/) for debugging and finding solutions to problems.
 * Fonts were taken from [Google Fonts](https://fonts.google.com/)
 * [For help pushing the footer to the bottom of the page](https://www.youtube.com/watch?v=yc2olxLgKLk)
 * [favicon generator](https://www.favicon-generator.org/) was used to generate the favicon.
+* [Table convert](https://tableconvert.com/) to convert excel files to markdown tabels.  
+* [convert images](https://towebp.io/) Used to convert JPEG images to WEBP.
+* [On how to encypt a form](https://www.w3schools.com/tags/att_form_enctype.asp)
+* [Utube codemy](https://www.youtube.com/watch?v=6-XXvUENY_8) to help style blog the blog, how to add a snippet and how to upload images.
+* [Uploading multiple imgages to a model](https://medium.com/ibisdev/upload-multiple-images-to-a-model-with-django-fd00d8551a1c)
+* [Vape by dnlbowers](https://github.com/dnlbowers/Vape-Store) for help and inspiration on my readme.
+* [The coffe collective project by rickofmanc](https://the-coffee-collective.herokuapp.com/) for help and inspiration on my project and read me.
+* [Leather working group](https://www.leatherworkinggroup.com/news-events/news/what-is-sustainable-leather-/) for infomation for my blog posts and info on sustainable leather
+* [Tinnakeenly leather](https://tinnakeenlyleathers.com/) Product images and information and inspiration for my project.
+* [pexels](https://www.pexels.com/) for sourcing free images.
+* [Looka](https://looka.com/onboarding) for making Leather works logo.
+* [Leather company](https://www.leathercompany.co.uk/) text for custom product blog.
+* [Leatherial](https://leatherial.com/) was used for the blog post on sustainable leather. 
 
+
+[Back to top](<#top>)

@@ -685,6 +685,18 @@ input[name='q']::placeholder {
         width: 170px;
     }
 
+    a.mailto-anchor {
+        color:#007bff;
+        font-weight: 600;
+        font-size: 17px;
+    }
+    
+    a.email {
+        color:#007bff;
+        font-weight: 600;
+        font-size: 17px;
+    }
+
 
 
 }
