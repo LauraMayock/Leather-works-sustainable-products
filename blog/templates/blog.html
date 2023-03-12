@@ -15,69 +15,55 @@
 <!-- Blog Entries Column -->
 
   <div class="container-fluid col-10">
-      <div class="row">
             {% for post in post_list %}
                 <div class="col mt-3 mb-3">
-                  <h1>{{ post.title }}</h1>
-                
+                  <h1>{{ post.title }}</h1> 
                 </div>
-            </div>
-          <div class="card mb-10">
-            <div class="card-body col-8">
-              <div class="img-container">
-                {% if "placeholder" in post.featured_image.url %}
-                <img class="card-img-top" src="{{ post.featured_image }}" style="width:80%; height:auto"
-                  alt="Blog post image">
-                {% else %}
-                <img class="card-img-top mb-3" src=" {{ post.featured_image.url }}" alt="" style="width:80%; height:auto;">
-                {% endif %}
-              </div>
-              <p class="card-text text-muted mb-2">{{ post.created_on}}
-                {{ post.author }}</p>
-            </div>
-            <div>
-            <p class="card-text ml-3">{{post.snippet}}</p>
-            <a href="{% url 'post_detail' post.slug %}" class="btn btn-dark">Read More</a>
-          </div>
-          {% if request.user.is_superuser %}
-          <small class="ml-3">
-              <a href="{% url 'update_post' post.id %}">Edit</a>
-              <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
-          </small>
-      {% endif %}
-          </div>
-          <hr class="hr1">
-        {% endfor %}
-      <div>
-        <!-- Back to top button -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-      </div>
-    </div>
-    <!-- Pagination -->
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-      <ul class="pagination justify-content-center">
-        {% if page_obj.has_previous %}
-        <li>
-          <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a>
-        </li>
-        {% endif %}
-        {% if page_obj.has_next %}
-        <li>
-          <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
-        </li>
-        {% endif %}
-      </ul>
-    </nav>
-  </div>
-</div>
+                        <div class="img-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                            <img class="card-img-top" src="{{ post.featured_image }}" style="width:80%; height:auto"
+                            alt="Blog post image">
+                        {% else %}
+                            <img class="card-img-top mb-3" src=" {{ post.featured_image.url }}" alt="" style="width:80%; height:auto;">
+                        {% endif %}
+                        </div>
+                        <div class="card-body col-8">
+                                <p class="card-text text-muted mb-2">{{ post.created_on}}
+                                   {{ post.author }}</p>
+                                <p class="card-text ml-3">{{post.snippet}}</p>
+                                 <a href="{% url 'post_detail' post.slug %}" class="btn btn-dark">Read More</a>
+                        </div>
+                      {% if request.user.is_superuser %}
+                          <small class="ml-3">
+                              <a href="{% url 'update_post' post.id %}">Edit</a>
+                              <a class="text-danger" href="{% url 'delete_post' post.id %}">Delete</a>
+                          </small>
+                      {% endif %}
+                      <hr class="hr1">
+                      {% endfor %}
+                      <div>
+                    </div>
+                  </div>
+                        <!-- Pagination -->
+                      {% if is_paginated %}
+                      <nav aria-label="Page navigation">
+                          <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                              <li>
+                                  <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a>
+                              </li>
+                            {% endif %}
+                            {% if page_obj.has_next %}
+                              <li>
+                                  <a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a>
+                              </li>
+                            {% endif %}
+                         </ul>
+                      </nav>
+         </div>
+  {% endif %}
+{%endblock%}
 <script>
-// Learned from  W3school
-let mybutton = document.getElementById("myBtn");
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
 
 function scrollFunction() {
   if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -92,5 +78,3 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 </script>
-{% endif %}
-{%endblock%}

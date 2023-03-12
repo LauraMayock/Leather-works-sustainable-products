@@ -312,7 +312,14 @@ Most errors were easily amended. I had significant issies with the way I origina
 
 Another error was the type element in the <script> which was unneeded and could be deleted.
 
-![scritp error](media/Screenshot%202023-03-10%20181232.png)
+![scrit error](media/Screenshot%202023-03-10%20181232.png)
+
+ * ### Known errors on product details page
+
+![product details page](media/product%20details%20error.png)
+
+Above highlights two know errors on the product details paged. This relates to the product images lightbox.
+When trying to rectify these issues they break the imaged lighthox. I cannot place an src as requested as i am using this to call on the imges clicked to view larger. I also tried changing the element from a <img> to a <div> this also does not work. Given more time I would hope to find a solution to rectify this.
 
 </p>
 </details>
