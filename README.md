@@ -1,6 +1,6 @@
 # **Leather Works**
 
-<img src="media/responsive mock up.png" alt="How the website displays on differing devices"/>
+<img src="media/main_image.png" alt="How the website displays on differing devices"/>
 
 [Live Website](https://leather-works.herokuapp.com/)<br>
 [GitHub Repo](https://github.com/LauraMayock/Leather-works-sustainable-products)
@@ -414,10 +414,9 @@ Black and white feature heavily throughout the site. However, I added color to h
 
 #### ***Typography***
 
-For this project, I have used the following fonts:
+For this project, I have kept it simple using:
 
-* [DM Sans](https://fonts.google.com/specimen/DM+Sans?query=dm+s) - This font is used for the main headings and the logo. It is a clean and simple font that is easy to read and stands out well.
-* [Damion](https://fonts.google.com/specimen/Damion?query=damion) - This was for the logo. I initially wanted to make the V and the T cursive; however, I found this font perfect for all letters of the logo.
+* Times New Roman and serif as a back up and worked with font weights and colors to gain the desired effect.
 
 [Back to top](<#top>)
 

@@ -20,16 +20,15 @@
           <br>
           <input type="submit" value="Update" class="btn btn-dark">
           <a class="btn btn-dark" href="{% url 'blog' %}">Back </a>
-        </form>
-       
+        </form>       
       </div>
     </div>
-
     {% else %}  
     <div class="ml-5">
-    <h3>This is not your Post.</h3> 
-    <p>Only the Post Author can amend this blog post.</p>
-    <a class="btn btn-dark" href="{% url 'blog' %}">Back </a>
+        <h3>This is not your Post.</h3> 
+        <p>Only the Post Author can amend this blog post.</p>
+            <a class="btn btn-dark" href="{% url 'blog' %}">Back </a>
+    </div>
 </div> 
 {% endif %}
 
