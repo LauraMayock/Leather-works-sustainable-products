@@ -1,1 +1,0 @@
-web: gunicorn leather_works.wsgi:application
